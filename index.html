@@ -322,12 +322,10 @@
   .mat-num{font-family:var(--roman);font-size:.6rem;letter-spacing:.2em;color:var(--gold-deep)}
   .mat-name{font-family:var(--serif);font-weight:500;font-size:1.08rem;text-transform:uppercase;letter-spacing:.03em}
   .mat-tag{font-size:.6rem;letter-spacing:.16em;color:var(--muted);margin-left:auto;text-transform:uppercase}
-  @media(min-width:900px) and (hover:hover){
-    .gallery{overflow:hidden;padding-left:0}
-    .g-track{animation:gscroll 70s linear infinite;padding-right:0}
-    .g-group{padding-right:clamp(1rem,2.4vw,2.2rem)}
-    .gallery:hover .g-track{animation-play-state:paused}
-  }
+  .gallery{overflow:hidden;padding-left:0}
+  .g-track{animation:gscroll 70s linear infinite;padding-right:0}
+  .g-group{padding-right:clamp(1rem,2.4vw,2.2rem)}
+  .gallery:hover .g-track, .gallery:active .g-track{animation-play-state:paused}
   @keyframes gscroll{to{transform:translateX(-50%)}}
 
   /* ═══ MÓDULO 07 · STACKED REVEAL — II PROCESO (3 IMÁGENES) ══ */
