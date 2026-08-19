@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════ SEO ═══════════════ -->
+  <title>Marmolería — Mármol, Granito y Cuarzo | Catálogo y Trabajos a Medida</title>
+  <meta name="description" content="Marmolería en Buenos Aires. Catálogo de mármol, granito, cuarzo y revestimientos. Mesadas, escaleras y baños a medida. Taller propio y montaje certificado.">
+  <meta name="theme-color" content="#111110">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marmolería — Mármol que define espacios">
+  <meta property="og:description" content="Catálogo de mármol, granito, cuarzo y revestimientos. Diseño, corte e instalación.">
+  <meta property="og:image" content="assets/images/hero/hero.jpg">
+  <meta property="og:locale" content="es_AR">
+
+  <!-- Favicon (rombo dorado) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111110'/%3E%3Crect x='21' y='21' width='22' height='22' transform='rotate(45 32 32)' fill='none' stroke='%23C8A45D' stroke-width='3'/%3E%3C/svg%3E">
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Schema.org — LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Marmolería",
+    "description": "Marmolería especializada en mármol, granito, cuarzo y revestimientos. Catálogo propio, corte e instalación.",
+    "telephone": "+54 9 11 0000 0000",
+    "image": "assets/images/hero/hero.jpg",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    "sameAs": ["https://instagram.com/marmoleria"]
+  }
+  </script>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       CSS — Módulos de estilos integrados
+       ══════════════════════════════════════════════════════════════ -->
+  <style>
+  /* ═══ MÓDULO 01 · BASE Y VARIABLES ═══════════════════════════ */
+  :root{
+    --marble-white:#F5F3EE;
+    --marble-black:#111110;
+    --gold:#C8A45D;
+    --gold-deep:#A9833F;
+    --text:#2B2B27;
+    --text-inv:#F5F3EE;
+    --muted:#6E6C64;
+    --muted-inv:#A6A49B;
+    --border:rgba(17,17,16,.14);
+    --border-inv:rgba(245,243,238,.16);
+    --serif:'Cormorant Garamond',Georgia,serif;
+    --roman:'Cinzel',serif;
+    --sans:'DM Sans',Helvetica,Arial,sans-serif;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --header-h:72px;
+    --pad:clamp(1.25rem,6vw,5rem);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    background:var(--marble-white);
+    color:var(--text);
+    font-family:var(--sans);
+    font-size:16px;
+    line-height:1.7;
+    overflow-x:clip;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  button{font:inherit;background:none;border:0;cursor:pointer;color:inherit}
+  ::selection{background:var(--gold);color:var(--marble-black)}
+  a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+  section{scroll-margin-top:calc(var(--header-h) + .5rem)}
+
+  /* Grano fotográfico sutil */
+  .grain{position:relative}
+  .grain::after{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:3;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Filtro de imagen optimizado para fotografía real */
+  .img-tone img,.img-tone video{transition:filter .4s ease,transform .9s var(--ease)}
+
+  /* ═══ MÓDULO 02 · TIPOGRAFÍA Y COMPONENTES ══════════════════ */
+  .display{
+    font-family:var(--serif);font-weight:500;text-transform:uppercase;
+    line-height:.98;letter-spacing:.005em;color:var(--text);
+  }
+  .dot{color:var(--gold)}
+  .on-dark .display{color:var(--text-inv)}
+  .display--hero{font-size:clamp(3.1rem,12.5vw,10rem)}
+  .display--1{font-size:clamp(2.55rem,8vw,5.6rem)}
+  .display--stack{font-size:clamp(2.2rem,7.5vw,6.6rem)}
+  .display--cta{font-size:clamp(2.7rem,9vw,7.8rem)}
+  .display--modal{font-size:clamp(1.95rem,4.6vw,3rem)}
+  em.t{font-style:italic;font-weight:400}
+
+  /* Etiqueta de capítulo */
+  .chapter{
+    display:inline-flex;align-items:center;gap:.9rem;
+    font-family:var(--roman);font-size:.66rem;letter-spacing:.34em;
+    color:var(--gold-deep);text-transform:uppercase;white-space:nowrap;
+  }
+  .chapter b{font-weight:400;color:var(--gold-deep)}
+  .chapter::after{content:"";width:52px;height:1px;background:var(--gold);opacity:.75;flex:none}
+  .on-dark .chapter{color:var(--gold)}
+  .on-dark .chapter b{color:var(--gold)}
+  .chapter--center::before{content:"";width:52px;height:1px;background:var(--gold);opacity:.75;flex:none}
+
+  .lead{max-width:34ch;color:var(--muted);font-size:.95rem}
+  .on-dark .lead{color:var(--muted-inv)}
+  .gold-line{width:60px;height:1px;background:var(--gold)}
+  .wrap{padding-inline:var(--pad)}
+  .section{padding-block:clamp(5.5rem,13vh,9.5rem)}
+
+  /* Cabecera de sección reutilizable */
+  .sec-head{display:flex;flex-direction:column;gap:1.25rem;margin-bottom:clamp(2.5rem,6vh,4rem)}
+  .sec-head .lead{max-width:46ch}
+  @media(min-width:960px){
+    .sec-head{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:3rem}
+  }
+  .head-stack{display:flex;flex-direction:column;gap:1.25rem}
+
+  /* Botones duales */
+  .btn{
+    position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.8rem;
+    min-height:58px;padding:1.05rem 2.1rem;overflow:hidden;isolation:isolate;
+    font-family:var(--roman);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;
+    border:1px solid transparent;cursor:pointer;
+    transition:color .45s var(--ease),border-color .45s var(--ease);
+  }
+  .btn>*{position:relative;z-index:1}
+  .btn::before{
+    content:"";position:absolute;inset:0;z-index:0;background:var(--gold);
+    transform:translateY(102%);transition:transform .55s var(--ease);
+  }
+  .btn:hover::before{transform:translateY(0)}
+  .btn .ico{width:15px;height:15px;transition:transform .45s var(--ease)}
+  .btn:hover .ico{transform:translateX(5px)}
+  .btn-solid{background:var(--marble-black);color:var(--marble-white);border-color:rgba(245,243,238,.22)}
+  .btn-solid:hover{color:var(--marble-black)}
+  .btn-ghost{background:transparent;color:var(--gold-deep);border-color:var(--gold)}
+  .on-dark .btn-ghost{color:var(--gold)}
+  .btn-ghost:hover{color:var(--marble-black)}
+  .btn-row{display:flex;flex-direction:column;align-items:stretch;gap:.9rem;max-width:420px}
+  @media(min-width:640px){.btn-row{flex-direction:row;align-items:center;max-width:none}}
+
+  .ico{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.4;flex:none}
+
+  /* Enlace subrayado dorado */
+  .link-u{
+    display:inline-flex;align-items:center;gap:.55rem;
+    font-family:var(--roman);font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--gold-deep);position:relative;padding-bottom:.4rem;
+  }
+  .on-dark .link-u{color:var(--gold)}
+  .link-u::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(.35);transform-origin:left;transition:transform .5s var(--ease)}
+  .link-u:hover::after{transform:scaleX(1)}
+  .link-u .ico{width:13px;height:13px;transition:transform .4s var(--ease)}
+  .link-u:hover .ico{transform:translateX(4px)}
+
+  /* ═══ MÓDULO 03 · HEADER + MENÚ ═════════════════════════════ */
+  .site-header{
+    position:fixed;top:0;left:0;right:0;z-index:100;height:var(--header-h);
+    display:flex;align-items:center;justify-content:space-between;
+    padding-inline:var(--pad);
+    transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease);
+    border-bottom:1px solid transparent;color:var(--text-inv);
+  }
+  .site-header[data-theme="light"]{
+    color:var(--text);
+    background:rgba(245,243,238,.86);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    border-bottom-color:var(--border);
+  }
+  .site-header[data-theme="dark"].scrolled{
+    background:rgba(17,17,16,.58);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+  }
+  .brand{display:inline-flex;align-items:center;gap:.7rem}
+  .brand-gem{width:11px;height:11px;flex:none}
+  .brand-gem rect{fill:none;stroke:var(--gold);stroke-width:1.6}
+  .brand-name{font-family:var(--roman);font-size:.78rem;letter-spacing:.32em;font-weight:400}
+  .main-nav{display:none;gap:2.4rem}
+  .main-nav a{
+    font-family:var(--roman);font-size:.64rem;letter-spacing:.2em;
+    position:relative;padding-block:.4rem;
+  }
+  .main-nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+  .main-nav a:hover::after{transform:scaleX(1)}
+  .header-right{display:flex;align-items:center;gap:1.4rem}
+  .header-wa{min-height:44px;padding:.7rem 1.3rem;font-size:.62rem;display:none}
+  .burger{width:46px;height:46px;display:grid;place-items:center;position:relative;z-index:110}
+  .burger span{position:absolute;left:11px;width:24px;height:1.5px;background:currentColor;transition:transform .45s var(--ease),top .45s var(--ease)}
+  .burger span:nth-child(1){top:19px}
+  .burger span:nth-child(2){top:26px}
+  .burger.open span:nth-child(1){top:22.5px;transform:rotate(45deg)}
+  .burger.open span:nth-child(2){top:22.5px;transform:rotate(-45deg)}
+  @media(min-width:960px){
+    .main-nav{display:flex}
+    .burger{display:none}
+  }
+  @media(min-width:760px){.header-wa{display:inline-flex}}
+
+  /* Menú overlay mobile */
+  .menu{
+    position:fixed;inset:0;z-index:90;background:var(--marble-black);
+    display:flex;flex-direction:column;justify-content:center;gap:3rem;
+    padding:calc(var(--header-h) + 1rem) var(--pad) 2.5rem;
+    transform:translateY(-102%);transition:transform .75s var(--ease);
+    visibility:hidden;
+  }
+  .menu.open{transform:translateY(0);visibility:visible}
+  .menu-list{display:flex;flex-direction:column}
+  .menu-list a{
+    display:flex;align-items:baseline;gap:1.1rem;
+    font-family:var(--serif);font-weight:500;text-transform:uppercase;
+    font-size:clamp(2.1rem,8.5vw,3.4rem);line-height:1.35;color:var(--text-inv);
+    border-bottom:1px solid var(--border-inv);padding-block:.55rem;
+    opacity:0;transform:translateY(26px);
+    transition:opacity .5s var(--ease),transform .5s var(--ease),color .3s;
+  }
+  .menu-list a:hover{color:var(--gold)}
+  .menu-num{font-family:var(--roman);font-size:.7rem;letter-spacing:.2em;color:var(--gold)}
+  .menu.open .menu-list a{opacity:1;transform:none;transition-delay:calc(.18s + var(--i)*.06s)}
+  .menu-foot{display:flex;flex-direction:column;gap:1.1rem;opacity:0;transition:opacity .6s .55s}
+  .menu.open .menu-foot{opacity:1}
+  .menu-foot-row{display:flex;flex-wrap:wrap;gap-x:2rem;gap-y:.6rem}
+  .menu-foot a{font-family:var(--roman);font-size:.64rem;letter-spacing:.22em;color:var(--muted-inv)}
+  .menu-foot a:hover{color:var(--gold)}
+  .menu-gline{width:52px;height:1px;background:var(--gold)}
+
+  /* ═══ MÓDULO 04 · HERO ══════════════════════════════════════ */
+  .hero{
+    position:relative;min-height:100vh;min-height:100svh;
+    display:flex;flex-direction:column;justify-content:center;
+    padding-top:var(--header-h);overflow:hidden;background:var(--marble-black);
+  }
+  .hero-media{position:absolute;inset:0;z-index:0}
+  .hero-media img,.hero-video{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    filter:brightness(.92);
+  }
+  .hero-media img{animation:kenburns 26s ease-in-out infinite alternate}
+  @keyframes kenburns{from{transform:scale(1.03)}to{transform:scale(1.12)}}
+  .hero.has-video .hero-media img{animation:none}
+  .hero-video{opacity:0;transition:opacity 1.4s ease;z-index:1}
+  .hero-video.is-ready{opacity:1}
+  .hero-scrim{
+    position:absolute;inset:0;z-index:2;
+    background:linear-gradient(180deg,rgba(17,17,16,.55) 0%,rgba(17,17,16,.28) 42%,rgba(17,17,16,.68) 100%);
+  }
+  .hero-content{position:relative;z-index:4;color:var(--text-inv);display:flex;flex-direction:column;gap:clamp(1.6rem,4vh,2.6rem)}
+  .hero-eyebrow{
+    font-family:var(--roman);font-size:.62rem;letter-spacing:.4em;color:var(--gold);
+    display:flex;align-items:center;gap:1rem;
+  }
+  .hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--gold);opacity:.8}
+  .hero-sub{
+    font-family:var(--roman);font-size:.66rem;letter-spacing:.3em;
+    color:rgba(245,243,238,.72);
+  }
+  .scroll-hint{
+    position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);z-index:4;
+    display:flex;flex-direction:column;align-items:center;gap:.7rem;
+  }
+  .scroll-hint span{font-family:var(--roman);font-size:.55rem;letter-spacing:.36em;color:rgba(245,243,238,.5)}
+  .scroll-line{width:1px;height:44px;background:rgba(245,243,238,.18);position:relative;overflow:hidden}
+  .scroll-line::after{content:"";position:absolute;top:0;left:0;width:100%;height:45%;background:var(--gold);animation:drop 2.6s var(--ease) infinite}
+  @keyframes drop{0%{transform:translateY(-110%)}65%,100%{transform:translateY(260%)}}
+  @media(max-height:620px){.scroll-hint{display:none}}
+
+  /* ═══ MÓDULO 05 · MARQUEE ═══════════════════════════════════ */
+  .marquee{
+    background:var(--marble-black);color:var(--marble-white);
+    border-top:1px solid var(--border-inv);border-bottom:1px solid var(--border-inv);
+    overflow:hidden;padding-block:1.15rem;
+  }
+  .mq-track{display:flex;width:max-content;animation:mq 34s linear infinite}
+  .mq-group{display:flex;align-items:center;padding-right:3rem}
+  .mq-item{font-family:var(--serif);font-weight:500;text-transform:uppercase;font-size:clamp(1.05rem,2.4vw,1.5rem);letter-spacing:.06em;white-space:nowrap}
+  .mq-gem{width:9px;height:9px;flex:none;margin-inline:1.6rem}
+  .mq-gem rect{fill:var(--gold)}
+  @keyframes mq{to{transform:translateX(-50%)}}
+
+  /* ═══ MÓDULO 06 · PRODUCTOS DESTACADOS (GALERÍA INFINITA) ═══ */
+  .gallery{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;
+    padding-left:var(--pad);scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .gallery::-webkit-scrollbar{display:none}
+  .g-track{display:flex;width:max-content;padding-right:var(--pad);padding-block:.5rem 1rem}
+  .g-group{display:flex}
+  .mat{margin-right:clamp(1rem,2.4vw,2.2rem);scroll-snap-align:start;cursor:pointer}
+  .mat-media{height:clamp(300px,50vh,540px);overflow:hidden}
+  .mat-media img{height:100%;width:auto;object-fit:cover;transition:transform .9s var(--ease)}
+  .mat:hover .mat-media img,.mat:focus-visible .mat-media img{transform:scale(1.045)}
+  .mat-cap{
+    display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap;
+    padding-block:.85rem .55rem;position:relative;border-bottom:1px solid var(--border);
+    max-width:100%;
+  }
+  .mat-cap::after{content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+  .mat:hover .mat-cap::after,.mat:focus-visible .mat-cap::after{transform:scaleX(1)}
+  .mat-num{font-family:var(--roman);font-size:.6rem;letter-spacing:.2em;color:var(--gold-deep)}
+  .mat-name{font-family:var(--serif);font-weight:500;font-size:1.08rem;text-transform:uppercase;letter-spacing:.03em}
+  .mat-tag{font-size:.6rem;letter-spacing:.16em;color:var(--muted);margin-left:auto;text-transform:uppercase}
+  @media(min-width:900px) and (hover:hover){
+    .gallery{overflow:hidden;padding-left:0}
+    .g-track{animation:gscroll 70s linear infinite;padding-right:0}
+    .g-group{padding-right:clamp(1rem,2.4vw,2.2rem)}
+    .gallery:hover .g-track{animation-play-state:paused}
+  }
+  @keyframes gscroll{to{transform:translateX(-50%)}}
+
+  /* ═══ MÓDULO 07 · STACKED REVEAL — II PROCESO (3 IMÁGENES) ══ */
+  .stack{background:var(--marble-black);color:var(--text-inv);padding-block:0}
+  .stack-head{padding:clamp(5.5rem,13vh,9.5rem) var(--pad) clamp(3rem,7vh,5rem);display:flex;flex-direction:column;gap:1.5rem}
+  .stack-track{height:280vh;position:relative}
+  .stack-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+  .stack-img{position:absolute;inset:0;overflow:hidden;will-change:transform}
+  .stack-img img{width:100%;height:100%;object-fit:cover;filter:none}
+  .stack-img--over{transform:translateY(100%);border-top:1px solid var(--gold)}
+  .stack-img--over img{will-change:transform}
+  .stack-label{
+    position:absolute;left:var(--pad);bottom:1.6rem;z-index:2;
+    font-family:var(--roman);font-size:.6rem;letter-spacing:.3em;color:var(--text-inv);
+    background:rgba(17,17,16,.5);padding:.55rem .9rem;
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  .stack-label b{color:var(--gold);font-weight:400;margin-right:.6rem}
+  .stack-caption{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:1.6rem;pointer-events:none;
+  }
+  .stack-caption h2{mix-blend-mode:difference;color:#fff;text-align:center}
+  .stack-caption .gold-line{flex:none;opacity:0;transition:opacity .9s var(--ease) .45s}
+  .stack-caption.in .gold-line{opacity:1}
+  @media(min-width:760px){.stack-track{height:340vh}}
+
+  /* ═══ MÓDULO 08 · CATÁLOGO — TABS + GRILLA + VER MÁS ════════ */
+  .tabs{
+    display:flex;gap:.2rem;overflow-x:auto;scrollbar-width:none;
+    border-bottom:1px solid var(--border);
+    -webkit-overflow-scrolling:touch;
+  }
+  .tabs::-webkit-scrollbar{display:none}
+  @media(max-width:699px){
+    .tabs{
+      padding-right:2.5rem;
+      -webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);
+      mask-image:linear-gradient(90deg,#000 88%,transparent);
+    }
+  }
+  .tab{
+    position:relative;flex:none;min-height:52px;padding:0 1.15rem;
+    display:inline-flex;align-items:center;
+    font-family:var(--roman);font-size:.62rem;letter-spacing:.22em;
+    color:var(--muted);text-transform:uppercase;white-space:nowrap;
+    transition:color .35s;
+  }
+  .tab::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;
+    background:var(--gold);transform:scaleX(0);transform-origin:left;
+    transition:transform .5s var(--ease);
+  }
+  .tab:hover{color:var(--text)}
+  .tab[aria-selected="true"]{color:var(--gold-deep)}
+  .tab[aria-selected="true"]::after{transform:scaleX(1)}
+
+  .pgrid{
+    display:grid;grid-template-columns:repeat(2,1fr);
+    column-gap:1rem;row-gap:2.6rem;margin-top:2.6rem;
+    transition:opacity .3s ease,transform .3s ease;
+  }
+  .pgrid.switching{opacity:0;transform:translateY(10px)}
+  @media(min-width:700px){.pgrid{grid-template-columns:repeat(3,1fr);column-gap:1.8rem;row-gap:3.2rem}}
+
+  .pgrid .mat{margin:0;animation:itemIn .9s var(--ease) both;animation-delay:var(--d,0s)}
+  @keyframes itemIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+  .pgrid .mat-media{height:auto}
+  .pgrid .mat-media img{width:100%;height:auto;aspect-ratio:3/4}
+  .pgrid .mat-name{font-size:.95rem}
+  .pgrid .mat-tag{flex-basis:100%;margin-left:0;margin-top:.1rem}
+  .prod-note{
+    font-family:var(--serif);font-style:italic;font-size:.86rem;
+    color:var(--muted);margin-top:.35rem;line-height:1.4;
+  }
+  .pempty{
+    grid-column:1/-1;text-align:center;padding:3.5rem 0;
+    font-family:var(--roman);font-size:.64rem;letter-spacing:.28em;color:var(--muted);
+  }
+
+  .pmore{margin-top:3.4rem;display:flex;flex-direction:column;align-items:center;gap:1.3rem}
+  .pcount{font-family:var(--roman);font-size:.58rem;letter-spacing:.3em;color:var(--muted)}
+  .pcount b{color:var(--gold-deep);font-weight:400}
+  .pmore .btn{min-width:230px}
+
+  /* ═══ MÓDULO 09 · MODAL DE PRODUCTO ═════════════════════════ */
+  .modal{
+    position:fixed;inset:0;z-index:200;
+    display:flex;align-items:flex-end;justify-content:center;
+    visibility:hidden;opacity:0;
+    transition:opacity .45s var(--ease),visibility 0s .45s var(--ease);
+  }
+  .modal.open{visibility:visible;opacity:1;transition:opacity .45s var(--ease)}
+  .modal-scrim{
+    position:absolute;inset:0;background:rgba(17,17,16,.74);
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+  }
+  .modal-panel{
+    position:relative;width:100%;max-height:92svh;
+    display:flex;flex-direction:column;overflow-y:auto;overscroll-behavior:contain;
+    background:var(--marble-white);border:1px solid rgba(200,164,93,.5);border-bottom:0;
+    transform:translateY(7%);
+    transition:transform .6s var(--ease);
+  }
+  .modal.open .modal-panel{transform:none}
+  .modal-close{
+    position:absolute;top:.8rem;right:.8rem;z-index:5;
+    width:46px;height:46px;display:grid;place-items:center;
+    color:var(--text-inv);background:rgba(17,17,16,.55);
+    border:1px solid rgba(200,164,93,.5);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    transition:color .3s,border-color .3s,transform .2s;
+  }
+  .modal-close:hover{color:var(--gold)}
+  .modal-close:active{transform:scale(.94)}
+  .modal-close .ico{width:16px;height:16px}
+  .modal-media{position:relative;aspect-ratio:4/3;overflow:hidden;flex:none}
+  .modal-media img{width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .5s ease}
+  .modal-media img.loaded{opacity:1}
+  .modal-num{
+    position:absolute;top:.75rem;left:.75rem;z-index:2;
+    font-family:var(--roman);font-size:.66rem;letter-spacing:.16em;color:var(--gold);
+    background:rgba(17,17,16,.55);padding:.38rem .68rem;
+    border:1px solid rgba(200,164,93,.4);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  .modal-body{
+    display:flex;flex-direction:column;align-items:flex-start;gap:1.1rem;
+    padding:1.9rem var(--pad) 2.2rem;
+  }
+  .modal-tag{
+    font-family:var(--roman);font-size:.6rem;letter-spacing:.3em;
+    color:var(--gold-deep);text-transform:uppercase;
+  }
+  .modal-desc{color:var(--muted);font-size:.95rem;max-width:44ch}
+  .modal-cta{width:100%;margin-top:auto}
+  .modal-foot{
+    margin-top:.5rem;align-self:center;
+    font-family:var(--roman);font-size:.55rem;letter-spacing:.3em;color:var(--muted);
+  }
+  @media(min-width:820px){
+    .modal{align-items:center;padding:2rem}
+    .modal-panel{
+      max-width:960px;max-height:min(88vh,660px);
+      display:grid;grid-template-columns:1.15fr 1fr;
+      overflow:hidden;border-bottom:1px solid rgba(200,164,93,.5);
+    }
+    .modal-media{aspect-ratio:auto;height:100%;min-height:0}
+    .modal-body{padding:2.6rem 2.6rem 2.4rem;overflow-y:auto}
+  }
+
+  /* ═══ MÓDULO 10 · SOBRE NOSOTROS + MARCO DORADO ═════════════ */
+  .framed{--frame-off:clamp(10px,2.2vw,16px);position:relative}
+  .framed::after{
+    content:"";position:absolute;pointer-events:none;z-index:2;
+    inset:calc(-1 * var(--frame-off));
+    border:1px solid rgba(200,164,93,.55);
+  }
+  .about-grid{display:grid;gap:2.8rem;margin-top:clamp(2.5rem,6vh,4rem)}
+  .about-figure .parallax{aspect-ratio:4/5}
+  .about-copy{display:flex;flex-direction:column;gap:1.3rem;max-width:44ch;align-items:flex-start}
+  .about-sign{
+    font-family:var(--serif);font-style:italic;font-weight:500;
+    font-size:clamp(1.35rem,3vw,1.75rem);color:var(--text);line-height:1.3;
+  }
+  .about-figure figcaption,.cta-figure figcaption{
+    margin-top:1.4rem;font-family:var(--roman);font-size:.58rem;letter-spacing:.26em;color:var(--muted);
+    display:flex;justify-content:space-between;gap:1rem;
+  }
+  @media(min-width:960px){
+    .about-grid{grid-template-columns:repeat(12,1fr);gap:2.5rem;align-items:end}
+    .about-figure{grid-column:1/8}
+    .about-figure .parallax{aspect-ratio:16/11}
+    .about-copy{grid-column:9/13;padding-bottom:1.5rem}
+  }
+
+  /* Parallax genérico */
+  .parallax{position:relative;overflow:hidden}
+  .parallax>img,.parallax>video{
+    position:absolute;left:0;top:-15%;width:100%;height:130%;object-fit:cover;will-change:transform;
+  }
+  .cta-figure .parallax{width:100%;aspect-ratio:16/10;min-height:300px}
+  @media(min-width:960px){.cta-figure .parallax{aspect-ratio:21/9;min-height:400px}}
+  .cta-figure .parallax img,.cta-figure .parallax video{filter:none}
+  .cta-video{opacity:0;z-index:2;transition:opacity 1.4s ease}
+  .cta-video.is-ready{opacity:1}
+  .cta-figure.has-video img{opacity:0;transition:opacity 1.4s ease}
+
+  /* ═══ MÓDULO 11 · CONTADORES ROMANOS + DOCK ═════════════════ */
+  .counters{background:var(--marble-black);color:var(--text-inv);overflow:hidden;position:relative}
+  .counters-bg{position:absolute;inset:0;opacity:.12}
+  .counters-bg img{width:100%;height:100%;object-fit:cover;filter:none}
+  .counters-inner{position:relative;z-index:2;display:flex;flex-direction:column;gap:clamp(2.5rem,6vh,4rem)}
+  .stats{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--border-inv)}
+  .stat{padding:2.2rem 1.2rem 2rem;border-bottom:1px solid var(--border-inv)}
+  .stat:nth-child(odd){border-right:1px solid var(--border-inv)}
+  .stat-num{
+    display:block;font-family:var(--serif);font-weight:500;
+    font-size:clamp(2.7rem,7vw,4.8rem);line-height:1;min-height:1.05em;
+    color:var(--text-inv);
+  }
+  .stat-label{display:block;margin-top:.8rem;font-family:var(--roman);font-size:.58rem;letter-spacing:.32em;color:var(--muted-inv)}
+  @media(min-width:900px){
+    .stats{grid-template-columns:repeat(4,1fr)}
+    .stat{border-right:1px solid var(--border-inv);border-bottom:0;padding:2.8rem 1.6rem}
+    .stat:nth-child(odd){border-right:1px solid var(--border-inv)}
+    .stat:last-child{border-right:0}
+  }
+
+  /* Dock de redes sociales */
+  .dock-zone{margin-top:clamp(2.5rem,7vh,4rem);display:flex;flex-direction:column;align-items:center;gap:1.3rem}
+  .dock-cap{
+    display:flex;align-items:center;gap:1rem;
+    font-family:var(--roman);font-size:.58rem;letter-spacing:.34em;color:var(--muted-inv);
+  }
+  .dock-cap::before,.dock-cap::after{content:"";width:34px;height:1px;background:var(--gold);opacity:.6}
+  .dock{
+    display:inline-flex;
+    border:1px solid rgba(200,164,93,.45);
+    background:rgba(245,243,238,.04);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  }
+  .dock a{
+    position:relative;width:56px;height:52px;
+    display:grid;place-items:center;
+    color:var(--muted-inv);
+    transition:color .35s var(--ease),transform .2s var(--ease);
+  }
+  .dock a+.dock a{border-left:1px solid rgba(200,164,93,.22)}
+  .dock a::after{
+    content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);
+    width:0;height:1px;background:var(--gold);
+    transition:width .45s var(--ease);
+  }
+  .dock a:hover,.dock a:focus-visible{color:var(--gold)}
+  .dock a:hover::after,.dock a:focus-visible::after{width:100%}
+  .dock a:active{transform:scale(.94)}
+  .dock .ico{width:19px;height:19px;transition:transform .35s var(--ease)}
+  .dock a:hover .ico{transform:translateY(-2px)}
+  @media(max-width:480px){.dock a{width:54px;height:50px}}
+
+  /* ═══ MÓDULO 12 · CTA FINAL ═════════════════════════════════ */
+  .cta-final .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.6rem}
+  .cta-final .lead{max-width:40ch}
+  .cta-final .btn-row{margin-top:.8rem}
+  .cta-figure{margin-top:clamp(3.5rem,9vh,6rem);width:100%}
+
+  /* ═══ MÓDULO 13 · CLIENTES FELICES — FEED MASONRY ═══════════ */
+  .masonry{columns:2;column-gap:1rem}
+  @media(min-width:700px){.masonry{columns:3;column-gap:1.8rem}}
+  @media(min-width:1200px){.masonry{columns:4;column-gap:2rem}}
+  .client{
+    break-inside:avoid;-webkit-column-break-inside:avoid;
+    margin-bottom:2.4rem;cursor:pointer;
+  }
+  .client-media{position:relative;overflow:hidden}
+  .client-media img{width:100%;height:auto;transition:transform .9s var(--ease)}
+  .client:hover .client-media img,.client:focus-visible .client-media img{transform:scale(1.04)}
+  .client-num{
+    position:absolute;top:.75rem;left:.75rem;z-index:2;
+    font-family:var(--roman);font-size:.66rem;letter-spacing:.16em;color:var(--gold);
+    background:rgba(17,17,16,.55);padding:.38rem .68rem;
+    border:1px solid rgba(200,164,93,.4);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  }
+  .client-cap{
+    position:relative;padding-block:.8rem .5rem;
+    border-bottom:1px solid var(--border);
+  }
+  .client-cap::after{
+    content:"";position:absolute;left:0;bottom:-1px;width:100%;height:1px;
+    background:var(--gold);transform:scaleX(0);transform-origin:left;
+    transition:transform .6s var(--ease);
+  }
+  .client:hover .client-cap::after,.client:focus-visible .client-cap::after{transform:scaleX(1)}
+  .client-work{
+    display:block;font-family:var(--serif);font-weight:500;font-size:1rem;
+    text-transform:uppercase;letter-spacing:.02em;line-height:1.15;
+  }
+  .client-name{
+    display:block;margin-top:.28rem;
+    font-family:var(--roman);font-size:.56rem;letter-spacing:.26em;
+    color:var(--muted);text-transform:uppercase;
+  }
+
+  /* ═══ MÓDULO 14 · FOOTER ════════════════════════════════════ */
+  .site-footer{background:var(--marble-black);color:var(--text-inv)}
+  .footer-grid{display:grid;gap:3rem;padding-block:clamp(3.5rem,9vh,5.5rem)}
+  .footer-brand p{color:var(--muted-inv);font-size:.88rem;max-width:30ch;margin-top:1rem}
+  .footer-loc{display:flex;align-items:center;gap:.6rem;margin-top:1.6rem;font-family:var(--roman);font-size:.6rem;letter-spacing:.26em;color:var(--gold)}
+  .footer-h{font-family:var(--roman);font-size:.6rem;letter-spacing:.32em;color:var(--muted-inv);margin-bottom:1.3rem}
+  .footer-col a{display:flex;align-items:center;gap:.7rem;padding-block:.42rem;font-size:.88rem;color:var(--text-inv);transition:color .3s}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-col .ico{width:15px;height:15px;color:var(--gold)}
+  .footer-nav a{display:block;padding-block:.42rem;font-family:var(--roman);font-size:.68rem;letter-spacing:.22em;color:var(--text-inv);transition:color .3s}
+  .footer-nav a:hover{color:var(--gold)}
+  .footer-bottom{border-top:1px solid var(--border-inv);padding-block:1.6rem;display:flex;flex-direction:column;gap:1.2rem;align-items:flex-start}
+  .footer-gline{width:52px;height:1px;background:var(--gold)}
+  .footer-copy{font-family:var(--roman);font-size:.56rem;letter-spacing:.24em;color:var(--muted-inv)}
+  @media(min-width:820px){
+    .footer-grid{grid-template-columns:1.4fr 1fr 1fr;gap:4rem}
+    .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}
+  }
+
+  /* ═══ MÓDULO 15 · SISTEMA DE REVEALS ════════════════════════ */
+  .r{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
+  .r.in{opacity:1;transform:none}
+  .line{display:block;overflow:hidden;padding-bottom:.04em;margin-bottom:-.04em}
+  .line-in{display:block;transform:translateY(112%);transition:transform 1.15s var(--ease);transition-delay:var(--d,0s)}
+  .in .line-in{transform:none}
+  .r-img{opacity:0;transform:translateY(22px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+  .r-img img,.r-img video{transform:scale(1.04);transition:transform 1.4s var(--ease)}
+  .r-img.in{opacity:1;transform:none}
+  .r-img.in img,.r-img.in video{transform:scale(1)}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+    .r,.r-img{opacity:1;transform:none;clip-path:none}
+    .line-in{transform:none}
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Iconos SVG reutilizables -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M3 12h17M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+    <symbol id="i-gem" viewBox="0 0 12 12"><rect x="2.6" y="2.6" width="6.8" height="6.8" transform="rotate(45 6 6)"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z"/><path d="M9 8.6c.2 2.9 3.6 6.3 6.5 6.5l1.4-1.5-2.3-1.4-.9.9c-1-.5-2-1.4-2.4-2.4l.9-.9L9.8 7.5 9 8.6Z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+    <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  </svg>
+
+  <!-- ══════════════ HEADER ══════════════ -->
+  <header class="site-header" data-theme="dark">
+    <a class="brand" href="#top" aria-label="Marmolería — inicio">
+      <svg class="brand-gem" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.6" y="2.6" width="6.8" height="6.8" transform="rotate(45 6 6)"/></svg>
+      <span class="brand-name">MARMOLERÍA</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#materiales">MATERIALES</a>
+      <a href="#productos">PRODUCTOS</a>
+      <a href="#nosotros">NOSOTROS</a>
+      <a href="#clientes">CLIENTES</a>
+      <a href="#contacto">CONTACTO</a>
+    </nav>
+    <div class="header-right">
+      <a class="btn btn-ghost header-wa" data-wa="default">WHATSAPP <svg class="ico"><use href="#i-arrow"/></svg></a>
+      <button class="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú overlay mobile -->
+  <nav class="menu" id="menu" aria-hidden="true" aria-label="Menú">
+    <ul class="menu-list">
+      <li style="--i:0"><a href="#materiales"><span class="menu-num">I</span>MATERIALES</a></li>
+      <li style="--i:1"><a href="#productos"><span class="menu-num">II</span>PRODUCTOS</a></li>
+      <li style="--i:2"><a href="#nosotros"><span class="menu-num">III</span>NOSOTROS</a></li>
+      <li style="--i:3"><a href="#clientes"><span class="menu-num">IV</span>CLIENTES</a></li>
+      <li style="--i:4"><a href="#contacto"><span class="menu-num">V</span>CONTACTO</a></li>
+    </ul>
+    <div class="menu-foot">
+      <span class="menu-gline"></span>
+      <div class="menu-foot-row">
+        <a data-wa="default">WHATSAPP</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a href="mailto:hola@marmoleria.com">HOLA@MARMOLERIA.COM</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ══════════════ HERO CINEMATOGRÁFICO ══════════════ -->
+    <section class="hero grain" data-theme="dark" aria-label="Presentación">
+      <div class="hero-media">
+        <img src="assets/images/hero/hero.jpg"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/marmol-hero/1920/1080.jpg';"
+             fetchpriority="high" decoding="async"
+             alt="Detalle de un bloque de mármol con veta natural">
+      </div>
+
+      <video class="hero-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1">
+        <source src="assets/videos/video-Hero.mp4" type="video/mp4">
+        <source src="assets/videos/hero.mp4"       type="video/mp4">
+        <source src="assets/videos/hero.webm"      type="video/webm">
+      </video>
+
+      <div class="hero-scrim"></div>
+
+      <div class="hero-content wrap">
+        <p class="hero-eyebrow">TALLER DE PIEDRA — BUENOS AIRES</p>
+        <h1 class="display display--hero" id="hero-title">
+          <span class="line"><span class="line-in" style="--d:.05s">MÁRMOL</span></span>
+          <span class="line"><span class="line-in em t" style="--d:.16s">QUE DEFINE</span></span>
+          <span class="line"><span class="line-in" style="--d:.27s">ESPACIOS<span class="dot">.</span></span></span>
+        </h1>
+        <p class="hero-sub r" style="--d:.55s">MESADAS · ESCALERAS · BAÑOS · REVESTIMIENTOS</p>
+        <div class="btn-row r" style="--d:.7s">
+          <a class="btn btn-solid" href="#materiales">DESCUBRIR PRODUCTOS <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" data-wa="default">HABLAR POR WHATSAPP</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ MARQUESINA INFINITA ══════════════ -->
+    <div class="marquee" aria-label="Especialidades">
+      <div class="mq-track" id="mq-track"></div>
+    </div>
+
+    <!-- ══════════════ I — PRODUCTOS DESTACADOS (GALERÍA INFINITA) ══════════════ -->
+    <section class="section" id="materiales" data-theme="light">
+      <div class="wrap sec-head">
+        <div class="head-stack">
+          <p class="chapter r"><b>I</b>— MATERIA · DESTACADOS</p>
+          <h2 class="display display--1 r-head">
+            <span class="line"><span class="line-in">NUESTRA</span></span>
+            <span class="line"><span class="line-in em t" style="--d:.1s">MATERIA PRIMA<span class="dot">.</span></span></span>
+          </h2>
+        </div>
+        <p class="lead r" style="--d:.2s">Piedras naturales y superficies de ingeniería, elegidas bloque por bloque. Tocá un material para consultar disponibilidad y precio.</p>
+      </div>
+      <div class="gallery" id="gallery" aria-label="Materiales destacados"></div>
+    </section>
+
+    <!-- ══════════════ II — PROCESO · STACKED REVEAL (3 IMÁGENES) ══════════════ -->
+    <section class="stack" id="proceso" data-theme="dark">
+      <div class="stack-head">
+        <p class="chapter r"><b>II</b>— PROCESO</p>
+        <h2 class="display display--1 r-head">
+          <span class="line"><span class="line-in">DEL BLOQUE</span></span>
+          <span class="line"><span class="line-in em t" style="--d:.1s">AL ESPACIO<span class="dot">.</span></span></span>
+        </h2>
+      </div>
+      <div class="stack-track" id="stack-track">
+        <div class="stack-sticky grain">
+
+          <!-- 01 · Jabonera de mármol (base) -->
+          <div class="stack-img img-tone">
+            <img src="assets/images/proceso/Jabonera de marmol.png"
+                 onerror="this.onerror=null;this.src='https://picsum.photos/seed/piedra-bloque/1600/1000.jpg';"
+                 loading="lazy" decoding="async"
+                 alt="Jabonera de mármol">
+            <span class="stack-label"><b>01</b>JABONERA DE MÁRMOL</span>
+          </div>
+
+          <!-- 02 · Escalera de mármol (sube y cubre a la 01) -->
+          <div class="stack-img stack-img--over img-tone" id="stack-b">
+            <img src="assets/images/proceso/Escalera de marmol.png"
+                 onerror="this.onerror=null;this.src='https://picsum.photos/seed/taller-corte/1600/1000.jpg';"
+                 loading="lazy" decoding="async"
+                 alt="Escalera de mármol"
+                 id="stack-b-img">
+            <span class="stack-label"><b>02</b>ESCALERA DE MÁRMOL</span>
+          </div>
+
+          <!-- 03 · Mesada de mármol (sube y cubre a la 02) -->
+          <div class="stack-img stack-img--over img-tone" id="stack-c">
+            <img src="assets/images/proceso/Mesada-Marmol.png"
+                 onerror="this.onerror=null;this.src='https://picsum.photos/seed/interior-obra/1600/1000.jpg';"
+                 loading="lazy" decoding="async"
+                 alt="Mesada de mármol"
+                 id="stack-c-img">
+            <span class="stack-label"><b>03</b>MESADA DE MÁRMOL</span>
+          </div>
+
+          <!-- Texto que entra durante la transición final -->
+          <div class="stack-caption" id="stack-caption">
+            <h2 class="display display--stack">
+              <span class="line"><span class="line-in">TRANSFORMAMOS</span></span>
+              <span class="line"><span class="line-in em t" style="--d:.12s">MATERIA EN</span></span>
+              <span class="line"><span class="line-in" style="--d:.24s">ARQUITECTURA<span class="dot">.</span></span></span>
+            </h2>
+            <span class="gold-line"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ III — TODOS LOS PRODUCTOS (TABS + GRILLA) ══════════════ -->
+    <section class="section" id="productos" data-theme="light">
+      <div class="wrap sec-head">
+        <div class="head-stack">
+          <p class="chapter r"><b>III</b>— CATÁLOGO</p>
+          <h2 class="display display--1 r-head">
+            <span class="line"><span class="line-in">TODOS LOS</span></span>
+            <span class="line"><span class="line-in em t" style="--d:.1s">PRODUCTOS<span class="dot">.</span></span></span>
+          </h2>
+        </div>
+        <p class="lead r" style="--d:.2s">Explorá el catálogo completo por categoría. Tocá cualquier material para verlo en detalle y consultar disponibilidad, formatos y precio.</p>
+      </div>
+
+      <div class="wrap">
+        <div class="tabs r" id="tabs" role="tablist" aria-label="Categorías de productos"></div>
+        <div class="pgrid" id="pgrid" aria-live="polite"></div>
+        <div class="pmore">
+          <p class="pcount" id="pcount"></p>
+          <button class="btn btn-ghost" id="pmore-btn">VER MÁS <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ IV — SOBRE NOSOTROS ══════════════ -->
+    <section class="section" id="nosotros" data-theme="light">
+      <div class="wrap">
+        <div class="head-stack">
+          <p class="chapter r"><b>IV</b>— NOSOTROS</p>
+          <h2 class="display display--1 r-head">
+            <span class="line"><span class="line-in">MANOS,</span></span>
+            <span class="line"><span class="line-in em t" style="--d:.1s">PIEDRA</span></span>
+            <span class="line"><span class="line-in" style="--d:.2s">Y TIEMPO<span class="dot">.</span></span></span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <!-- Imagen protagonista con parallax + marco dorado offset (.framed) -->
+          <figure class="about-figure img-tone">
+            <div class="framed">
+              <div class="parallax r-img" data-parallax="0.12">
+                <img src="assets/images/nosotros/El imperioo marmoleria.jpeg"
+                     onerror="this.onerror=null;this.src='assets/images/nosotros/taller.jpg';"
+                     loading="eager" decoding="async"
+                     alt="El Imperio Marmolería - Nuestro Taller">
+              </div>
+            </div>
+            <figcaption><span>EL TALLER</span><span>BUENOS AIRES</span></figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <span class="gold-line r"></span>
+            <p class="lead r" style="--d:.1s">Somos un taller, no una fábrica. Detrás de cada placa hay tres generaciones que aprendieron el oficio mirando trabajar a los que llegaron antes.</p>
+            <p class="lead r" style="--d:.2s">Medimos, cortamos, pulimos e instalamos. Cada proyecto pasa por nuestras manos — del bloque en cantera al último milímetro en obra.</p>
+            <p class="about-sign r" style="--d:.3s">Nada de eso se delega.</p>
+            <a class="link-u r" style="--d:.4s" data-wa="taller">HABLAR CON EL TALLER <svg class="ico"><use href="#i-arrow"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contadores romanos + dock de redes (continuación de NOSOTROS) -->
+    <section class="section counters grain on-dark" data-theme="dark">
+      <div class="counters-bg parallax" data-parallax="0.08" aria-hidden="true">
+        <img src="assets/images/nosotros/textura-fondo.jpg"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/marmol-negro-tex/1600/900.jpg';"
+             loading="lazy" decoding="async" alt="">
+      </div>
+      <div class="wrap counters-inner">
+        <div class="head-stack">
+          <p class="chapter r"><b>IV</b>— NOSOTROS · LOS NÚMEROS</p>
+          <h2 class="display display--1 r-head">
+            <span class="line"><span class="line-in">EXPERIENCIA</span></span>
+            <span class="line"><span class="line-in em t" style="--d:.1s">QUE PERDURA<span class="dot">.</span></span></span>
+          </h2>
+        </div>
+
+        <div class="stats r" style="--d:.15s">
+          <div class="stat">
+            <span class="stat-num" data-roman="15">XV</span>
+            <span class="stat-label">AÑOS DE EXPERIENCIA</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-roman="500">D</span>
+            <span class="stat-label">PROYECTOS REALIZADOS</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-roman="30">XXX</span>
+            <span class="stat-label">TIPOS DE MATERIALES</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-roman="3">III</span>
+            <span class="stat-label">GENERACIONES</span>
+          </div>
+        </div>
+
+        <!-- Dock de redes sociales -->
+        <div class="dock-zone r" style="--d:.25s">
+          <p class="dock-cap">SEGUINOS</p>
+          <nav class="dock" aria-label="Redes sociales">
+            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+            <a data-wa="default" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ico"><use href="#i-tt"/></svg></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ V — CLIENTES FELICES (FEED MASONRY) ══════════════ -->
+    <section class="section" id="clientes" data-theme="light">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="head-stack">
+            <p class="chapter r"><b>V</b>— CLIENTES</p>
+            <h2 class="display display--1 r-head">
+              <span class="line"><span class="line-in">NUESTROS</span></span>
+              <span class="line"><span class="line-in em t" style="--d:.1s">CLIENTES</span></span>
+              <span class="line"><span class="line-in" style="--d:.2s">FELICES<span class="dot">.</span></span></span>
+            </h2>
+          </div>
+          <p class="lead r" style="--d:.2s">Obra real, casas reales. Un recorrido por los proyectos que ya viven en hogares de quienes confiaron en el taller — tocá cualquier trabajo para consultar algo similar.</p>
+        </div>
+
+        <div class="masonry" id="clients-feed" aria-label="Trabajos para clientes"></div>
+      </div>
+    </section>
+
+    <!-- ══════════════ VI — CONTACTO · CTA FINAL ══════════════ -->
+    <section class="section cta-final grain on-dark" id="contacto" data-theme="dark" style="position:relative; overflow:hidden; padding-block:10rem 12rem;">
+      <div class="hero-media">
+        <img src="assets/images/contacto/marmol-final.jpg"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/marmol-final/1920/820.jpg';"
+             loading="lazy" decoding="async"
+             style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5);"
+             alt="Detalles de superficie de mármol pulido">
+        
+        <video class="cta-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5);">
+          <source src="assets/videos/video-cta.mp4" type="video/mp4">
+          <source src="assets/videos/cta.mp4"       type="video/mp4">
+          <source src="assets/videos/cta.webm"      type="video/webm">
+        </video>
+      </div>
+
+      <div class="hero-scrim"></div>
+
+      <div class="wrap" style="position:relative; z-index:4;">
+        <p class="chapter chapter--center r"><b>VI</b>— CONTACTO</p>
+        <h2 class="display display--cta r-head">
+          <span class="line"><span class="line-in">¿TENÉS UN</span></span>
+          <span class="line"><span class="line-in em t" style="--d:.1s">PROYECTO</span></span>
+          <span class="line"><span class="line-in" style="--d:.2s">EN MENTE<span class="dot">?</span></span></span>
+        </h2>
+        <p class="lead r" style="--d:.25s">Contanos qué necesitás y te ayudamos a encontrar el material ideal. Respondemos el mismo día.</p>
+        <div class="btn-row r" style="--d:.35s">
+          <a class="btn btn-solid" data-wa="proyecto">HABLAR POR WHATSAPP <svg class="ico"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#productos">VER PRODUCTOS</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="site-footer grain on-dark" data-theme="dark">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top">
+          <svg class="brand-gem" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.6" y="2.6" width="6.8" height="6.8" transform="rotate(45 6 6)"/></svg>
+          <span class="brand-name">MARMOLERÍA</span>
+        </a>
+        <p>Superficies de piedra a medida. Diseño, corte e instalación en mármol, granito y cuarzo.</p>
+        <p class="footer-loc"><svg class="ico"><use href="#i-pin"/></svg> BUENOS AIRES — ARGENTINA</p>
+      </div>
+      <nav class="footer-col footer-nav" aria-label="Navegación footer">
+        <h4 class="footer-h">NAVEGAR</h4>
+        <a href="#materiales">MATERIALES</a>
+        <a href="#productos">PRODUCTOS</a>
+        <a href="#nosotros">NOSOTROS</a>
+        <a href="#clientes">CLIENTES</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
+      <div class="footer-col">
+        <h4 class="footer-h">CONTACTO</h4>
+        <a data-wa="default" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> WhatsApp</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg> Instagram</a>
+        <a href="mailto:hola@marmoleria.com"><svg class="ico"><use href="#i-mail"/></svg> hola@marmoleria.com</a>
+        <p style="margin-top:1.4rem;font-size:.8rem;color:var(--muted-inv)">Lun a Vie 8–18 h · Sáb 9–13 h</p>
+      </div>
+    </div>
+    <div class="wrap footer-bottom">
+      <span class="footer-gline"></span>
+      <p class="footer-copy">© 2026 — TODOS LOS DERECHOS RESERVADOS</p>
+      <p class="footer-copy">MÁRMOL · GRANITO · CUARZO</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════ MODAL DE PRODUCTO ══════════════ -->
+  <div class="modal grain" id="product-modal" role="dialog" aria-modal="true"
+       aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal-scrim" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" type="button" data-close aria-label="Cerrar detalle">
+        <svg class="ico"><use href="#i-close"/></svg>
+      </button>
+      <figure class="modal-media img-tone">
+        <img id="modal-img" src="" alt="" decoding="async">
+        <span class="modal-num" id="modal-num">I</span>
+      </figure>
+      <div class="modal-body">
+        <p class="modal-tag" id="modal-tag"></p>
+        <h3 class="display display--modal" id="modal-title"></h3>
+        <span class="gold-line"></span>
+        <p class="modal-desc" id="modal-desc"></p>
+        <a class="btn btn-solid modal-cta" id="modal-cta" target="_blank" rel="noopener">
+          CONSULTAR POR WHATSAPP <svg class="ico"><use href="#i-arrow"/></svg>
+        </a>
+        <p class="modal-foot">MEDIMOS · CORTAMOS · INSTALAMOS</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       JS — Lógica y datos de la aplicación
+       ══════════════════════════════════════════════════════════════ -->
+  <script>
+  'use strict';
+
+  /* ═══ 00 · CONFIGURACIÓN ════════════════════════════════════ */
+  const WHATSAPP_NUMBER = '5491100000000';
+
+  const WA_MESSAGES = {
+    default:  'Hola, quisiera hacer una consulta sobre vuestros trabajos.',
+    proyecto: 'Hola, quisiera consultar por un proyecto.',
+    taller:   'Hola, quisiera conocer más sobre el taller y cómo trabajan.'
+  };
+  const waURL = msg =>
+    `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+
+  // I — Materiales destacados (carpeta assets/images/destacados/ y catálogo)
+  const MATERIALS = [
+    { n:'CALACATTA ORO', t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/calacatta-oro.jpg',    s:'mat-calacatta',   a:'3/4' },
+    { n:'CARRARA',       t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/carrara-c.jpg',        s:'mat-carrara',     a:'4/5' },
+    { n:'NEGRO MARQUINA',t:'MÁRMOL · ESPAÑA',      img:'assets/images/catalogo/negro-marquina.jpg',   s:'mat-marquina',    a:'1/1' },
+    { n:'TRAVERTINO',    t:'PIEDRA · TÍVOLI',      img:'assets/images/catalogo/travertino-romano.jpg', s:'mat-travertino',  a:'3/4' },
+    { n:'GRANITO NEGRO', t:'GRANITO · BRASIL',     img:'assets/images/catalogo/negro-absoluto.jpg',    s:'mat-granito',     a:'4/5' },
+    { n:'STATUARIO',     t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/statuario-venato.jpg', s:'mat-statuario',   a:'3/4' },
+    { n:'CUARZO',        t:'SUPERFICIE · A MEDIDA',img:'assets/images/catalogo/calacatta.jpg',        s:'mat-cuarzo',      a:'1/1' },
+    { n:'ÓNICE',         t:'PIEDRA NATURAL',       img:'assets/images/catalogo/onice-miel.jpg',        s:'mat-onice',       a:'4/5' }
+  ];
+
+  const MARQUEE_WORDS = ['MÁRMOL','GRANITO','CUARZO','REVESTIMIENTOS','DISEÑO','PRECISIÓN','ARTESANÍA'];
+
+  // VI — Clientes felices (carpeta assets/images/clientes/)
+  const CLIENTS = [
+    { work:'MESADA CALACATTA',     who:'FAMILIA BERTOTTI', img:'assets/images/clientes/mesada-calacatta.jpg',     seed:'cli-mesada',    ar:'3/4' },
+    { work:'ESCALERA TRAVERTINO',  who:'CASA DUARTE',      img:'assets/images/clientes/escalera-travertino.jpg',  seed:'cli-escalera',  ar:'4/5' },
+    { work:'BAÑO NEGRO MARQUINA',  who:'M. ACUÑA',         img:'assets/images/clientes/bano-negro-marquina.jpg',  seed:'cli-bano',      ar:'1/1' },
+    { work:'REVESTIMIENTO CARRARA',who:'ESTUDIO VEGA',     img:'assets/images/clientes/revestimiento-carrara.jpg',seed:'cli-revest',    ar:'3/4' },
+    { work:'COCINA DE CUARZO',     who:'FAMILIA SOSA',     img:'assets/images/clientes/cocina-cuarzo.jpg',        seed:'cli-cocina',    ar:'4/5' },
+    { work:'VANITY STATUARIO',     who:'L. FERRER',        img:'assets/images/clientes/vanity-statuario.jpg',     seed:'cli-vanity',    ar:'1/1' },
+    { work:'ISLA DE GRANITO',      who:'CASA IBARLUCEA',   img:'assets/images/clientes/isla-granito.jpg',         seed:'cli-isla',      ar:'3/4' },
+    { work:'MURAL DE ÓNICE',       who:'HOTEL AURA',       img:'assets/images/clientes/mural-onice.jpg',          seed:'cli-mural',     ar:'4/5' }
+  ];
+
+  // III — Catálogo completo (carpeta assets/images/catalogo/)
+  const PAGE_SIZE = 6;
+  const PRODUCTS = [
+    // MÁRMOL
+    { name:'CALACATTA ORO',     cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/calacatta-oro.jpg', seed:'p-calacatta',
+      desc:'El mármol más codiciado del mundo: fondo blanco profundo cruzado por vetas doradas. Protagonista absoluto de mesadas centrales.' },
+    { name:'CARRARA C',         cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/carrara-c.jpg', seed:'p-carrara',
+      desc:'Blanco perlado con veta gris suave. El clásico atemporal de la arquitectura italiana, luminoso y versátil.' },
+    { name:'STATUARIO VENATO',  cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/statuario-venato.jpg', seed:'p-statuario', note:'Libro abierto a pedido',
+      desc:'Fondo cristalino con vetas profundas y dramáticas. Reservado para piezas donde la piedra es la protagonista del espacio.' },
+    { name:'NEGRO MARQUINA',    cat:'MÁRMOL', tag:'MÁRMOL · ESPAÑA', img:'assets/images/catalogo/negro-marquina.jpg', seed:'p-marquina',
+      desc:'Negro absoluto con vetas blancas eléctricas. Contraste puro para baños, detalles de autor y superficies de impacto.' },
+    { name:'TRAVERTINO ROMANO', cat:'MÁRMOL', tag:'PIEDRA · TÍVOLI', img:'assets/images/catalogo/travertino-romano.jpg', seed:'p-travertino', note:'Corte cruzado o a favor',
+      desc:'La piedra con la que se construyó Roma. Porosidad cálida y textura natural, disponible en corte a favor o cruzado.' },
+    { name:'VERDE ALPI',        cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/verde-alpi.jpg', seed:'p-verde',
+      desc:'Verde profundo con movimiento mineral. Una rareza de cantera para piezas de colección y detalles únicos.' },
+    { name:'ÓNICE MIEL',        cat:'MÁRMOL', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/onice-miel.jpg', seed:'p-onice', note:'Retroiluminable',
+      desc:'Translúcido y cálido. Retroiluminado, convierte una pared en una lámpara de piedra. Para momentos arquitectónicos irrepetibles.' },
+    // GRANITO
+    { name:'NEGRO ABSOLUTO',    cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/negro-absoluto.jpg', seed:'p-negroabs', note:'Pulido espejo',
+      desc:'Granito uniforme y extremadamente resistente. Pulido espejo que no pierde brillo con el uso diario más exigente.' },
+    { name:'BLANCO SIENA',      cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/blanco-siena.jpg', seed:'p-siena',
+      desc:'Blanco cremoso de grano fino. El equilibrio justo entre calidez y rendimiento para cocinas de uso intenso.' },
+    { name:'GRIS PERLA',        cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/gris-perla.jpg', seed:'p-perla',
+      desc:'Gris entreverado, sobrio y contemporáneo. Rendimiento de granito con una paleta que no compite con el entorno.' },
+    { name:'CAFÉ IMPERIAL',     cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/cafe-imperial.jpg', seed:'p-cafe',
+      desc:'Marrón profundo con destellos dorados. Cálido, noble e inagotable — un clásico que nunca cansa.' },
+    // CUARZO
+    { name:'BLANCO PURO',       cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/blanco-puro.jpg', seed:'p-cblanco', note:'No poroso · antibacteriano',
+      desc:'Superficie de ingeniería no porosa y antibacteriana. Impecable de por vida, con mantenimiento prácticamente nulo.' },
+    { name:'CALACATTA',         cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/calacatta.jpg', seed:'p-ccala',
+      desc:'La estética del Calacatta con la performance del cuarzo: veta definida, blanco absoluto y uso diario sin cuidados.' },
+    { name:'GRIS CONCRETE',     cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/gris-concrete.jpg', seed:'p-concrete',
+      desc:'Gris urbano de terminación mate. Para cocinas de línea arquitectónica donde el material acompaña en silencio.' },
+    { name:'NEGRO STELLAR',     cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/negro-stellar.jpg', seed:'p-nero',
+      desc:'Negro con partículas de espejo que atrapan la luz. Dramático de día, espectacular bajo luz cálida.' },
+    // REVESTIMIENTOS
+    { name:'TRAVERTINO A LIBRO',cat:'REVESTIMIENTOS', tag:'PIEDRA · TÍVOLI', img:'assets/images/catalogo/travertino-a-libro.jpg', seed:'p-rev-trav', note:'Continuidad de veta',
+      desc:'Revestimiento con continuidad de veta: cada placa continúa a la anterior como si el muro fuera un solo bloque.' },
+    { name:'PIEDRA PARÍS',      cat:'REVESTIMIENTOS', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/piedra-paris.jpg', seed:'p-rev-paris',
+      desc:'Piedra natural en formato chapa: liviana de instalar, real y eterna. Textura mineral para muros completos.' },
+    { name:'CRETA ROMA',        cat:'REVESTIMIENTOS', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/creta-roma.jpg', seed:'p-rev-creta',
+      desc:'Textura de calcáreo romano, mate y mineral. Muros con silencio, materia y profundidad táctil.' }
+  ];
+  PRODUCTS.forEach((p, i) => { p.idx = i; });
+
+  /* ═══ UTILIDADES ═════════════════════════════════════════════ */
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const clamp01 = v => Math.min(1, Math.max(0, v));
+
+  const ROMAN_MAP = [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],
+                     [50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']];
+  const toRoman = n => {
+    if(n <= 0) return '·';
+    let s = '';
+    for(const [v, r] of ROMAN_MAP){ while(n >= v){ s += r; n -= v; } }
+    return s;
+  };
+
+  /* ═══ 01 · WHATSAPP ═════════════════════════════════════════ */
+  (function initWhatsApp(){
+    document.querySelectorAll('[data-wa]').forEach(a => {
+      const msg = WA_MESSAGES[a.dataset.wa] || WA_MESSAGES.default;
+      a.href = waURL(msg);
+      a.target = '_blank';
+      a.rel = 'noopener';
+    });
+  })();
+
+  /* ═══ 02 · MARQUESINA INFINITA ══════════════════════════════ */
+  (function buildMarquee(){
+    const track = document.getElementById('mq-track');
+    if(!track) return;
+    const gem = `<svg class="mq-gem" viewBox="0 0 10 10" aria-hidden="true"><rect x="2.6" y="2.6" width="4.8" height="4.8" transform="rotate(45 5 5)"/></svg>`;
+    const groupHTML =
+      MARQUEE_WORDS.map(w => `<span class="mq-item">${w}</span>${gem}`).join('');
+    track.innerHTML =
+      `<div class="mq-group">${groupHTML}</div>` +
+      `<div class="mq-group" aria-hidden="true">${groupHTML}</div>`;
+  })();
+
+  /* ═══ 03 · PRODUCTOS DESTACADOS ══════════════════════════════ */
+  (function buildGallery(){
+    const gallery = document.getElementById('gallery');
+    if(!gallery) return;
+
+    const itemHTML = (m, i) => `
+      <figure class="mat" role="button" tabindex="0"
+              data-wa-material="${m.n}"
+              aria-label="Consultar por ${m.n}">
+        <div class="mat-media img-tone">
+          <img src="${m.img}"
+               onerror="this.onerror=null;this.src='https://picsum.photos/seed/${m.s}/700/875.jpg';"
+               loading="lazy" decoding="async"
+               style="aspect-ratio:${m.a}" alt="Superficie de ${m.n}">
+        </div>
+        <figcaption class="mat-cap">
+          <span class="mat-num">${String(i+1).padStart(2,'0')}</span>
+          <span class="mat-name">${m.n}</span>
+          <span class="mat-tag">${m.t}</span>
+        </figcaption>
+      </figure>`;
+
+    const groupHTML = MATERIALS.map(itemHTML).join('');
+    gallery.innerHTML =
+      `<div class="g-track"><div class="g-group">${groupHTML}</div>` +
+      `<div class="g-group" aria-hidden="true">${groupHTML}</div></div>`;
+
+    const ask = name =>
+      window.open(waURL(`Hola, quisiera consultar por este material: ${name}.`), '_blank', 'noopener');
+
+    gallery.addEventListener('click', e => {
+      const mat = e.target.closest('.mat');
+      if(mat) ask(mat.dataset.waMaterial);
+    });
+    gallery.addEventListener('keydown', e => {
+      if(e.key !== 'Enter' && e.key !== ' ') return;
+      const mat = e.target.closest('.mat');
+      if(mat){ e.preventDefault(); ask(mat.dataset.waMaterial); }
+    });
+  })();
+
+  /* ═══ 04 · CLIENTES FELICES ═════════════════════════════════ */
+  (function buildClients(){
+    const feed = document.getElementById('clients-feed');
+    if(!feed) return;
+
+    const itemHTML = (c, i) => {
+      const [w, h] = c.ar.split('/').map(Number);
+      const ih = Math.round(600 * h / w);
+      return `
+      <figure class="client r" role="button" tabindex="0"
+              data-work="${c.work}" data-who="${c.who}"
+              aria-label="Trabajo ${c.work} para ${c.who} — consultar algo similar"
+              style="--d:${(i % 4) * .08}s">
+        <div class="client-media img-tone">
+          <span class="client-num">${toRoman(i + 1)}</span>
+          <img src="${c.img}"
+               onerror="this.onerror=null;this.src='https://picsum.photos/seed/${c.seed}/600/${ih}.jpg';"
+               loading="lazy" decoding="async"
+               style="aspect-ratio:${c.ar}" alt="Trabajo de ${c.work} realizado para ${c.who}">
+        </div>
+        <figcaption class="client-cap">
+          <span class="client-work">${c.work}</span>
+          <span class="client-name">${c.who}</span>
+        </figcaption>
+      </figure>`;
+    };
+
+    feed.innerHTML = CLIENTS.map(itemHTML).join('');
+
+    const ask = (work, who) =>
+      window.open(waURL(`Hola, vi el trabajo "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener');
+
+    feed.addEventListener('click', e => {
+      const c = e.target.closest('.client');
+      if(c) ask(c.dataset.work, c.dataset.who);
+    });
+    feed.addEventListener('keydown', e => {
+      if(e.key !== 'Enter' && e.key !== ' ') return;
+      const c = e.target.closest('.client');
+      if(c){ e.preventDefault(); ask(c.dataset.work, c.dataset.who); }
+    });
+  })();
+
+  /* ═══ 05 · MODAL DE PRODUCTO ════════════════════════════════ */
+  const modal       = document.getElementById('product-modal');
+  const modalImg    = document.getElementById('modal-img');
+  const modalNum    = document.getElementById('modal-num');
+  const modalTag    = document.getElementById('modal-tag');
+  const modalTitle  = document.getElementById('modal-title');
+  const modalDesc   = document.getElementById('modal-desc');
+  const modalCta    = document.getElementById('modal-cta');
+  const modalClose  = modal?.querySelector('.modal-close');
+  let   lastFocus   = null;
+
+  function openProductModal(idx){
+    const p = PRODUCTS[idx];
+    if(!p || !modal) return;
+    modalImg.classList.remove('loaded');
+    modalImg.onerror = function(){
+      this.onerror = null;
+      this.src = `https://picsum.photos/seed/${p.seed}/1200/900.jpg`;
+    };
+    modalImg.src = p.img;
+    modalImg.alt = `Superficie de ${p.name}`;
+    if(modalImg.complete && modalImg.naturalWidth) modalImg.classList.add('loaded');
+    modalNum.textContent  = toRoman(idx + 1);
+    modalTag.textContent  = p.tag;
+    modalTitle.textContent = p.name;
+    modalDesc.textContent = p.desc || 'Material seleccionado bloque por bloque en nuestro taller.';
+    modalCta.href = waURL(`Hola, quisiera consultar por este material: ${p.name}.`);
+    
+    lastFocus = document.activeElement;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modalClose?.focus();
+  }
+
+  function closeProductModal(){
+    if(!modal || !modal.classList.contains('open')) return;
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+    setTimeout(() => modal.setAttribute('aria-hidden', 'true'), 460);
+    lastFocus?.focus?.();
+  }
+
+  if(modal){
+    modal.addEventListener('click', e => {
+      if(e.target.closest('[data-close]')) closeProductModal();
+    });
+    addEventListener('keydown', e => {
+      if(e.key === 'Escape') closeProductModal();
+    });
+    modalImg.addEventListener('load', () => modalImg.classList.add('loaded'));
+    modal.addEventListener('keydown', e => {
+      if(e.key !== 'Tab') return;
+      const f = [...modal.querySelectorAll('button, a[href]')]
+        .filter(el => el.offsetParent !== null);
+      if(!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if(e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if(!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    });
+  }
+
+  /* ═══ 06 · CATÁLOGO — TABS + GRILLA + VER MÁS ═══════════════ */
+  (function initCatalog(){
+    const tabsEl = document.getElementById('tabs');
+    const grid   = document.getElementById('pgrid');
+    const countEl= document.getElementById('pcount');
+    const moreBtn= document.getElementById('pmore-btn');
+    if(!tabsEl || !grid) return;
+
+    const TAB_ALL = 'TODOS';
+    const cats = [...new Set(PRODUCTS.map(p => p.cat))];
+    const state = { filter: TAB_ALL, shown: PAGE_SIZE, timer: null };
+
+    const itemHTML = (p, i) => `
+      <figure class="mat" role="button" tabindex="0"
+              data-idx="${p.idx}"
+              aria-label="Ver detalle de ${p.name}"
+              style="--d:${(i % PAGE_SIZE) * .06}s">
+        <div class="mat-media img-tone">
+          <img src="${p.img}"
+               onerror="this.onerror=null;this.src='https://picsum.photos/seed/${p.seed}/600/800.jpg';"
+               loading="lazy" decoding="async"
+               alt="Superficie de ${p.name}">
+        </div>
+        <figcaption class="mat-cap">
+          <span class="mat-num">${String(i+1).padStart(2,'0')}</span>
+          <span class="mat-name">${p.name}</span>
+          <span class="mat-tag">${p.tag}</span>
+        </figcaption>
+        ${p.note ? `<p class="prod-note">${p.note}</p>` : ''}
+      </figure>`;
+
+    tabsEl.innerHTML = [TAB_ALL, ...cats].map(c =>
+      `<button class="tab" role="tab" aria-selected="${c === state.filter}">${c}</button>`
+    ).join('');
+    const tabBtns = [...tabsEl.querySelectorAll('.tab')];
+
+    tabBtns.forEach(btn =>
+      btn.addEventListener('click', () => switchTab(btn.textContent.trim(), btn)));
+
+    tabsEl.addEventListener('keydown', e => {
+      if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      e.preventDefault();
+      const i = tabBtns.indexOf(document.activeElement);
+      if(i < 0) return;
+      const n = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : tabBtns.length - 1)) % tabBtns.length];
+      n.focus(); n.click();
+    });
+
+    function switchTab(cat, btn){
+      if(state.filter === cat) return;
+      state.filter = cat;
+      state.shown = PAGE_SIZE;
+      tabBtns.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
+      grid.classList.add('switching');
+      clearTimeout(state.timer);
+      state.timer = setTimeout(() => {
+        render();
+        grid.classList.remove('switching');
+      }, 300);
+    }
+
+    const filtered = () =>
+      state.filter === TAB_ALL ? PRODUCTS : PRODUCTS.filter(p => p.cat === state.filter);
+
+    function render(){
+      const list = filtered();
+      const slice = list.slice(0, state.shown);
+      grid.innerHTML = slice.length
+        ? slice.map(itemHTML).join('')
+        : `<p class="pempty">SIN PRODUCTOS — PRÓXIMAMENTE</p>`;
+      updateMeta(list, slice.length);
+    }
+
+    moreBtn.addEventListener('click', () => {
+      const list = filtered();
+      const from = state.shown;
+      state.shown += PAGE_SIZE;
+      const slice = list.slice(from, state.shown);
+      grid.insertAdjacentHTML('beforeend',
+        slice.map((p, i) => itemHTML(p, from + i)).join(''));
+      updateMeta(list, state.shown);
+    });
+
+    function updateMeta(list, shown){
+      countEl.innerHTML =
+        `MOSTRANDO <b>${String(Math.min(shown, list.length)).padStart(2,'0')}</b> DE <b>${String(list.length).padStart(2,'0')}</b>`;
+      moreBtn.style.display = shown >= list.length ? 'none' : '';
+    }
+
+    grid.addEventListener('click', e => {
+      const m = e.target.closest('.mat');
+      if(m) openProductModal(+m.dataset.idx);
+    });
+    grid.addEventListener('keydown', e => {
+      if(e.key !== 'Enter' && e.key !== ' ') return;
+      const m = e.target.closest('.mat');
+      if(m){ e.preventDefault(); openProductModal(+m.dataset.idx); }
+    });
+
+    render();
+  })();
+
+  /* ═══ 07 · MENÚ MOBILE ══════════════════════════════════════ */
+  (function initMenu(){
+    const burger = document.querySelector('.burger');
+    const menu   = document.getElementById('menu');
+    const header = document.querySelector('.site-header');
+    if(!burger || !menu) return;
+
+    const setOpen = open => {
+      burger.classList.toggle('open', open);
+      menu.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+      burger.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+      menu.setAttribute('aria-hidden', !open);
+      document.body.style.overflow = open ? 'hidden' : '';
+      header.dataset.theme = open ? 'dark' : header.dataset.theme;
+    };
+
+    burger.addEventListener('click', () => setOpen(!menu.classList.contains('open')));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setOpen(false)));
+    addEventListener('keydown', e => {
+      if(e.key === 'Escape' && menu.classList.contains('open')) setOpen(false);
+    });
+  })();
+
+  /* ═══ 08 · SCROLL LOOP ══════════════════════════════════════ */
+  const stackTrack    = document.getElementById('stack-track');
+  const stackB        = document.getElementById('stack-b');
+  const stackBImg     = document.getElementById('stack-b-img');
+  const stackC        = document.getElementById('stack-c');
+  const stackCImg     = document.getElementById('stack-c-img');
+  const stackCaption  = document.getElementById('stack-caption');
+  const header        = document.querySelector('.site-header');
+  const themedSections= [...document.querySelectorAll('[data-theme]')];
+  const paras         = [...document.querySelectorAll('[data-parallax]')];
+
+  function updateHeader(){
+    const hh = header.offsetHeight;
+    header.classList.toggle('scrolled', scrollY > 40);
+    if(document.querySelector('.menu.open')){ header.dataset.theme = 'dark'; return; }
+    let theme = 'dark';
+    for(const s of themedSections){
+      const r = s.getBoundingClientRect();
+      if(r.top <= hh && r.bottom > hh + 8){ theme = s.dataset.theme; break; }
+    }
+    header.dataset.theme = theme;
+  }
+
+  function updateStack(){
+    if(!stackTrack) return;
+    const r = stackTrack.getBoundingClientRect();
+    const total = r.height - innerHeight;
+    if(total <= 0) return;
+    const p = clamp01(-r.top / total);
+    const pB = clamp01(p / .5);
+    const pC = clamp01((p - .5) / .5);
+    stackB.style.transform    = `translate3d(0, ${(1 - pB) * 100}%, 0)`;
+    stackBImg.style.transform = `scale(${1.08 - pB * .08})`;
+    stackC.style.transform    = `translate3d(0, ${(1 - pC) * 100}%, 0)`;
+    stackCImg.style.transform = `scale(${1.08 - pC * .08})`;
+    stackCaption.classList.toggle('in', p > .55);
+  }
+
+  function updateParallax(){
+    if(reduceMotion) return;
+    const vh = innerHeight;
+    const factor = innerWidth < 768 ? 0.35 : 1;
+    for(const el of paras){
+      const r = el.getBoundingClientRect();
+      if(r.bottom < -80 || r.top > vh + 80) continue;
+      const center = r.top + r.height / 2 - vh / 2;
+      const media = el.querySelectorAll('img, video');
+      media.forEach(m => {
+        m.style.transform = `translate3d(0, ${(-center * parseFloat(el.dataset.parallax || '0.1') * factor).toFixed(1)}px, 0)`;
+      });
+    }
+  }
+
+  let ticking = false;
+  function update(){
+    ticking = false;
+    updateHeader();
+    updateStack();
+    updateParallax();
+  }
+  addEventListener('scroll', () => {
+    if(!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  addEventListener('resize', update);
+  addEventListener('load', update);
+
+  /* ═══ 09 · REVEALS ON SCROLL ════════════════════════════════ */
+  (function initReveals(){
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+    document.querySelectorAll('.r, .r-head, .r-img').forEach(el => io.observe(el));
+  })();
+
+  addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      document.querySelectorAll('.hero .r, #hero-title').forEach(el => el.classList.add('in'));
+    }, 120);
+  });
+
+  /* ═══ 10 · CONTADORES ROMANOS ═══════════════════════════════ */
+  (function initRomanCounters(){
+    const els = document.querySelectorAll('[data-roman]');
+    if(!els.length) return;
+
+    const quantize = target => target >= 100 ? 50 : target >= 20 ? 5 : 1;
+    const finish = el => { el.textContent = toRoman(+el.dataset.roman); };
+
+    const animate = el => {
+      const target = +el.dataset.roman;
+      const q = quantize(target);
+      const dur = 1800, t0 = performance.now();
+      const step = t => {
+        const k = Math.min((t - t0) / dur, 1);
+        const e = 1 - Math.pow(1 - k, 3);
+        const v = Math.min(Math.round((target * e) / q) * q, target);
+        el.textContent = toRoman(v);
+        if(k < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    };
+
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(!e.isIntersecting) return;
+        io.unobserve(e.target);
+        reduceMotion ? finish(e.target) : animate(e.target);
+      });
+    }, { threshold: 0.5 });
+    els.forEach(el => io.observe(el));
+  })();
+
+  /* ═══ 11 · REPRODUCTORES DE VIDEO CON DEGRADACIÓN ELEGANTE ═══ */
+  function initVideo(videoSelector, containerSelector){
+    const video = document.querySelector(videoSelector);
+    const container = document.querySelector(containerSelector);
+    if(!video || !container) return;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const playVideo = () => {
+      video.classList.add('is-ready');
+      container.classList.add('has-video');
+      video.play().catch(err => console.log("Autoplay video info:", err));
+    };
+
+    if (video.readyState >= 2) {
+      playVideo();
+    } else {
+      video.addEventListener('canplay', playVideo, { once: true });
+      video.addEventListener('loadeddata', playVideo, { once: true });
+    }
+    video.load();
+    playVideo();
+  }
+
+  (function initAllVideos(){
+    initVideo('.hero-video', '.hero');
+    initVideo('.cta-video', '.cta-final');
+  })();
+
+  update();
+  </script>
+</body>
+</html>
