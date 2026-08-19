@@ -338,10 +338,11 @@
   .stack-img--over{transform:translateY(100%);border-top:1px solid var(--gold)}
   .stack-img--over img{will-change:transform}
   .stack-label{
-    position:absolute;left:var(--pad);bottom:1.6rem;z-index:2;
-    font-family:var(--roman);font-size:.6rem;letter-spacing:.3em;color:var(--text-inv);
-    background:rgba(17,17,16,.5);padding:.55rem .9rem;
-    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    position:absolute;left:var(--pad);top:calc(var(--header-h) + 1.5rem);z-index:2;
+    font-family:var(--roman);font-size:.75rem;font-weight:600;letter-spacing:.2em;color:var(--text-inv);
+    background:rgba(17,17,16,.85);padding:.8rem 1.2rem;
+    -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+    border:1px solid rgba(245,243,238,.15);
   }
   .stack-label b{color:var(--gold);font-weight:400;margin-right:.6rem}
   .stack-caption{
