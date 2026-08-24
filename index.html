@@ -5,19 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══════════════ SEO ═══════════════ -->
-  <title>Marmolería — Mármol, Granito y Cuarzo | Catálogo y Trabajos a Medida</title>
-  <meta name="description" content="Marmolería en Buenos Aires. Catálogo de mármol, granito, cuarzo y revestimientos. Mesadas, escaleras y baños a medida. Taller propio y montaje certificado.">
+  <title>Marmolería Benjamín — Mármol, Granito y Cuarzo | Catálogo y Trabajos a Medida</title>
+  <meta name="description" content="Marmolería Benjamín en Buenos Aires. Catálogo de mármol, granito, cuarzo y revestimientos. Mesadas, escaleras y baños a medida. Taller propio y montaje certificado.">
   <meta name="theme-color" content="#111110">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Marmolería — Mármol que define espacios">
+  <meta property="og:title" content="Marmolería Benjamín — Mármol que define espacios">
   <meta property="og:description" content="Catálogo de mármol, granito, cuarzo y revestimientos. Diseño, corte e instalación.">
-  <meta property="og:image" content="assets/images/hero/hero.jpg">
+  <meta property="og:image" content="assets/images/Favicon.png">
   <meta property="og:locale" content="es_AR">
 
-  <!-- Favicon (rombo dorado) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23111110'/%3E%3Crect x='21' y='21' width='22' height='22' transform='rotate(45 32 32)' fill='none' stroke='%23C8A45D' stroke-width='3'/%3E%3C/svg%3E">
+  <!-- Favicon con esquinas redondeadas -->
+  <link rel="icon" type="image/png" href="assets/images/Favicon.png">
+  <link rel="shortcut icon" href="assets/images/Favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/Favicon.png">
 
   <!-- Tipografías -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,16 +31,20 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Marmolería",
-    "description": "Marmolería especializada en mármol, granito, cuarzo y revestimientos. Catálogo propio, corte e instalación.",
+    "name": "Marmolería Benjamín",
+    "description": "Marmolería Benjamín especializada en mármol, granito, cuarzo y revestimientos. Catálogo propio, corte e instalación.",
     "telephone": "+54 9 11 0000 0000",
-    "image": "assets/images/hero/hero.jpg",
+    "image": "assets/images/Favicon.png",
     "priceRange": "$$$",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Buenos Aires",
+      "streetAddress": "Saraza 4297",
+      "addressLocality": "Pontevedra",
+      "addressRegion": "Provincia de Buenos Aires",
+      "postalCode": "B1761FFM",
       "addressCountry": "AR"
     },
+    "hasMap": "https://maps.google.com/maps/place/Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95bcc222cb195a55:0x89d27a0af439dc62?entry=s&sa=X&ved=1t:78214&hl=es&ictx=111",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
@@ -196,10 +202,20 @@
     background:rgba(17,17,16,.58);
     -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
   }
-  .brand{display:inline-flex;align-items:center;gap:.7rem}
-  .brand-gem{width:11px;height:11px;flex:none}
-  .brand-gem rect{fill:none;stroke:var(--gold);stroke-width:1.6}
-  .brand-name{font-family:var(--roman);font-size:.78rem;letter-spacing:.32em;font-weight:400}
+  .brand{display:inline-flex;align-items:center;gap:.75rem;text-decoration:none}
+  .brand-logo{
+    height:clamp(34px, 4vw, 44px);
+    width:auto;
+    object-fit:contain;
+    display:block;
+    transition:filter .45s var(--ease),transform .35s var(--ease);
+  }
+  .brand:hover .brand-logo{transform:scale(1.03)}
+  .site-header[data-theme="dark"] .brand-logo{filter:invert(1) brightness(1.2)}
+  .site-header[data-theme="light"] .brand-logo{filter:brightness(0.1)}
+  .site-footer .brand-logo{filter:invert(1) brightness(1.2);height:48px}
+  .brand-name{font-family:var(--roman);font-size:clamp(.72rem,1.4vw,.82rem);letter-spacing:.26em;font-weight:500;white-space:nowrap;line-height:1}
+  @media(max-width:420px){.brand-name{font-size:.68rem;letter-spacing:.16em}}
   .main-nav{display:none;gap:2.4rem}
   .main-nav a{
     font-family:var(--roman);font-size:.64rem;letter-spacing:.2em;
@@ -613,6 +629,72 @@
     color:var(--muted);text-transform:uppercase;
   }
 
+  /* ═══ MÓDULO 13B · MAPA GIGANTE & UBICACIÓN ══════════════════ */
+  .map-section{padding-bottom:0}
+  .map-giant-wrapper{
+    position:relative;width:100%;min-height:560px;height:clamp(520px,68vh,720px);
+    border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+    overflow:hidden;background:#dedcd7;
+  }
+  .map-frame{
+    width:100%;height:100%;border:0;display:block;
+    filter:grayscale(25%) contrast(1.03);
+    transition:filter .6s var(--ease);
+  }
+  .map-giant-wrapper:hover .map-frame,.map-frame:focus{
+    filter:none;
+  }
+  .map-card{
+    position:absolute;bottom:clamp(1.5rem,4vw,3.2rem);left:clamp(1.25rem,6vw,5rem);z-index:10;
+    max-width:460px;width:calc(100% - 2.5rem);
+    background:rgba(17,17,16,.94);color:var(--text-inv);
+    border:1px solid rgba(200,164,93,.55);
+    padding:clamp(1.6rem,3.2vw,2.4rem);
+    -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+    box-shadow:0 24px 50px rgba(0,0,0,.45);
+    display:flex;flex-direction:column;gap:1.1rem;
+    animation:itemIn .9s var(--ease) both;
+  }
+  .map-card-tag{
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-family:var(--roman);font-size:.62rem;letter-spacing:.32em;
+    color:var(--gold);text-transform:uppercase;
+  }
+  .map-card-tag .ico{width:14px;height:14px;color:var(--gold)}
+  .map-card-title{
+    font-family:var(--serif);font-size:clamp(1.4rem,2.8vw,1.9rem);
+    font-weight:500;text-transform:uppercase;letter-spacing:.02em;line-height:1.15;
+    color:var(--text-inv);
+  }
+  .map-card-addr{
+    font-size:.9rem;color:var(--muted-inv);line-height:1.6;
+  }
+  .map-card-schedule{
+    font-family:var(--sans);font-size:.8rem;color:rgba(245,243,238,.72);
+    border-top:1px solid var(--border-inv);padding-top:.85rem;
+    display:flex;flex-direction:column;gap:.3rem;
+  }
+  .map-card-schedule span{color:var(--gold);font-family:var(--roman);font-size:.68rem;letter-spacing:.12em}
+  .map-card-actions{
+    display:flex;flex-direction:column;gap:.8rem;margin-top:.4rem;
+  }
+  .map-card-actions .btn{min-height:50px;padding:.9rem 1.6rem;font-size:.66rem;letter-spacing:.22em}
+  .map-card-actions .btn-solid{background:var(--gold);color:var(--marble-black);border-color:var(--gold)}
+  .map-card-actions .btn-solid:hover{background:var(--marble-white);color:var(--marble-black)}
+  .map-card-actions .btn-ghost{color:var(--gold);border-color:rgba(200,164,93,.6)}
+  .map-card-actions .btn-ghost:hover{color:var(--marble-black);background:var(--gold)}
+  @media(min-width:540px){
+    .map-card-actions{flex-direction:row;align-items:center}
+  }
+  @media(max-width:768px){
+    .map-giant-wrapper{height:clamp(440px,65vh,540px)}
+    .map-card{
+      position:relative;bottom:auto;left:auto;max-width:none;width:100%;
+      border-left:0;border-right:0;border-bottom:0;
+      box-shadow:none;
+    }
+  }
+
   /* ═══ MÓDULO 14 · FOOTER ════════════════════════════════════ */
   .site-footer{background:var(--marble-black);color:var(--text-inv)}
   .footer-grid{display:grid;gap:3rem;padding-block:clamp(3.5rem,9vh,5.5rem)}
@@ -669,9 +751,9 @@
 
   <!-- ══════════════ HEADER ══════════════ -->
   <header class="site-header" data-theme="dark">
-    <a class="brand" href="#top" aria-label="Marmolería — inicio">
-      <svg class="brand-gem" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.6" y="2.6" width="6.8" height="6.8" transform="rotate(45 6 6)"/></svg>
-      <span class="brand-name">MARMOLERÍA</span>
+    <a class="brand" href="#top" aria-label="Marmolería Benjamín — inicio">
+      <img src="assets/images/Logo-Header.png" alt="Marmolería Benjamín" class="brand-logo" width="44" height="44">
+      <span class="brand-name">MARMOLERÍA BENJAMÍN</span>
     </a>
     <nav class="main-nav" aria-label="Navegación principal">
       <a href="#materiales">MATERIALES</a>
@@ -679,6 +761,7 @@
       <a href="#nosotros">NOSOTROS</a>
       <a href="#clientes">CLIENTES</a>
       <a href="#contacto">CONTACTO</a>
+      <a href="#ubicacion">UBICACIÓN</a>
     </nav>
     <div class="header-right">
       <a class="btn btn-ghost header-wa" data-wa="default">WHATSAPP <svg class="ico"><use href="#i-arrow"/></svg></a>
@@ -696,6 +779,7 @@
       <li style="--i:2"><a href="#nosotros"><span class="menu-num">III</span>NOSOTROS</a></li>
       <li style="--i:3"><a href="#clientes"><span class="menu-num">IV</span>CLIENTES</a></li>
       <li style="--i:4"><a href="#contacto"><span class="menu-num">V</span>CONTACTO</a></li>
+      <li style="--i:5"><a href="#ubicacion"><span class="menu-num">VI</span>UBICACIÓN</a></li>
     </ul>
     <div class="menu-foot">
       <span class="menu-gline"></span>
@@ -858,7 +942,7 @@
                 <img src="assets/images/nosotros/El imperioo marmoleria.webp"
                      onerror="this.onerror=null;this.src='assets/images/nosotros/taller.webp';"
                      loading="eager" decoding="async"
-                     alt="El Imperio Marmolería - Nuestro Taller">
+                     alt="Marmolería Benjamín - Nuestro Taller">
               </div>
             </div>
             <figcaption><span>EL TALLER</span><span>BUENOS AIRES</span></figcaption>
@@ -974,18 +1058,64 @@
         </div>
       </div>
     </section>
+
+    <!-- ══════════════ VII — UBICACIÓN · MAPA GIGANTE ══════════════ -->
+    <section class="section map-section" id="ubicacion" data-theme="light">
+      <div class="wrap sec-head">
+        <div class="head-stack">
+          <p class="chapter r"><b>VII</b>— UBICACIÓN · TALLER</p>
+          <h2 class="display display--1 r-head">
+            <span class="line"><span class="line-in">NUESTRO</span></span>
+            <span class="line"><span class="line-in em t" style="--d:.1s">TALLER<span class="dot">.</span></span></span>
+          </h2>
+        </div>
+        <p class="lead r" style="--d:.2s">Vení a conocer nuestras placas en persona, apreciar las vetas y texturas de cada piedra y coordinar tu proyecto directo en el taller.</p>
+      </div>
+
+      <div class="map-giant-wrapper r-img">
+        <iframe
+          class="map-frame"
+          src="https://maps.google.com/maps?q=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Marmolería Benjamín en Pontevedra">
+        </iframe>
+
+        <div class="map-card">
+          <div class="map-card-tag"><svg class="ico"><use href="#i-pin"/></svg> TALLER & SHOWROOM</div>
+          <h3 class="map-card-title">MARMOLERÍA BENJAMÍN</h3>
+          <p class="map-card-addr">Saraza 4297, B1761FFM Pontevedra<br>Provincia de Buenos Aires, Argentina</p>
+          <div class="map-card-schedule">
+            <p><span>Lunes a Viernes:</span> 08:00 — 18:00 hs</p>
+            <p><span>Sábados:</span> 09:00 — 13:00 hs</p>
+          </div>
+          <div class="map-card-actions">
+            <a class="btn btn-solid" href="https://maps.google.com/maps/place/Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95bcc222cb195a55:0x89d27a0af439dc62?entry=s&sa=X&ved=1t:78214&hl=es&ictx=111" target="_blank" rel="noopener">
+              CÓMO LLEGAR <svg class="ico"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-ghost" data-wa="taller">
+              COORDINAR VISITA
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <!-- ══════════════ FOOTER ══════════════ -->
   <footer class="site-footer grain on-dark" data-theme="dark">
     <div class="wrap footer-grid">
       <div class="footer-brand">
-        <a class="brand" href="#top">
-          <svg class="brand-gem" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.6" y="2.6" width="6.8" height="6.8" transform="rotate(45 6 6)"/></svg>
-          <span class="brand-name">MARMOLERÍA</span>
+        <a class="brand" href="#top" aria-label="Marmolería Benjamín — inicio">
+          <img src="assets/images/Logo-Header.png" alt="Marmolería Benjamín" class="brand-logo" width="48" height="48">
+          <span class="brand-name">MARMOLERÍA BENJAMÍN</span>
         </a>
         <p>Superficies de piedra a medida. Diseño, corte e instalación en mármol, granito y cuarzo.</p>
-        <p class="footer-loc"><svg class="ico"><use href="#i-pin"/></svg> BUENOS AIRES — ARGENTINA</p>
+        <p class="footer-loc"><a href="https://maps.google.com/maps/place/Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95bcc222cb195a55:0x89d27a0af439dc62?entry=s&sa=X&ved=1t:78214&hl=es&ictx=111" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;color:inherit;"><svg class="ico"><use href="#i-pin"/></svg> SARAZA 4297, PONTEVEDRA — BS. AS.</a></p>
       </div>
       <nav class="footer-col footer-nav" aria-label="Navegación footer">
         <h4 class="footer-h">NAVEGAR</h4>
@@ -994,6 +1124,7 @@
         <a href="#nosotros">NOSOTROS</a>
         <a href="#clientes">CLIENTES</a>
         <a href="#contacto">CONTACTO</a>
+        <a href="#ubicacion">UBICACIÓN</a>
       </nav>
       <div class="footer-col">
         <h4 class="footer-h">CONTACTO</h4>
@@ -1005,7 +1136,7 @@
     </div>
     <div class="wrap footer-bottom">
       <span class="footer-gline"></span>
-      <p class="footer-copy">© 2026 — TODOS LOS DERECHOS RESERVADOS</p>
+      <p class="footer-copy">© 2026 MARMOLERÍA BENJAMÍN — TODOS LOS DERECHOS RESERVADOS</p>
       <p class="footer-copy">MÁRMOL · GRANITO · CUARZO</p>
     </div>
   </footer>
