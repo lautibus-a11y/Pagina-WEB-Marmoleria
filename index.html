@@ -950,9 +950,9 @@
 
           <div class="about-copy">
             <span class="gold-line r"></span>
-            <p class="lead r" style="--d:.1s">Somos un taller, no una fábrica. Detrás de cada placa hay tres generaciones que aprendieron el oficio mirando trabajar a los que llegaron antes.</p>
-            <p class="lead r" style="--d:.2s">Medimos, cortamos, pulimos e instalamos. Cada proyecto pasa por nuestras manos — del bloque en cantera al último milímetro en obra.</p>
-            <p class="about-sign r" style="--d:.3s">Nada de eso se delega.</p>
+            <p class="lead r" style="--d:.1s">Somos una <strong>marmolería familiar con una historia que atraviesa generaciones</strong>. Nuestro oficio comenzó con nuestro abuelo, continuó de la mano de nuestro padre y hoy somos nosotros quienes seguimos manteniendo viva esa tradición.</p>
+            <p class="lead r" style="--d:.2s">Hace <strong>9 años iniciamos nuestro propio camino</strong>, combinando todo el conocimiento y la experiencia heredados con una mirada actual, cuidando cada detalle y manteniendo siempre el compromiso con la calidad.</p>
+            <p class="about-sign r" style="--d:.3s">Para nosotros, trabajar el mármol no es solo un oficio: <em class="t">es un legado familiar que continúa creciendo generación tras generación.</em></p>
             <a class="link-u r" style="--d:.4s" data-wa="taller">HABLAR CON EL TALLER <svg class="ico"><use href="#i-arrow"/></svg></a>
           </div>
         </div>
@@ -1094,7 +1094,7 @@
             <p><span>Sábados:</span> 09:00 — 13:00 hs</p>
           </div>
           <div class="map-card-actions">
-            <a class="btn btn-solid" href="https://maps.google.com/maps/place/Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95bcc222cb195a55:0x89d27a0af439dc62?entry=s&sa=X&ved=1t:78214&hl=es&ictx=111" target="_blank" rel="noopener">
+            <a class="btn btn-solid" id="btn-directions" href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener">
               CÓMO LLEGAR <svg class="ico"><use href="#i-arrow"/></svg>
             </a>
             <a class="btn btn-ghost" data-wa="taller">
@@ -1115,7 +1115,7 @@
           <span class="brand-name">MARMOLERÍA BENJAMÍN</span>
         </a>
         <p>Superficies de piedra a medida. Diseño, corte e instalación en mármol, granito y cuarzo.</p>
-        <p class="footer-loc"><a href="https://maps.google.com/maps/place/Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires/data=!4m2!3m1!1s0x95bcc222cb195a55:0x89d27a0af439dc62?entry=s&sa=X&ved=1t:78214&hl=es&ictx=111" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;color:inherit;"><svg class="ico"><use href="#i-pin"/></svg> SARAZA 4297, PONTEVEDRA — BS. AS.</a></p>
+        <p class="footer-loc"><a href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;color:inherit;"><svg class="ico"><use href="#i-pin"/></svg> SARAZA 4297, PONTEVEDRA — BS. AS.</a></p>
       </div>
       <nav class="footer-col footer-nav" aria-label="Navegación footer">
         <h4 class="footer-h">NAVEGAR</h4>
@@ -1706,6 +1706,30 @@
   (function initAllVideos(){
     initVideo('.hero-video', '.hero');
     initVideo('.cta-video', '.cta-final');
+  })();
+
+  /* ═══ 12 · CÓMO LLEGAR (RUTA DINÁMICA SEGÚN UBICACIÓN DEL USUARIO) ═══ */
+  (function initDirections(){
+    const btn = document.getElementById('btn-directions');
+    if(!btn) return;
+    const dest = encodeURIComponent('Saraza 4297, B1761FFM Pontevedra, Provincia de Buenos Aires');
+    const fallbackUrl = `https://www.google.com/maps/dir/?api=1&destination=${dest}`;
+
+    btn.addEventListener('click', e => {
+      if(navigator.geolocation){
+        e.preventDefault();
+        navigator.geolocation.getCurrentPosition(
+          pos => {
+            const { latitude, longitude } = pos.coords;
+            window.open(`https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${dest}`, '_blank', 'noopener');
+          },
+          () => {
+            window.open(fallbackUrl, '_blank', 'noopener');
+          },
+          { timeout: 5000, enableHighAccuracy: true }
+        );
+      }
+    });
   })();
 
   update();
