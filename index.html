@@ -596,9 +596,10 @@
   .cta-figure{margin-top:clamp(3.5rem,9vh,6rem);width:100%}
 
   /* ═══ MÓDULO 13 · CLIENTES FELICES — FEED MASONRY ═══════════ */
-  .masonry{columns:2;column-gap:1rem}
-  @media(min-width:700px){.masonry{columns:3;column-gap:1.8rem}}
-  @media(min-width:1200px){.masonry{columns:4;column-gap:2rem}}
+  .masonry{columns:1;column-gap:1.2rem}
+  @media(min-width:560px){.masonry{columns:2;column-gap:1.6rem}}
+  @media(min-width:960px){.masonry{columns:3;column-gap:2rem}}
+  @media(min-width:1280px){.masonry{columns:4;column-gap:2.2rem}}
   .client{
     break-inside:avoid;-webkit-column-break-inside:avoid;
     margin-bottom:2.4rem;cursor:pointer;
@@ -763,7 +764,7 @@
       <a href="#materiales">MATERIALES</a>
       <a href="#productos">PRODUCTOS</a>
       <a href="#nosotros">NOSOTROS</a>
-      <a href="#clientes">CLIENTES</a>
+      <a href="#proyectos">PROYECTOS</a>
       <a href="#contacto">CONTACTO</a>
       <a href="#ubicacion">UBICACIÓN</a>
     </nav>
@@ -781,7 +782,7 @@
       <li style="--i:0"><a href="#materiales"><span class="menu-num">I</span>MATERIALES</a></li>
       <li style="--i:1"><a href="#productos"><span class="menu-num">II</span>PRODUCTOS</a></li>
       <li style="--i:2"><a href="#nosotros"><span class="menu-num">III</span>NOSOTROS</a></li>
-      <li style="--i:3"><a href="#clientes"><span class="menu-num">IV</span>CLIENTES</a></li>
+      <li style="--i:3"><a href="#proyectos"><span class="menu-num">IV</span>PROYECTOS</a></li>
       <li style="--i:4"><a href="#contacto"><span class="menu-num">V</span>CONTACTO</a></li>
       <li style="--i:5"><a href="#ubicacion"><span class="menu-num">VI</span>UBICACIÓN</a></li>
     </ul>
@@ -1011,22 +1012,23 @@
       </div>
     </section>
 
-    <!-- ══════════════ V — CLIENTES FELICES (FEED MASONRY) ══════════════ -->
-    <section class="section" id="clientes" data-theme="light">
+    <!-- ══════════════ V — PROYECTOS REALIZADOS (FEED MASONRY) ══════════════ -->
+    <section class="section" id="proyectos-feed" data-theme="light">
       <div class="wrap">
         <div class="sec-head">
           <div class="head-stack">
-            <p class="chapter r"><b>V</b>— CLIENTES</p>
+            <p class="chapter r"><b>V</b>— PROYECTOS</p>
             <h2 class="display display--1 r-head">
               <span class="line"><span class="line-in">NUESTROS</span></span>
-              <span class="line"><span class="line-in em t" style="--d:.1s">CLIENTES</span></span>
-              <span class="line"><span class="line-in" style="--d:.2s">FELICES<span class="dot">.</span></span></span>
+              <span class="line"><span class="line-in em t" style="--d:.1s">PROYECTOS</span></span>
+              <span class="line"><span class="line-in" style="--d:.2s">PROPIOS<span class="dot">.</span></span></span>
             </h2>
           </div>
-          <p class="lead r" style="--d:.2s">Obra real, casas reales. Un recorrido por los proyectos que ya viven en hogares de quienes confiaron en el taller — tocá cualquier trabajo para consultar algo similar.</p>
+          <p class="lead r" style="--d:.2s">Obra real, materialidad real. Cada proyecto que salió de nuestro taller tiene historia — tocá cualquier imagen para consultar materiales, medidas y precio.</p>
         </div>
 
-        <div class="masonry" id="clients-feed" aria-label="Trabajos para clientes"></div>
+        <div class="tabs r" id="proj-tabs" role="tablist" aria-label="Filtrar proyectos por categoría"></div>
+        <div class="masonry" id="clients-feed" aria-label="Proyectos realizados por el taller"></div>
       </div>
     </section>
 
@@ -1125,7 +1127,7 @@
         <a href="#materiales">MATERIALES</a>
         <a href="#productos">PRODUCTOS</a>
         <a href="#nosotros">NOSOTROS</a>
-        <a href="#clientes">CLIENTES</a>
+        <a href="#proyectos-feed">PROYECTOS</a>
         <a href="#contacto">CONTACTO</a>
         <a href="#ubicacion">UBICACIÓN</a>
       </nav>
@@ -1186,6 +1188,9 @@
   const waURL = msg =>
     `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
 
+  /* Observer de reveals — se asigna en §09, se usa también en buildClients */
+  let revealObserver;
+
   // I — Materiales destacados (carpeta assets/images/destacados/ y catálogo)
   const MATERIALS = [
     { n:'CALACATTA ORO', t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/calacatta-oro.webp',    s:'mat-calacatta',   a:'3/4' },
@@ -1200,19 +1205,23 @@
 
   const MARQUEE_WORDS = ['GRANITOS','MÁRMOLES','CUARCITAS','PURASTONE','PURASTONE PRIMA','SILESTONE','DEKTON'];
 
-  // VI — Clientes felices (carpeta assets/images/clientes/)
+  // VI — Proyectos realizados (carpeta assets/images/clientes/)
   const CLIENTS = [
-    { work:'MESADA CALACATTA',     who:'FAMILIA BERTOTTI', img:'assets/images/clientes/mesada-calacatta.webp',     seed:'cli-mesada',    ar:'3/4' },
-    { work:'ESCALERA TRAVERTINO',  who:'CASA DUARTE',      img:'assets/images/clientes/escalera-travertino.webp',  seed:'cli-escalera',  ar:'4/5' },
-    { work:'BAÑO NEGRO MARQUINA',  who:'M. ACUÑA',         img:'assets/images/clientes/bano-negro-marquina.webp',  seed:'cli-bano',      ar:'1/1' },
-    { work:'REVESTIMIENTO CARRARA',who:'ESTUDIO VEGA',     img:'assets/images/clientes/revestimiento-carrara.webp',seed:'cli-revest',    ar:'3/4' },
-    { work:'COCINA DE CUARZO',     who:'FAMILIA SOSA',     img:'assets/images/clientes/cocina-cuarzo.webp',        seed:'cli-cocina',    ar:'4/5' },
-    { work:'VANITY STATUARIO',     who:'L. FERRER',        img:'assets/images/clientes/vanity-statuario.webp',     seed:'cli-vanity',    ar:'1/1' },
-    { work:'ISLA DE GRANITO',      who:'CASA IBARLUCEA',   img:'assets/images/clientes/isla-granito.webp',         seed:'cli-isla',      ar:'3/4' },
-    { work:'MURAL DE ÓNICE',       who:'HOTEL AURA',       img:'assets/images/clientes/mural-onice-2.webp',        seed:'cli-mural',     ar:'4/5' },
-    { work:'JABONERA DE MÁRMOL',   who:'DETALLE DE AUTOR', img:'assets/images/clientes/jabonera-marmol.webp',      seed:'cli-jabo',      ar:'1/1' },
-    { work:'REVESTIMIENTO NEGRO MARQUINA', who:'CASA NOAH', img:'assets/images/clientes/negro-marquina-2.webp',     seed:'cli-bano2',     ar:'3/4' }
+    { cat:'MESADAS',         work:'ISLA Y ALZADA EN TRAVERTINO',      who:'CASCADA CONTINUA · TRAVERTINO ROMANO',   img:'assets/images/clientes/isla-travertino.webp',            seed:'cli-isla-trav',    ar:'3/4' },
+    { cat:'BAÑOS',           work:'BACHA ARTESANAL CIPOLLINO',        who:'CONTINUIDAD DE VETA · MÁRMOL EXÓTICO',   img:'assets/images/clientes/bacha-cipollino-ondulato.webp',   seed:'cli-cipollino',    ar:'3/4' },
+    { cat:'MESADAS',         work:'ISLA DESAYUNADORA CALACATTA',      who:'BARRA INTEGRADA · CUARZO CALACATTA',     img:'assets/images/clientes/isla-calacatta-desayunador.webp', seed:'cli-isla-cala',    ar:'3/4' },
+    { cat:'BAÑOS',           work:'VANITORY CON BACHA INTEGRADA',     who:'DISEÑO CURVO · CUARZO GRIS',             img:'assets/images/clientes/vanitory-curvo.webp',             seed:'cli-vanitory',     ar:'3/4' },
+    { cat:'MESADAS',         work:'ISLA & MESADA EN GRANITO NEGRO',   who:'PULIDO ESPEJO · GRANITO NEGRO BRASIL',   img:'assets/images/clientes/isla-granito-negro.webp',         seed:'cli-granito-neg',  ar:'4/3' },
+    { cat:'BAÑOS',           work:'BACHA CON DESAGÜE OCULTO',         who:'TERMINACIÓN INGLETADA · PIEDRA GRIS',    img:'assets/images/clientes/bacha-oculta.webp',               seed:'cli-bacha-oculta', ar:'3/4' },
+    { cat:'BAÑOS',           work:'VANITORY DOBLE & REVESTIMIENTO',   who:'DOBLE BACHA · CUARZO BLANCO & CALACATTA',img:'assets/images/clientes/bano-doble-bacha.jpg',            seed:'cli-bano-doble',   ar:'3/4' },
+    { cat:'MESADAS',         work:'ISLA DE QUINCHO EN NEGRO LEATHER', who:'CASCADA LATERAL · GRANITO NEGRO',        img:'assets/images/clientes/isla-quincho-negra.webp',         seed:'cli-quincho-neg',  ar:'3/4' },
+    { cat:'BAÑOS',           work:'VANITORY EN GRANITO EXÓTICO',      who:'FALDÓN INGLETADO · GRANITO PATAGONIA',   img:'assets/images/clientes/vanitory-granito-patagonia.jpg',  seed:'cli-patagonia',    ar:'9/16' },
+    { cat:'MESADAS',         work:'ISLA CENTRAL Y REVESTIMIENTO',     who:'COCINA DE AUTOR · PIEDRA SINTERIZADA',   img:'assets/images/clientes/isla-cocina-blanca.webp',         seed:'cli-isla-blanca',  ar:'3/4' },
+    { cat:'REVESTIMIENTOS',  work:'MURAL RETROILUMINADO EN ÓNICE',    who:'PANEL TRASLÚCIDO · ÓNICE BLANCO CRISTAL',img:'assets/images/clientes/mural-onice-iluminado.jpg',       seed:'cli-mural-onice',  ar:'3/4' },
+    { cat:'MESADAS',         work:'COCINA EN L & ALZADA COMPLETA',    who:'MUEBLE INTEGRADO · CUARZO BLANCO PURO',  img:'assets/images/clientes/cocina-en-l-cuarzo.webp',         seed:'cli-cocina-l',     ar:'3/4' }
   ];
+
+
 
   // III — Catálogo completo (carpeta assets/images/catalogo/)
   const PAGE_SIZE = 6;
@@ -1336,25 +1345,30 @@
     });
   })();
 
-  /* ═══ 04 · CLIENTES FELICES ═════════════════════════════════ */
+  /* ═══ 04 · PROYECTOS — TABS + MASONRY ══════════════════════ */
   (function buildClients(){
-    const feed = document.getElementById('clients-feed');
+    const feed    = document.getElementById('clients-feed');
+    const tabsEl  = document.getElementById('proj-tabs');
     if(!feed) return;
+
+    const TAB_ALL = 'TODOS';
+    const cats    = [...new Set(CLIENTS.map(c => c.cat))];
+    const state   = { filter: TAB_ALL, timer: null };
 
     const itemHTML = (c, i) => {
       const [w, h] = c.ar.split('/').map(Number);
       const ih = Math.round(600 * h / w);
       return `
       <figure class="client r" role="button" tabindex="0"
-              data-work="${c.work}" data-who="${c.who}"
-              aria-label="Trabajo ${c.work} para ${c.who} — consultar algo similar"
+              data-work="${c.work}" data-who="${c.who}" data-cat="${c.cat}"
+              aria-label="Proyecto ${c.work} — consultar algo similar"
               style="--d:${(i % 4) * .08}s">
         <div class="client-media img-tone">
           <span class="client-num">${toRoman(i + 1)}</span>
           <img src="${c.img}"
                onerror="this.onerror=null;this.src='https://picsum.photos/seed/${c.seed}/600/${ih}.jpg';"
                loading="lazy" decoding="async"
-               style="aspect-ratio:${c.ar}" alt="Trabajo de ${c.work} realizado para ${c.who}">
+               style="aspect-ratio:${c.ar}" alt="Proyecto ${c.work}">
         </div>
         <figcaption class="client-cap">
           <span class="client-work">${c.work}</span>
@@ -1363,10 +1377,62 @@
       </figure>`;
     };
 
-    feed.innerHTML = CLIENTS.map(itemHTML).join('');
+    /* ── Render ── */
+    function render(){
+      const list = state.filter === TAB_ALL
+        ? CLIENTS
+        : CLIENTS.filter(c => c.cat === state.filter);
+      feed.innerHTML = list.map(itemHTML).join('');
+      /* re-observe nuevos elementos para el reveal (revealObserver se declara después pero
+         el render inicial lo recoge el observer global; en filtraciones ya está disponible) */
+      if(typeof revealObserver !== 'undefined'){
+        feed.querySelectorAll('.r').forEach(el => {
+          el.classList.remove('in');
+          revealObserver.observe(el);
+        });
+      }
+    }
 
+    /* ── Tabs ── */
+    if(tabsEl){
+      tabsEl.innerHTML = [TAB_ALL, ...cats].map(c =>
+        `<button class="tab" role="tab" aria-selected="${c === TAB_ALL}">${c}</button>`
+      ).join('');
+
+      const tabBtns = [...tabsEl.querySelectorAll('.tab')];
+
+      tabBtns.forEach(btn => btn.addEventListener('click', () => {
+        const cat = btn.textContent.trim();
+        if(state.filter === cat) return;
+        state.filter = cat;
+        tabBtns.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
+        feed.style.opacity = '0';
+        feed.style.transform = 'translateY(10px)';
+        clearTimeout(state.timer);
+        state.timer = setTimeout(() => {
+          render();
+          feed.style.transition = 'opacity .3s ease, transform .3s ease';
+          feed.style.opacity = '1';
+          feed.style.transform = 'none';
+          setTimeout(() => { feed.style.transition = ''; }, 350);
+        }, 220);
+      }));
+
+      tabsEl.addEventListener('keydown', e => {
+        if(e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+        e.preventDefault();
+        const i = tabBtns.indexOf(document.activeElement);
+        if(i < 0) return;
+        const n = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : tabBtns.length - 1)) % tabBtns.length];
+        n.focus(); n.click();
+      });
+    }
+
+    render();
+
+    /* ── WhatsApp ── */
     const ask = (work, who) =>
-      window.open(waURL(`Hola, vi el trabajo "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener');
+      window.open(waURL(`Hola, vi el proyecto "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener');
 
     feed.addEventListener('click', e => {
       const c = e.target.closest('.client');
@@ -1634,14 +1700,12 @@
   addEventListener('load', update);
 
   /* ═══ 09 · REVEALS ON SCROLL ════════════════════════════════ */
-  (function initReveals(){
-    const io = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
-    document.querySelectorAll('.r, .r-head, .r-img').forEach(el => io.observe(el));
-  })();
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting){ e.target.classList.add('in'); revealObserver.unobserve(e.target); }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -6% 0px' });
+  document.querySelectorAll('.r, .r-head, .r-img').forEach(el => revealObserver.observe(el));
 
   addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
