@@ -605,7 +605,7 @@
   .cta-figure{margin-top:clamp(3.5rem,9vh,6rem);width:100%}
 
   /* ═══ MÓDULO 13 · CLIENTES FELICES — FEED MASONRY ═══════════ */
-  .masonry{columns:1;column-gap:1.2rem}
+  .masonry{columns:2;column-gap:1rem}
   @media(min-width:560px){.masonry{columns:2;column-gap:1.6rem}}
   @media(min-width:960px){.masonry{columns:3;column-gap:2rem}}
   @media(min-width:1280px){.masonry{columns:4;column-gap:2.2rem}}
@@ -701,7 +701,8 @@
     .map-card-actions{flex-direction:row;align-items:center}
   }
   @media(max-width:768px){
-    .map-giant-wrapper{height:clamp(440px,65vh,540px)}
+    .map-giant-wrapper{height:auto;display:flex;flex-direction:column;min-height:0}
+    .map-frame{height:350px;flex:none}
     .map-card{
       position:relative;bottom:auto;left:auto;max-width:none;width:100%;
       border-left:0;border-right:0;border-bottom:0;
@@ -799,7 +800,7 @@
       <span class="menu-gline"></span>
       <div class="menu-foot-row">
         <a data-wa="default">WHATSAPP</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener">INSTAGRAM</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
         <a href="mailto:hola@marmoleria.com">HOLA@MARMOLERIA.COM</a>
       </div>
     </div>
@@ -975,8 +976,9 @@
     <section class="section counters grain on-dark" data-theme="dark">
       <div class="counters-bg parallax" data-parallax="0.08" aria-hidden="true">
         <img src="assets/images/fondo-numeros.webp"
-             onerror="this.onerror=null;this.src='https://picsum.photos/seed/marmol-negro-tex/1600/900.jpg';"
-             loading="lazy" decoding="async" alt="">
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/piedra-textura/1920/1080.jpg';"
+             loading="lazy" decoding="async"
+             alt="Textura de mármol de fondo">
       </div>
       <div class="wrap counters-inner">
         <div class="head-stack">
@@ -1010,10 +1012,10 @@
         <div class="dock-zone r" style="--d:.25s">
           <p class="dock-cap">SEGUINOS</p>
           <nav class="dock" aria-label="Redes sociales">
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="ico"><use href="#i-ig"/></svg></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg class="ico"><use href="#i-fb"/></svg></a>
             <a data-wa="default" aria-label="WhatsApp"><svg class="ico"><use href="#i-wa"/></svg></a>
-            <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ico"><use href="#i-tt"/></svg></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg class="ico"><use href="#i-tt"/></svg></a>
           </nav>
         </div>
       </div>
@@ -1036,6 +1038,10 @@
 
         <div class="tabs r" id="proj-tabs" role="tablist" aria-label="Filtrar proyectos por categoría"></div>
         <div class="masonry" id="clients-feed" aria-label="Proyectos realizados por el taller"></div>
+        <div class="pmore r" id="clients-more-container" style="display:none">
+          <p class="pcount" id="clients-count"></p>
+          <button class="btn btn-ghost" id="clients-more-btn">VER MÁS PROYECTOS</button>
+        </div>
       </div>
     </section>
 
@@ -1043,10 +1049,10 @@
     <section class="section cta-final grain on-dark" id="contacto" data-theme="dark" style="position:relative; overflow:hidden; padding-block:10rem 12rem;">
       <div class="hero-media">
         <img src="assets/images/contacto/marmol-final.jpg"
-             onerror="this.onerror=null;this.src='https://picsum.photos/seed/marmol-final/1920/820.jpg';"
+             onerror="this.onerror=null;this.src='https://picsum.photos/seed/piedra-lujo/1920/1080.jpg';"
              loading="lazy" decoding="async"
              style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5);"
-             alt="Detalles de superficie de mármol pulido">
+             alt="Superficie de mármol de lujo">
         
         <video class="cta-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5);">
           <source src="assets/videos/cta.mp4" type="video/mp4">
@@ -1104,7 +1110,7 @@
             <p><span>Lunes a Viernes:</span> 09:00 — 17:00 hs</p>
           </div>
           <div class="map-card-actions">
-            <a class="btn btn-solid" id="btn-directions" href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener">
+            <a class="btn btn-solid" id="btn-directions" href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener noreferrer">
               CÓMO LLEGAR <svg class="ico"><use href="#i-arrow"/></svg>
             </a>
             <a class="btn btn-ghost" data-wa="taller">
@@ -1125,7 +1131,7 @@
           <span class="brand-name">MARMOLERÍA BENJAMÍN</span>
         </a>
         <p>Superficies de piedra a medida. Diseño, corte e instalación en mármol, granito y cuarzo.</p>
-        <p class="footer-loc"><a href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.6rem;color:inherit;"><svg class="ico"><use href="#i-pin"/></svg> SARAZA 4297, PONTEVEDRA — BS. AS.</a></p>
+        <p class="footer-loc"><a href="https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:.6rem;color:inherit;"><svg class="ico"><use href="#i-pin"/></svg> SARAZA 4297, PONTEVEDRA — BS. AS.</a></p>
       </div>
       <nav class="footer-col footer-nav" aria-label="Navegación footer">
         <h4 class="footer-h">NAVEGAR</h4>
@@ -1168,7 +1174,7 @@
         <h3 class="display display--modal" id="modal-title"></h3>
         <span class="gold-line"></span>
         <p class="modal-desc" id="modal-desc"></p>
-        <a class="btn btn-solid modal-cta" id="modal-cta" target="_blank" rel="noopener">
+        <a class="btn btn-solid modal-cta" id="modal-cta" target="_blank" rel="noopener noreferrer">
           CONSULTAR POR WHATSAPP <svg class="ico"><use href="#i-arrow"/></svg>
         </a>
         <p class="modal-foot">MEDIMOS · CORTAMOS · INSTALAMOS</p>
@@ -1198,14 +1204,14 @@
 
   // I — Materiales destacados (carpeta assets/images/destacados/ y catálogo)
   const MATERIALS = [
-    { n:'CALACATTA ORO', t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/calacatta-oro.webp',    s:'mat-calacatta',   a:'3/4' },
-    { n:'CARRARA',       t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/carrara-c.webp',        s:'mat-carrara',     a:'4/5' },
-    { n:'NEGRO MARQUINA',t:'MÁRMOL · ESPAÑA',      img:'assets/images/catalogo/negro-marquina.webp',   s:'mat-marquina',    a:'1/1' },
-    { n:'TRAVERTINO',    t:'PIEDRA · TÍVOLI',      img:'assets/images/catalogo/travertino-romano.webp', s:'mat-travertino',  a:'3/4' },
-    { n:'GRANITO NEGRO', t:'GRANITO · BRASIL',     img:'assets/images/catalogo/negro-absoluto.webp',    s:'mat-granito',     a:'4/5' },
-    { n:'STATUARIO',     t:'MÁRMOL · ITALIA',      img:'assets/images/catalogo/statuario-venato.webp', s:'mat-statuario',   a:'3/4' },
-    { n:'CUARZO',        t:'SUPERFICIE · A MEDIDA',img:'assets/images/catalogo/calacatta.webp',        s:'mat-cuarzo',      a:'1/1' },
-    { n:'ÓNICE',         t:'PIEDRA NATURAL',       img:'assets/images/catalogo/onice-miel.webp',        s:'mat-onice',       a:'4/5' }
+    { n:'EMBER', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/ember.webp', s:'p-ember', a:'3/4' },
+    { n:'DALMATA', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Dálmata.webp', s:'p-dalma', a:'3/4' },
+    { n:'DESERT', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Desert.webp', s:'p-deser', a:'3/4' },
+    { n:'ALPINUS WHITE', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Alpinus White.webp', s:'p-alpin', a:'3/4' },
+    { n:'BLANCO JADE', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Blanco_Jade_.webp', s:'p-blanc', a:'3/4' },
+    { n:'P24 BRECCIA IMPERIALE', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/P24_BRECCIA IMPERIALE_.webp', s:'p-p24b', a:'3/4' },
+    { n:'METRO GREY', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Metro Grey.webp', s:'p-metro', a:'3/4' },
+    { n:'CEPPO DI GRE', t:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Ceppo_di_gre_.webp', s:'p-ceppo', a:'3/4' }
   ];
 
   const MARQUEE_WORDS = ['GRANITOS','MÁRMOLES','CUARCITAS','PURASTONE','PURASTONE PRIMA','SILESTONE','DEKTON'];
@@ -1225,53 +1231,94 @@
     { cat:'REVESTIMIENTOS',  work:'MURAL RETROILUMINADO EN ÓNICE',    who:'PANEL TRASLÚCIDO · ÓNICE BLANCO CRISTAL',img:'assets/images/clientes/mural-onice-iluminado.jpg',       seed:'cli-mural-onice',  ar:'3/4' },
     { cat:'MESADAS',         work:'COCINA EN L & ALZADA COMPLETA',    who:'MUEBLE INTEGRADO · CUARZO BLANCO PURO',  img:'assets/images/clientes/cocina-en-l-cuarzo.webp',         seed:'cli-cocina-l',     ar:'3/4' }
   ];
-
+  CLIENTS.forEach((c, i) => { c.idx = i; });
 
 
   // III — Catálogo completo (carpeta assets/images/catalogo/)
   const PAGE_SIZE = 6;
   const PRODUCTS = [
-    // MÁRMOL
-    { name:'CALACATTA ORO',     cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/calacatta-oro.webp', seed:'p-calacatta',
-      desc:'El mármol más codiciado del mundo: fondo blanco profundo cruzado por vetas doradas. Protagonista absoluto de mesadas centrales.' },
-    { name:'CARRARA C',         cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/carrara-c.webp', seed:'p-carrara',
-      desc:'Blanco perlado con veta gris suave. El clásico atemporal de la arquitectura italiana, luminoso y versátil.' },
-    { name:'STATUARIO VENATO',  cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/statuario-venato.webp', seed:'p-statuario', note:'Libro abierto a pedido',
-      desc:'Fondo cristalino con vetas profundas y dramáticas. Reservado para piezas donde la piedra es la protagonista del espacio.' },
-    { name:'NEGRO MARQUINA',    cat:'MÁRMOL', tag:'MÁRMOL · ESPAÑA', img:'assets/images/catalogo/negro-marquina.webp', seed:'p-marquina',
-      desc:'Negro absoluto con vetas blancas eléctricas. Contraste puro para baños, detalles de autor y superficies de impacto.' },
-    { name:'TRAVERTINO ROMANO', cat:'MÁRMOL', tag:'PIEDRA · TÍVOLI', img:'assets/images/catalogo/travertino-romano.webp', seed:'p-travertino', note:'Corte cruzado o a favor',
-      desc:'La piedra con la que se construyó Roma. Porosidad cálida y textura natural, disponible en corte a favor o cruzado.' },
-    { name:'VERDE ALPI',        cat:'MÁRMOL', tag:'MÁRMOL · ITALIA', img:'assets/images/catalogo/verde-alpi.webp', seed:'p-verde',
-      desc:'Verde profundo con movimiento mineral. Una rareza de cantera para piezas de colección y detalles únicos.' },
-    { name:'ÓNICE MIEL',        cat:'MÁRMOL', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/onice-miel.webp', seed:'p-onice', note:'Retroiluminable',
-      desc:'Translúcido y cálido. Retroiluminado, convierte una pared en una lámpara de piedra. Para momentos arquitectónicos irrepetibles.' },
-    // GRANITO
-    { name:'NEGRO ABSOLUTO',    cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/negro-absoluto.webp', seed:'p-negroabs', note:'Pulido espejo',
-      desc:'Granito uniforme y extremadamente resistente. Pulido espejo que no pierde brillo con el uso diario más exigente.' },
-    { name:'BLANCO SIENA',      cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/blanco-siena.webp', seed:'p-siena',
-      desc:'Blanco cremoso de grano fino. El equilibrio justo entre calidez y rendimiento para cocinas de uso intenso.' },
-    { name:'GRIS PERLA',        cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/gris-perla.webp', seed:'p-perla',
-      desc:'Gris entreverado, sobrio y contemporáneo. Rendimiento de granito con una paleta que no compite con el entorno.' },
-    { name:'CAFÉ IMPERIAL',     cat:'GRANITO', tag:'GRANITO · BRASIL', img:'assets/images/catalogo/cafe-imperial.webp', seed:'p-cafe',
-      desc:'Marrón profundo con destellos dorados. Cálido, noble e inagotable — un clásico que nunca cansa.' },
-    // CUARZO
-    { name:'BLANCO PURO',       cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/blanco-puro.webp', seed:'p-cblanco', note:'No poroso · antibacteriano',
-      desc:'Superficie de ingeniería no porosa y antibacteriana. Impecable de por vida, con mantenimiento prácticamente nulo.' },
-    { name:'CALACATTA',         cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/calacatta.webp', seed:'p-ccala',
-      desc:'La estética del Calacatta con la performance del cuarzo: veta definida, blanco absoluto y uso diario sin cuidados.' },
-    { name:'GRIS CONCRETE',     cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/gris-concrete.webp', seed:'p-concrete',
-      desc:'Gris urbano de terminación mate. Para cocinas de línea arquitectónica donde el material acompaña en silencio.' },
-    { name:'NEGRO STELLAR',     cat:'CUARZO', tag:'SUPERFICIE · A MEDIDA', img:'assets/images/catalogo/negro-stellar.webp', seed:'p-nero',
-      desc:'Negro con partículas de espejo que atrapan la luz. Dramático de día, espectacular bajo luz cálida.' },
-    // REVESTIMIENTOS
-    { name:'TRAVERTINO A LIBRO',cat:'REVESTIMIENTOS', tag:'PIEDRA · TÍVOLI', img:'assets/images/catalogo/travertino-a-libro.jpg', seed:'p-rev-trav', note:'Continuidad de veta',
-      desc:'Revestimiento con continuidad de veta: cada placa continúa a la anterior como si el muro fuera un solo bloque.' },
-    { name:'PIEDRA PARÍS',      cat:'REVESTIMIENTOS', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/piedra-paris.jpg', seed:'p-rev-paris',
-      desc:'Piedra natural en formato chapa: liviana de instalar, real y eterna. Textura mineral para muros completos.' },
-    { name:'CRETA ROMA',        cat:'REVESTIMIENTOS', tag:'PIEDRA NATURAL', img:'assets/images/catalogo/creta-roma.jpg', seed:'p-rev-creta',
-      desc:'Textura de calcáreo romano, mate y mineral. Muros con silencio, materia y profundidad táctil.' }
+    { name:'EMBER', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/ember.webp', seed:'p-ember', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'DALMATA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Dálmata.webp', seed:'p-dalma', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'DESERT', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Desert.webp', seed:'p-deser', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ALPINUS WHITE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Alpinus White.webp', seed:'p-alpin', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO JADE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Blanco_Jade_.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'P24 BRECCIA IMPERIALE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/P24_BRECCIA IMPERIALE_.webp', seed:'p-p24b', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'METRO GREY', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Metro Grey.webp', seed:'p-metro', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CEPPO DI GRE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Ceppo_di_gre_.webp', seed:'p-ceppo', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ORA GOLD', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Ora_Gold_.webp', seed:'p-orag', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'MARQUINA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Marquina.webp', seed:'p-marqu', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'IVORY DESERT', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Ivory_desert_.webp', seed:'p-ivory', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ARABESCATO WOW', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Arabescato_Wow_.webp', seed:'p-arabe', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CORALINA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Coralina.webp', seed:'p-coral', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'METRO CREAM', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Metro cream_.webp', seed:'p-metro', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'GRIS MANHATTAN', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Gris_Manhattan.webp', seed:'p-gris', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'LIMESTONE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Limestone.webp', seed:'p-limes', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TAJ MAHAL', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Taj_Mahal_.webp', seed:'p-tajm', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'LUMIERE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Lumiere.webp', seed:'p-lumie', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ABSOLUTE BLACK', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/absolute black.webp', seed:'p-absol', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ARIA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Aria.webp', seed:'p-aria', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BIANCO LASA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Bianco Lasa.webp', seed:'p-bianc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CAMOUFLAGE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Camouflage_.webp', seed:'p-camou', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'VERDE SELVA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Verde Selva.webp', seed:'p-verde', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'SUMMER CALM', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Summer_calm.webp', seed:'p-summe', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA VIOLA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Calacatta_Viola_.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'MACCHIA VECCHIA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Macchia_Vecchia_.webp', seed:'p-macch', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'FIORDIBOSCO', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/fior-di-bosco.webp', seed:'p-fiord', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'LAVA BLACK', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Lava_Black_.webp', seed:'p-lava', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ONYX BLACK', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Onyx_Black_.webp', seed:'p-onyx', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'AURORA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Aurora_.webp', seed:'p-auror', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TUNDRA DARK', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Tundra_Dark_.webp', seed:'p-tundr', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TOSCANAVENA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Toscana-Vena-.webp', seed:'p-tosca', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'VENA ORO', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Vena_oro_.webp', seed:'p-vena', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TRAVERTINO NAVONA', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Travertino Navona_.webp', seed:'p-trave', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BRONCE ARMANI', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Bronce_Armani.webp', seed:'p-bronc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ONYX WHITE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Onyx White_.webp', seed:'p-onyx', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'PATAGONIA GOLD', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/patagonia_gold.webp', seed:'p-patag', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'DAZZLE', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Dazzle.webp', seed:'p-dazzl', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO ZEN', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Blanco Zen_.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TITANIUM BLACK', cat:'PURASTONE PRIMA', tag:'SUPERFICIE · PURASTONE PRIMA', img:'assets/images/catalogo/Purastone Prima/Titanium_Black_.webp', seed:'p-titan', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BASALTINA', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Basaltina.webp', seed:'p-basal', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'ESTATUARIO VENATO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Estatuario_Venato_.webp', seed:'p-estat', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTAVAGLI', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/CALACATTAVagli_.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO PALOMA', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Blanco_Paloma.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA ANTICO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Calacatta_Antico_.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BIANCO SILVER', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Bianco_Silver_.webp', seed:'p-bianc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA BORGHINI', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Calacatta_Borghini.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA DORE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Calacatta_Dore_.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'GRIS ZEN', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Gris_Zen.webp', seed:'p-gris', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BIANCO LUXE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Bianco_Luxe_.webp', seed:'p-bianc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CREMA PISA', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Crema_Pisa.webp', seed:'p-crema', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'STATUARIETTO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Statuarietto_.webp', seed:'p-statu', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'GREYGE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Greyge_.webp', seed:'p-greyg', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA VERSALLES', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Calacatta_versalles.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TAJ', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/taj.webp', seed:'p-taj', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'NEGRO BETUN', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Negro Betun_.webp', seed:'p-negro', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'TERRAZO WHITE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Terrazo_White.webp', seed:'p-terra', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'GRIS FOSIL', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Gris_Fosil.webp', seed:'p-gris', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO ICON', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Blanco_Icon_.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'VENATINO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Venatino.webp', seed:'p-venat', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'NOIR', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Noir_.webp', seed:'p-noir', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CALACATTA GOLD', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Calacatta_Gold_.webp', seed:'p-calac', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CEMENTO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Cemento.webp', seed:'p-cemen', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO NUBE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Blanco_Nube_.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'PORFIDO GRIS', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Porfido_Gris_.webp', seed:'p-porfi', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CONCRETE', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Concrete_.webp', seed:'p-concr', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO CANA', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Blanco_Cana.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'BLANCO GLITTER', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Blanco_Glitter.webp', seed:'p-blanc', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'STATUARIO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Statuario_.webp', seed:'p-statu', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'NEGRO GLITTER', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Negro_Glitter_.webp', seed:'p-negro', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CONCRETE SAND', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Concrete_sand_.webp', seed:'p-concr', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'NERO MARQUINA', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Nero_Marquina.webp', seed:'p-nero', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'GRIS TOPO', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Gris_Topo_.webp', seed:'p-gris', desc:'Superficie de alto rendimiento y belleza inigualable.' },
+    { name:'CONCRETE DARK', cat:'PURASTONE', tag:'SUPERFICIE · PURASTONE', img:'assets/images/catalogo/Purastone/Concrete_Dark.webp', seed:'p-concr', desc:'Superficie de alto rendimiento y belleza inigualable.' }
   ];
+  PRODUCTS.sort((a, b) => {
+    if(a.cat === 'PURASTONE' && b.cat !== 'PURASTONE') return -1;
+    if(b.cat === 'PURASTONE' && a.cat !== 'PURASTONE') return 1;
+    if(a.cat === 'PURASTONE PRIMA' && b.cat !== 'PURASTONE PRIMA') return -1;
+    if(b.cat === 'PURASTONE PRIMA' && a.cat !== 'PURASTONE PRIMA') return 1;
+    return 0;
+  });
   PRODUCTS.forEach((p, i) => { p.idx = i; });
 
   /* ═══ UTILIDADES ═════════════════════════════════════════════ */
@@ -1352,21 +1399,26 @@
 
   /* ═══ 04 · PROYECTOS — TABS + MASONRY ══════════════════════ */
   (function buildClients(){
-    const feed    = document.getElementById('clients-feed');
-    const tabsEl  = document.getElementById('proj-tabs');
+    const feed       = document.getElementById('clients-feed');
+    const tabsEl     = document.getElementById('proj-tabs');
+    const countEl    = document.getElementById('clients-count');
+    const moreBtn    = document.getElementById('clients-more-btn');
+    const moreCont   = document.getElementById('clients-more-container');
     if(!feed) return;
 
     const TAB_ALL = 'TODOS';
     const cats    = [...new Set(CLIENTS.map(c => c.cat))];
-    const state   = { filter: TAB_ALL, timer: null };
+    const isDesktop = window.innerWidth > 768;
+    const PAGE_SIZE_CLIENTS = isDesktop ? CLIENTS.length : 6;
+    const state   = { filter: TAB_ALL, shown: PAGE_SIZE_CLIENTS, timer: null };
 
     const itemHTML = (c, i) => {
       const [w, h] = c.ar.split('/').map(Number);
       const ih = Math.round(600 * h / w);
       return `
       <figure class="client r" role="button" tabindex="0"
-              data-work="${c.work}" data-who="${c.who}" data-cat="${c.cat}"
-              aria-label="Proyecto ${c.work} — consultar algo similar"
+              data-work="${c.work}" data-who="${c.who}" data-cat="${c.cat}" data-idx="${c.idx}"
+              aria-label="Proyecto ${c.work} — ver detalle"
               style="--d:${(i % 4) * .08}s">
         <div class="client-media img-tone">
           <span class="client-num">${toRoman(i + 1)}</span>
@@ -1387,15 +1439,37 @@
       const list = state.filter === TAB_ALL
         ? CLIENTS
         : CLIENTS.filter(c => c.cat === state.filter);
-      feed.innerHTML = list.map(itemHTML).join('');
-      /* re-observe nuevos elementos para el reveal (revealObserver se declara después pero
-         el render inicial lo recoge el observer global; en filtraciones ya está disponible) */
+      const slice = list.slice(0, state.shown);
+      feed.innerHTML = slice.map(itemHTML).join('');
+      updateMeta(list, slice.length);
+
       if(typeof revealObserver !== 'undefined'){
         feed.querySelectorAll('.r').forEach(el => {
           el.classList.remove('in');
           revealObserver.observe(el);
         });
       }
+    }
+
+    function updateMeta(list, shown){
+      if(!moreCont || !countEl || !moreBtn) return;
+      moreCont.style.display = 'flex';
+      countEl.innerHTML = `MOSTRANDO <b>${String(Math.min(shown, list.length)).padStart(2,'0')}</b> DE <b>${String(list.length).padStart(2,'0')}</b>`;
+      moreBtn.style.display = shown >= list.length ? 'none' : '';
+    }
+
+    if(moreBtn) {
+      moreBtn.addEventListener('click', () => {
+        const list = state.filter === TAB_ALL ? CLIENTS : CLIENTS.filter(c => c.cat === state.filter);
+        const from = state.shown;
+        state.shown += PAGE_SIZE_CLIENTS;
+        const slice = list.slice(from, state.shown);
+        feed.insertAdjacentHTML('beforeend', slice.map((c, i) => itemHTML(c, from + i)).join(''));
+        updateMeta(list, state.shown);
+        if(typeof revealObserver !== 'undefined'){
+          feed.querySelectorAll('.r:not(.in)').forEach(el => revealObserver.observe(el));
+        }
+      });
     }
 
     /* ── Tabs ── */
@@ -1410,6 +1484,7 @@
         const cat = btn.textContent.trim();
         if(state.filter === cat) return;
         state.filter = cat;
+        state.shown = PAGE_SIZE_CLIENTS;
         tabBtns.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
         feed.style.opacity = '0';
         feed.style.transform = 'translateY(10px)';
@@ -1435,18 +1510,15 @@
 
     render();
 
-    /* ── WhatsApp ── */
-    const ask = (work, who) =>
-      window.open(waURL(`Hola, vi el proyecto "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener,noreferrer');
-
+    /* ── Click / Modal ── */
     feed.addEventListener('click', e => {
       const c = e.target.closest('.client');
-      if(c) ask(c.dataset.work, c.dataset.who);
+      if(c) openClientModal(c.dataset.idx);
     });
     feed.addEventListener('keydown', e => {
       if(e.key !== 'Enter' && e.key !== ' ') return;
       const c = e.target.closest('.client');
-      if(c){ e.preventDefault(); ask(c.dataset.work, c.dataset.who); }
+      if(c){ e.preventDefault(); openClientModal(c.dataset.idx); }
     });
   })();
 
@@ -1477,6 +1549,31 @@
     modalTitle.textContent = p.name;
     modalDesc.textContent = p.desc || 'Material seleccionado bloque por bloque en nuestro taller.';
     modalCta.href = waURL(`Hola, quisiera consultar por este material: ${p.name}.`);
+    modalCta.rel = 'noopener noreferrer';
+    
+    lastFocus = document.activeElement;
+    modal.setAttribute('aria-hidden', 'false');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    modalClose?.focus();
+  }
+
+  function openClientModal(idx){
+    const c = CLIENTS[idx];
+    if(!c || !modal) return;
+    modalImg.classList.remove('loaded');
+    modalImg.onerror = function(){
+      this.onerror = null;
+      this.src = `https://picsum.photos/seed/${c.seed}/1200/900.jpg`;
+    };
+    modalImg.src = c.img;
+    modalImg.alt = `Proyecto ${c.work}`;
+    if(modalImg.complete && modalImg.naturalWidth) modalImg.classList.add('loaded');
+    modalNum.textContent  = toRoman(+idx + 1);
+    modalTag.textContent  = c.cat || 'PROYECTOS';
+    modalTitle.textContent = c.work;
+    modalDesc.textContent = c.who || '';
+    modalCta.href = waURL(`Hola, vi el proyecto "${c.work}" en su web y quisiera consultar algo similar.`);
     modalCta.rel = 'noopener noreferrer';
     
     lastFocus = document.activeElement;
@@ -1563,6 +1660,11 @@
 
     function switchTab(cat, btn){
       if(state.filter === cat) return;
+      
+      try {
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      } catch(e){}
+      
       state.filter = cat;
       state.shown = PAGE_SIZE;
       tabBtns.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
