@@ -323,11 +323,24 @@
   @keyframes mq{to{transform:translateX(-50%)}}
 
   /* ═══ MÓDULO 06 · PRODUCTOS DESTACADOS (GALERÍA INFINITA) ═══ */
-  .gallery{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-ms-overflow-style:none;
-    padding-left:var(--pad);scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
+  .gallery{
+    overflow:hidden;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+    padding-left:0;
+  }
   .gallery::-webkit-scrollbar{display:none}
-  .g-track{display:flex;width:max-content;padding-right:var(--pad);padding-block:.5rem 1rem}
-  .g-group{display:flex}
+  .g-track{
+    display:flex;
+    width:max-content;
+    animation:gscroll 70s linear infinite;
+    padding-block:.5rem 1rem;
+    padding-right:0;
+  }
+  .g-group{
+    display:flex;
+    padding-right:clamp(1rem,2.4vw,2.2rem);
+  }
   .mat{margin-right:clamp(1rem,2.4vw,2.2rem);scroll-snap-align:start;cursor:pointer}
   .mat-media{height:clamp(300px,50vh,540px);overflow:hidden}
   .mat-media img{height:100%;width:auto;object-fit:cover;transition:transform .9s var(--ease)}
@@ -342,9 +355,6 @@
   .mat-num{font-family:var(--roman);font-size:.6rem;letter-spacing:.2em;color:var(--gold-deep)}
   .mat-name{font-family:var(--serif);font-weight:500;font-size:1.08rem;text-transform:uppercase;letter-spacing:.03em}
   .mat-tag{font-size:.6rem;letter-spacing:.16em;color:var(--muted);margin-left:auto;text-transform:uppercase}
-  .gallery{overflow:hidden;padding-left:0}
-  .g-track{animation:gscroll 70s linear infinite;padding-right:0}
-  .g-group{padding-right:clamp(1rem,2.4vw,2.2rem)}
   .gallery:hover .g-track, .gallery:active .g-track{animation-play-state:paused}
   @keyframes gscroll{to{transform:translateX(-50%)}}
 
@@ -553,7 +563,6 @@
   @media(min-width:900px){
     .stats{grid-template-columns:repeat(4,1fr)}
     .stat{border-right:1px solid var(--border-inv);border-bottom:0;padding:2.8rem 1.6rem}
-    .stat:nth-child(odd){border-right:1px solid var(--border-inv)}
     .stat:last-child{border-right:0}
   }
 
@@ -808,9 +817,7 @@
       </div>
 
       <video class="hero-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1">
-        <source src="assets/videos/video-Hero.mp4" type="video/mp4">
-        <source src="assets/videos/hero.mp4"       type="video/mp4">
-        <source src="assets/videos/hero.webm"      type="video/webm">
+        <source src="assets/videos/hero.mp4" type="video/mp4">
       </video>
 
       <div class="hero-scrim"></div>
@@ -864,7 +871,7 @@
 
           <!-- 01 · Jabonera de mármol (base) -->
           <div class="stack-img img-tone">
-            <img src="assets/images/proceso/Jabonera de marmol.webp"
+            <img src="assets/images/proceso/jabonera-de-marmol.webp"
                  onerror="this.onerror=null;this.src='https://picsum.photos/seed/piedra-bloque/1600/1000.jpg';"
                  loading="lazy" decoding="async"
                  alt="Jabonera de mármol">
@@ -873,7 +880,7 @@
 
           <!-- 02 · Escalera de mármol (sube y cubre a la 01) -->
           <div class="stack-img stack-img--over img-tone" id="stack-b">
-            <img src="assets/images/proceso/Escalera de marmol.webp"
+            <img src="assets/images/proceso/escalera-de-marmol.webp"
                  onerror="this.onerror=null;this.src='https://picsum.photos/seed/taller-corte/1600/1000.jpg';"
                  loading="lazy" decoding="async"
                  alt="Escalera de mármol"
@@ -883,7 +890,7 @@
 
           <!-- 03 · Mesada de mármol (sube y cubre a la 02) -->
           <div class="stack-img stack-img--over img-tone" id="stack-c">
-            <img src="assets/images/proceso/Mesada-Marmol.webp"
+            <img src="assets/images/proceso/mesada-marmol.webp"
                  onerror="this.onerror=null;this.src='https://picsum.photos/seed/interior-obra/1600/1000.jpg';"
                  loading="lazy" decoding="async"
                  alt="Mesada de mármol"
@@ -944,8 +951,8 @@
           <figure class="about-figure img-tone">
             <div class="framed">
               <div class="parallax r-img" data-parallax="0.12">
-                <img src="assets/images/nosotros/El imperioo marmoleria.webp"
-                     onerror="this.onerror=null;this.src='assets/images/nosotros/taller.webp';"
+                <img src="assets/images/nosotros/el-imperio-marmoleria.webp"
+                     onerror="this.onerror=null;this.src='https://picsum.photos/seed/taller-marmol/1400/1000.jpg';"
                      loading="eager" decoding="async"
                      alt="Marmolería Benjamín - Nuestro Taller">
               </div>
@@ -1013,7 +1020,7 @@
     </section>
 
     <!-- ══════════════ V — PROYECTOS REALIZADOS (FEED MASONRY) ══════════════ -->
-    <section class="section" id="proyectos-feed" data-theme="light">
+    <section class="section" id="proyectos" data-theme="light">
       <div class="wrap">
         <div class="sec-head">
           <div class="head-stack">
@@ -1042,9 +1049,7 @@
              alt="Detalles de superficie de mármol pulido">
         
         <video class="cta-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5);">
-          <source src="assets/videos/video-cta.mp4" type="video/mp4">
-          <source src="assets/videos/cta.mp4"       type="video/mp4">
-          <source src="assets/videos/cta.webm"      type="video/webm">
+          <source src="assets/videos/cta.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -1127,14 +1132,14 @@
         <a href="#materiales">MATERIALES</a>
         <a href="#productos">PRODUCTOS</a>
         <a href="#nosotros">NOSOTROS</a>
-        <a href="#proyectos-feed">PROYECTOS</a>
+        <a href="#proyectos">PROYECTOS</a>
         <a href="#contacto">CONTACTO</a>
         <a href="#ubicacion">UBICACIÓN</a>
       </nav>
       <div class="footer-col">
         <h4 class="footer-h">CONTACTO</h4>
-        <a data-wa="default" target="_blank" rel="noopener"><svg class="ico"><use href="#i-wa"/></svg> WhatsApp</a>
-        <a href="https://instagram.com" target="_blank" rel="noopener"><svg class="ico"><use href="#i-ig"/></svg> Instagram</a>
+        <a data-wa="default" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-wa"/></svg> WhatsApp</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><svg class="ico"><use href="#i-ig"/></svg> Instagram</a>
         <a href="mailto:hola@marmoleria.com"><svg class="ico"><use href="#i-mail"/></svg> hola@marmoleria.com</a>
         <p style="margin-top:1.4rem;font-size:.8rem;color:var(--muted-inv)">Lun a Vie 9–17 h</p>
       </div>
@@ -1288,7 +1293,7 @@
       const msg = WA_MESSAGES[a.dataset.wa] || WA_MESSAGES.default;
       a.href = waURL(msg);
       a.target = '_blank';
-      a.rel = 'noopener';
+      a.rel = 'noopener noreferrer';
     });
   })();
 
@@ -1332,7 +1337,7 @@
       `<div class="g-group" aria-hidden="true">${groupHTML}</div></div>`;
 
     const ask = name =>
-      window.open(waURL(`Hola, quisiera consultar por este material: ${name}.`), '_blank', 'noopener');
+      window.open(waURL(`Hola, quisiera consultar por este material: ${name}.`), '_blank', 'noopener,noreferrer');
 
     gallery.addEventListener('click', e => {
       const mat = e.target.closest('.mat');
@@ -1432,7 +1437,7 @@
 
     /* ── WhatsApp ── */
     const ask = (work, who) =>
-      window.open(waURL(`Hola, vi el proyecto "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener');
+      window.open(waURL(`Hola, vi el proyecto "${work}" (${who}) en su web y quisiera consultar algo similar.`), '_blank', 'noopener,noreferrer');
 
     feed.addEventListener('click', e => {
       const c = e.target.closest('.client');
@@ -1472,6 +1477,7 @@
     modalTitle.textContent = p.name;
     modalDesc.textContent = p.desc || 'Material seleccionado bloque por bloque en nuestro taller.';
     modalCta.href = waURL(`Hola, quisiera consultar por este material: ${p.name}.`);
+    modalCta.rel = 'noopener noreferrer';
     
     lastFocus = document.activeElement;
     modal.setAttribute('aria-hidden', 'false');
@@ -1643,6 +1649,11 @@
   const header        = document.querySelector('.site-header');
   const themedSections= [...document.querySelectorAll('[data-theme]')];
   const paras         = [...document.querySelectorAll('[data-parallax]')];
+  const paraItems     = paras.map(el => ({
+    el,
+    media: [...el.querySelectorAll('img, video')],
+    factor: parseFloat(el.dataset.parallax || '0.1')
+  }));
 
   function updateHeader(){
     const hh = header.offsetHeight;
@@ -1675,14 +1686,14 @@
     if(reduceMotion) return;
     const vh = innerHeight;
     const factor = innerWidth < 768 ? 0.35 : 1;
-    for(const el of paras){
-      const r = el.getBoundingClientRect();
+    for(const item of paraItems){
+      const r = item.el.getBoundingClientRect();
       if(r.bottom < -80 || r.top > vh + 80) continue;
       const center = r.top + r.height / 2 - vh / 2;
-      const media = el.querySelectorAll('img, video');
-      media.forEach(m => {
-        m.style.transform = `translate3d(0, ${(-center * parseFloat(el.dataset.parallax || '0.1') * factor).toFixed(1)}px, 0)`;
-      });
+      const offset = (-center * item.factor * factor).toFixed(1);
+      for(const m of item.media){
+        m.style.transform = `translate3d(0, ${offset}px, 0)`;
+      }
     }
   }
 
@@ -1757,7 +1768,10 @@
     const playVideo = () => {
       video.classList.add('is-ready');
       container.classList.add('has-video');
-      video.play().catch(err => console.log("Autoplay video info:", err));
+      const p = video.play();
+      if(p && typeof p.catch === 'function'){
+        p.catch(() => { /* Autoplay en espera de interacción o baja batería */ });
+      }
     };
 
     if (video.readyState >= 2) {
@@ -1766,8 +1780,6 @@
       video.addEventListener('canplay', playVideo, { once: true });
       video.addEventListener('loadeddata', playVideo, { once: true });
     }
-    video.load();
-    playVideo();
   }
 
   (function initAllVideos(){
@@ -1788,10 +1800,10 @@
         navigator.geolocation.getCurrentPosition(
           pos => {
             const { latitude, longitude } = pos.coords;
-            window.open(`https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${dest}`, '_blank', 'noopener');
+            window.open(`https://www.google.com/maps/dir/?api=1&origin=${latitude},${longitude}&destination=${dest}`, '_blank', 'noopener,noreferrer');
           },
           () => {
-            window.open(fallbackUrl, '_blank', 'noopener');
+            window.open(fallbackUrl, '_blank', 'noopener,noreferrer');
           },
           { timeout: 5000, enableHighAccuracy: true }
         );
