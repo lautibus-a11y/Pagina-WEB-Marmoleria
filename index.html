@@ -380,8 +380,8 @@
     display:flex;flex-direction:column;align-items:center;justify-content:center;
     gap:1.6rem;pointer-events:none;
   }
-  .stack-caption h2{mix-blend-mode:difference;color:#fff;text-align:center}
-  .stack-caption .gold-line{flex:none;opacity:0;transition:opacity .9s var(--ease) .45s}
+  .stack-caption h2{color:var(--marble-black);text-align:center}
+  .stack-caption .gold-line{flex:none;opacity:0;background:var(--gold-deep);transition:opacity .9s var(--ease) .45s}
   .stack-caption.in .gold-line{opacity:1}
   @media(min-width:760px){.stack-track{height:340vh}}
 
@@ -1888,7 +1888,7 @@
     stackBImg.style.transform = `scale(${1.08 - pB * .08})`;
     stackC.style.transform    = `translate3d(0, ${(1 - pC) * 100}%, 0)`;
     stackCImg.style.transform = `scale(${1.08 - pC * .08})`;
-    stackCaption.classList.toggle('in', p > .55);
+    stackCaption.classList.toggle('in', p > .85);
   }
 
   function updateParallax(){
