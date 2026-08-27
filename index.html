@@ -376,12 +376,24 @@
   }
   .stack-label b{color:var(--gold);font-weight:400;margin-right:.6rem}
   .stack-caption{
-    position:absolute;inset:0;
-    display:flex;flex-direction:column;align-items:center;justify-content:center;
-    gap:1.6rem;pointer-events:none;
+    position:absolute;inset:0;z-index:3;
+    display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+    gap:1.4rem;pointer-events:none;
+    padding:var(--pad) var(--pad) clamp(1.5rem,4vh,2.8rem);
+    opacity:0;transform:translateY(-24px);
+    transition:opacity .75s var(--ease),transform .85s var(--ease);
   }
-  .stack-caption h2{color:var(--marble-black);text-align:center}
-  .stack-caption .gold-line{flex:none;opacity:0;background:var(--gold-deep);transition:opacity .9s var(--ease) .45s}
+  .stack-caption.in{
+    opacity:1;transform:translateY(0);
+  }
+  .stack-caption h2{
+    color:var(--marble-black);
+    text-align:center;
+  }
+  .stack-caption .gold-line{
+    flex:none;opacity:0;background:var(--gold-deep);
+    transition:opacity .8s var(--ease) .25s;
+  }
   .stack-caption.in .gold-line{opacity:1}
   @media(min-width:760px){.stack-track{height:340vh}}
 
@@ -1888,7 +1900,7 @@
     stackBImg.style.transform = `scale(${1.08 - pB * .08})`;
     stackC.style.transform    = `translate3d(0, ${(1 - pC) * 100}%, 0)`;
     stackCImg.style.transform = `scale(${1.08 - pC * .08})`;
-    stackCaption.classList.toggle('in', p > .85);
+    stackCaption.classList.toggle('in', p > .70);
   }
 
   function updateParallax(){
