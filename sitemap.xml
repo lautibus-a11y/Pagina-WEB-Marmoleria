@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://marmoleria-benjamin.com/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://marmoleria-benjamin.com/assets/images/Logo-Header.png</image:loc>
+      <image:title>Marmolería Benjamín — Mármoles, Granitos y Cuarzo</image:title>
+      <image:caption>Taller especializado en diseño, corte e instalación de mármol, granito y cuarzo en Buenos Aires.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://marmoleria-benjamin.com/assets/images/Favicon.png</image:loc>
+      <image:title>Marmolería Benjamín</image:title>
+    </image:image>
+  </url>
+</urlset>

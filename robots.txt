@@ -1,0 +1,8 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Disallow: /update_products.py
+Disallow: /*.py$
+
+# Sitemap index
+Sitemap: https://marmoleria-benjamin.com/sitemap.xml
