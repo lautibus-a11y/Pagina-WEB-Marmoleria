@@ -767,12 +767,12 @@
   .r{opacity:0;transform:translateY(26px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}
   .r.in{opacity:1;transform:none}
   .line{display:block;overflow:hidden;padding-bottom:.04em;margin-bottom:-.04em}
-  .line-in{display:block;transform:translateY(112%);transition:transform 1.15s var(--ease);transition-delay:var(--d,0s)}
-  .in .line-in{transform:none}
+  .line-in{display:block;transform:translateY(112%);transition:transform 1.15s var(--ease);transition-delay:var(--d,0s);will-change:transform}
+  .in .line-in{transform:none;will-change:auto}
   .r-img{opacity:0;transform:translateY(22px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
-  .r-img img,.r-img video{transform:scale(1.04);transition:transform 1.4s var(--ease)}
+  .r-img img,.r-img video{transform:scale(1.04);transition:transform 1.4s var(--ease);will-change:transform}
   .r-img.in{opacity:1;transform:none}
-  .r-img.in img,.r-img.in video{transform:scale(1)}
+  .r-img.in img,.r-img.in video{transform:scale(1);will-change:auto}
 
   /* ═══ MÓDULO 16 · BOTÓN FLOTANTE DE WHATSAPP (SOLO LOGO B&N) ═════ */
   .wa-float {
@@ -891,10 +891,6 @@
 
     <!-- ══════════════ HERO CINEMATOGRÁFICO ══════════════ -->
     <section class="hero grain" data-theme="dark" aria-label="Presentación">
-      <div class="hero-media">
-        <!-- Imagen de fallback eliminada -->
-      </div>
-
       <video class="hero-video" muted loop playsinline autoplay preload="metadata" aria-hidden="true" tabindex="-1">
         <source src="assets/videos/hero.mp4" type="video/mp4">
       </video>
@@ -1605,9 +1601,8 @@
 
     const TAB_ALL = 'TODOS';
     const cats    = [...new Set(CLIENTS.map(c => c.cat))];
-    const isDesktop = window.innerWidth > 768;
-    const PAGE_SIZE_CLIENTS = isDesktop ? CLIENTS.length : 6;
-    const state   = { filter: TAB_ALL, shown: PAGE_SIZE_CLIENTS, timer: null };
+    const getPageSize = () => window.innerWidth > 768 ? CLIENTS.length : 6;
+    const state   = { filter: TAB_ALL, shown: getPageSize(), timer: null };
 
     const itemHTML = (c, i) => {
       const [w, h] = c.ar.split('/').map(Number);
@@ -1659,7 +1654,7 @@
       moreBtn.addEventListener('click', () => {
         const list = state.filter === TAB_ALL ? CLIENTS : CLIENTS.filter(c => c.cat === state.filter);
         const from = state.shown;
-        state.shown += PAGE_SIZE_CLIENTS;
+        state.shown += 6;
         const slice = list.slice(from, state.shown);
         feed.insertAdjacentHTML('beforeend', slice.map((c, i) => itemHTML(c, from + i)).join(''));
         updateMeta(list, state.shown);
@@ -1681,7 +1676,7 @@
         const cat = btn.textContent.trim();
         if(state.filter === cat) return;
         state.filter = cat;
-        state.shown = PAGE_SIZE_CLIENTS;
+        state.shown = getPageSize();
         tabBtns.forEach(b => b.setAttribute('aria-selected', String(b === btn)));
         feed.style.opacity = '0';
         feed.style.transform = 'translateY(10px)';
@@ -1744,8 +1739,19 @@
     modalNum.textContent  = toRoman(idx + 1);
     modalTag.textContent  = p.tag;
     modalTitle.textContent = p.name;
-    modalDesc.innerHTML = Array.isArray(p.desc) ? p.desc.map(t => `<p>${t}</p>`).join('') : `<p>${p.desc || 'Material seleccionado bloque por bloque en nuestro taller.'}</p>`;
+    
+    modalDesc.innerHTML = '';
+    const descItems = Array.isArray(p.desc) ? p.desc : [p.desc || 'Material seleccionado bloque por bloque en nuestro taller.'];
+    const frag = document.createDocumentFragment();
+    descItems.forEach(text => {
+      const pEl = document.createElement('p');
+      pEl.textContent = text;
+      frag.appendChild(pEl);
+    });
+    modalDesc.appendChild(frag);
+
     modalCta.href = waURL(`Hola, quisiera consultar por este material: ${p.name}.`);
+    modalCta.target = '_blank';
     modalCta.rel = 'noopener noreferrer';
     
     lastFocus = document.activeElement;
@@ -1769,8 +1775,14 @@
     modalNum.textContent  = toRoman(+idx + 1);
     modalTag.textContent  = c.cat || 'PROYECTOS';
     modalTitle.textContent = c.work;
-    modalDesc.innerHTML = `<p>${c.who || ''}</p>`;
+    
+    modalDesc.innerHTML = '';
+    const pEl = document.createElement('p');
+    pEl.textContent = c.who || '';
+    modalDesc.appendChild(pEl);
+
     modalCta.href = waURL(`Hola, vi el proyecto "${c.work}" en su web y quisiera consultar algo similar.`);
+    modalCta.target = '_blank';
     modalCta.rel = 'noopener noreferrer';
     
     lastFocus = document.activeElement;
