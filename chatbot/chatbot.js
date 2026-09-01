@@ -75,7 +75,15 @@
     }
 
     messagesEl.appendChild(div);
-    scrollToBottom();
+
+    if (type === 'bot' || type === 'error') {
+      // Scrollear al inicio del nuevo mensaje del bot para que el usuario no tenga que subir
+      setTimeout(() => {
+        div.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 40);
+    } else {
+      scrollToBottom();
+    }
 
     // Guardar en historial
     if (type === 'user') {
