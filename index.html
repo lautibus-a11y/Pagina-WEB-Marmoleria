@@ -702,6 +702,230 @@
     color:var(--muted);text-transform:uppercase;
   }
 
+  /* ═══ MÓDULO 13C · TESTIMONIOS CAROUSEL (AUTOPLAY) ═══════════ */
+  .testimonials-section{
+    background:var(--marble-white);
+    position:relative;
+    overflow:hidden;
+    border-top:1px solid var(--border);
+  }
+  .sec-head--between{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+  }
+  @media(min-width:880px){
+    .sec-head--between{
+      flex-direction:row;
+      justify-content:space-between;
+      align-items:flex-end;
+    }
+    .sec-head--between .head-stack{flex:1;max-width:52%}
+    .testimonials-nav-wrap{flex:1;max-width:44%;display:flex;flex-direction:column;gap:1.4rem;align-items:flex-start}
+  }
+  .testimonials-controls{
+    display:inline-flex;
+    align-items:center;
+    gap:.85rem;
+    margin-top:.4rem;
+  }
+  .testi-btn{
+    width:46px;
+    height:46px;
+    border:1px solid var(--border);
+    background:rgba(255,255,255,.75);
+    color:var(--text);
+    display:grid;
+    place-items:center;
+    cursor:pointer;
+    transition:all .35s var(--ease);
+  }
+  .testi-btn:hover,.testi-btn:focus-visible{
+    background:var(--marble-black);
+    color:var(--marble-white);
+    border-color:var(--marble-black);
+    transform:translateY(-2px);
+  }
+  .testi-btn .ico{width:16px;height:16px;transition:transform .3s var(--ease)}
+  .testi-btn--prev .ico{transform:rotate(180deg)}
+  .testi-btn--prev:hover .ico{transform:rotate(180deg) translateX(2px)}
+  .testi-btn--next:hover .ico{transform:translateX(2px)}
+  .testi-dots{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+  }
+  .testi-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    border:0;
+    padding:0;
+    background:rgba(17,17,16,.22);
+    cursor:pointer;
+    transition:all .4s var(--ease);
+  }
+  .testi-dot.is-active{
+    width:28px;
+    border-radius:4px;
+    background:var(--gold);
+  }
+  .testimonials-carousel{
+    margin-top:clamp(2.5rem,6vh,4rem);
+    position:relative;
+    width:100%;
+    overflow:hidden;
+    user-select:none;
+    touch-action:pan-y;
+  }
+  .testimonials-track{
+    display:flex;
+    gap:clamp(1.2rem,2.2vw,2rem);
+    transition:transform .65s var(--ease);
+    will-change:transform;
+  }
+  .testi-card{
+    flex:0 0 100%;
+    max-width:100%;
+    background:rgba(255,255,255,.85);
+    border:1px solid var(--border);
+    padding:clamp(1.8rem,3.8vw,2.6rem);
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    box-shadow:0 12px 32px rgba(17,17,16,.03);
+    transition:transform .4s var(--ease),border-color .4s var(--ease),box-shadow .4s var(--ease);
+  }
+  @media(min-width:680px){
+    .testi-card{
+      flex:0 0 calc(50% - (clamp(1.2rem,2.2vw,2rem) / 2));
+      max-width:calc(50% - (clamp(1.2rem,2.2vw,2rem) / 2));
+    }
+  }
+  @media(min-width:1100px){
+    .testi-card{
+      flex:0 0 calc(33.333% - (clamp(1.2rem,2.2vw,2rem) * 2 / 3));
+      max-width:calc(33.333% - (clamp(1.2rem,2.2vw,2rem) * 2 / 3));
+    }
+  }
+  .testi-card::before{
+    content:"“";
+    position:absolute;
+    top:1rem;
+    right:1.6rem;
+    font-family:var(--serif);
+    font-size:clamp(4.5rem,7vw,6.5rem);
+    line-height:1;
+    color:rgba(200,164,93,.14);
+    pointer-events:none;
+    font-style:italic;
+  }
+  .testi-card:hover{
+    transform:translateY(-4px);
+    border-color:rgba(200,164,93,.65);
+    box-shadow:0 18px 40px rgba(17,17,16,.07);
+  }
+  .testi-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:.8rem;
+    margin-bottom:1.4rem;
+  }
+  .testi-stars{
+    display:flex;
+    gap:3px;
+    color:var(--gold);
+    font-size:.95rem;
+    letter-spacing:.06em;
+  }
+  .testi-stars .ico{
+    width:14px;
+    height:14px;
+    color:var(--gold);
+  }
+  .testi-tag{
+    font-family:var(--roman);
+    font-size:.54rem;
+    letter-spacing:.2em;
+    color:var(--gold-deep);
+    background:rgba(200,164,93,.12);
+    padding:.3rem .65rem;
+    border:1px solid rgba(200,164,93,.3);
+    white-space:nowrap;
+  }
+  .testi-quote{
+    font-family:var(--serif);
+    font-size:clamp(1.05rem,1.35vw,1.22rem);
+    line-height:1.65;
+    color:var(--text);
+    font-style:italic;
+    margin-bottom:2rem;
+    position:relative;
+    z-index:1;
+  }
+  .testi-author{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+    border-top:1px solid var(--border);
+    padding-top:1.2rem;
+  }
+  .testi-avatar{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    background:var(--marble-black);
+    color:var(--gold);
+    display:grid;
+    place-items:center;
+    font-family:var(--roman);
+    font-size:.76rem;
+    font-weight:500;
+    border:1px solid rgba(200,164,93,.5);
+    flex-shrink:0;
+  }
+  .testi-info{display:flex;flex-direction:column;gap:.2rem}
+  .testi-name{
+    font-family:var(--roman);
+    font-size:.78rem;
+    letter-spacing:.12em;
+    color:var(--text);
+    font-weight:500;
+    text-transform:uppercase;
+  }
+  .testi-role{
+    font-family:var(--sans);
+    font-size:.74rem;
+    color:var(--muted);
+    line-height:1.3;
+  }
+  .testi-mat{
+    font-family:var(--sans);
+    font-size:.68rem;
+    color:var(--gold-deep);
+    letter-spacing:.03em;
+    display:inline-flex;
+    align-items:center;
+    gap:.4rem;
+    margin-top:.15rem;
+  }
+  .testi-progress-bar{
+    width:100%;
+    height:2px;
+    background:rgba(17,17,16,.08);
+    margin-top:2.2rem;
+    position:relative;
+    overflow:hidden;
+  }
+  .testi-progress-fill{
+    height:100%;
+    width:0%;
+    background:var(--gold);
+    transition:width .1s linear;
+  }
+
   /* ═══ MÓDULO 13B · MAPA GIGANTE & UBICACIÓN ══════════════════ */
   .map-section{padding-bottom:0}
   .map-giant-wrapper{
@@ -868,6 +1092,7 @@
     <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></symbol>
     <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13" rx="1"/><path d="M3.5 7l8.5 6 8.5-6"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-5.8 7-11a7 7 0 1 0-14 0c0 5.2 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
   </svg>
 
   <!-- ══════════════ HEADER ══════════════ -->
@@ -881,6 +1106,7 @@
       <a href="#productos">PRODUCTOS</a>
       <a href="#nosotros">NOSOTROS</a>
       <a href="#proyectos">PROYECTOS</a>
+      <!-- <a href="#testimonios">TESTIMONIOS</a> (Oculto temporalmente) -->
       <a href="#contacto">CONTACTO</a>
       <a href="#ubicacion">UBICACIÓN</a>
     </nav>
@@ -899,6 +1125,7 @@
       <li style="--i:1"><a href="#productos"><span class="menu-num">II</span>PRODUCTOS</a></li>
       <li style="--i:2"><a href="#nosotros"><span class="menu-num">III</span>NOSOTROS</a></li>
       <li style="--i:3"><a href="#proyectos"><span class="menu-num">IV</span>PROYECTOS</a></li>
+      <!-- <li style="--i:4"><a href="#testimonios"><span class="menu-num">V</span>TESTIMONIOS</a></li> -->
       <li style="--i:4"><a href="#contacto"><span class="menu-num">V</span>CONTACTO</a></li>
       <li style="--i:5"><a href="#ubicacion"><span class="menu-num">VI</span>UBICACIÓN</a></li>
     </ul>
@@ -932,7 +1159,7 @@
         <p class="hero-sub r" style="--d:.55s">COCINAS · ESCALERAS · BAÑOS · REVESTIMIENTOS</p>
         <div class="btn-row r" style="--d:.7s">
           <a class="btn btn-solid" href="#materiales">DESCUBRIR PRODUCTOS <svg class="ico"><use href="#i-arrow"/></svg></a>
-          <a class="btn btn-ghost" data-wa="default">HABLAR POR WHATSAPP</a>
+          <a class="btn btn-ghost" href="#proyectos">VER NUESTROS TRABAJOS</a>
         </div>
       </div>
     </section>
@@ -1148,6 +1375,43 @@
         <div class="pmore r" id="clients-more-container" style="display:none">
           <p class="pcount" id="clients-count"></p>
           <button class="btn btn-ghost" id="clients-more-btn">VER MÁS PROYECTOS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ TESTIMONIOS (AUTO-PLAY CAROUSEL - OCULTO TEMPORALMENTE) ══════════════ -->
+    <section class="section testimonials-section" id="testimonios" data-theme="light" style="display:none" aria-hidden="true">
+      <div class="wrap">
+        <div class="sec-head sec-head--between">
+          <div class="head-stack">
+            <p class="chapter r"><b>VI</b>— TESTIMONIOS · EXPERIENCIAS</p>
+            <h2 class="display display--1 r-head">
+              <span class="line"><span class="line-in">LA VOZ DE</span></span>
+              <span class="line"><span class="line-in em t" style="--d:.1s">NUESTROS</span></span>
+              <span class="line"><span class="line-in" style="--d:.2s">CLIENTES<span class="dot">.</span></span></span>
+            </h2>
+          </div>
+          <div class="testimonials-nav-wrap r" style="--d:.2s">
+            <p class="lead" style="margin-bottom:0">Arquitectos, desarrolladores y familias que confiaron en nuestro taller para transformar sus espacios con materiales nobles y corte milimétrico.</p>
+            <div class="testimonials-controls" aria-label="Controles del carrusel de testimonios">
+              <button class="testi-btn testi-btn--prev" id="testi-prev-btn" aria-label="Testimonio anterior">
+                <svg class="ico"><use href="#i-arrow"/></svg>
+              </button>
+              <div class="testi-dots" id="testi-dots" role="tablist" aria-label="Seleccionar testimonio"></div>
+              <button class="testi-btn testi-btn--next" id="testi-next-btn" aria-label="Siguiente testimonio">
+                <svg class="ico"><use href="#i-arrow"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-carousel r" id="testimonials-carousel" aria-roledescription="carousel" aria-label="Testimonios de clientes">
+          <div class="testimonials-track" id="testimonials-track"></div>
+        </div>
+
+        <!-- Indicador de progreso de autoplay -->
+        <div class="testi-progress-bar" aria-hidden="true">
+          <div class="testi-progress-fill" id="testi-progress-fill"></div>
         </div>
       </div>
     </section>
@@ -1744,6 +2008,251 @@
       const c = e.target.closest('.client');
       if(c){ e.preventDefault(); openClientModal(c.dataset.idx); }
     });
+  })();
+
+  /* ═══ 04B · TESTIMONIOS — CAROUSEL CON AUTOPLAY ═════════════ */
+  const TESTIMONIALS = [
+    {
+      name: 'Arq. Florencia Benítez',
+      role: 'Estudio F+B Arquitectura · Obra Nordelta',
+      project: 'Isla & Mesada en Purastone Travertino',
+      tag: 'RESIDENCIAL',
+      initials: 'FB',
+      quote: 'La precisión en los ingletes a 45° y la caída continua en cascada de la isla en Purastone Travertino superó las expectativas del cliente más exigente. Pocos talleres en Buenos Aires manejan las superficies sinterizadas con este nivel de pulcritud y puntualidad.'
+    },
+    {
+      name: 'Ing. Esteban Rossi',
+      role: 'Propietario · Country Los Álamos, Canning',
+      project: 'Mesada, Alzada e Isla en Neolith Calacatta',
+      tag: 'COCINA INTEGRAL',
+      initials: 'ER',
+      quote: 'Elegimos Neolith Calacatta para la cocina integrada. El trabajo de corte computarizado y el ensamble continuo de las vetas fue una obra de arte. Vinieron a rectificar medidas y el montaje se hizo en el día sin un solo detalle.'
+    },
+    {
+      name: 'Diseñadora Mariana Castro',
+      role: 'Interiorismo & Espacios · Belgrano R, CABA',
+      project: 'Vanitory y Bacha Conformada en Cuarcita Rosso',
+      tag: 'BAÑO PRINCIPAL',
+      initials: 'MC',
+      quote: 'Llevo más de 4 años confiando en Marmolería Benjamín para proyectos de alta gama. El vanitory con bacha integrada oculta en cuarcita quedó con una terminación de nivel internacional. Trabajar con ellos es garantía total de tranquilidad.'
+    },
+    {
+      name: 'Arq. Gonzalo Morales',
+      role: 'Morales & Asoc. · Desarrollos Castelar',
+      project: 'Mesadas e Islas en Purastone Statuarietto',
+      tag: 'DESARROLLO',
+      initials: 'GM',
+      quote: 'Equipamos tres departamentos de categoría con mesadas e islas en Purastone Statuarietto. Excelente relación precio-calidad, material noble y un trato directo, honesto y transparente con el taller en todo momento.'
+    },
+    {
+      name: 'Dra. Valeria Soria',
+      role: 'Propietaria · Residencia en Parque Leloir',
+      project: 'Mesada de Quincho en Granito Negro Brasil Leather',
+      tag: 'EXTERIORES & QUINCHO',
+      initials: 'VS',
+      quote: 'Buscábamos una mesada rústica pero súper distinguida para la zona de parrilla exterior. Nos recomendaron el acabado Leather y no pudimos haber elegido mejor: resistente al calor, a las manchas y visualmente imponente.'
+    },
+    {
+      name: 'Ignacio & Camila',
+      role: 'Propietarios · San Antonio de Padua',
+      project: 'Cocina en L en Purastone Prima Blanco Zen',
+      tag: 'REMODELACIÓN',
+      initials: 'IC',
+      quote: 'Desde la visita al taller en Pontevedra para elegir las placas en persona hasta la colocación final, la experiencia fue inmejorable. Nos explicaron el cuidado del material y nos transmitieron una confianza absoluta.'
+    }
+  ];
+
+  (function initTestimonialsCarousel(){
+    const sectionEl = document.getElementById('testimonios');
+    if(!sectionEl || sectionEl.style.display === 'none') return;
+    const track = document.getElementById('testimonials-track');
+    const dotsContainer = document.getElementById('testi-dots');
+    const prevBtn = document.getElementById('testi-prev-btn');
+    const nextBtn = document.getElementById('testi-next-btn');
+    const carousel = document.getElementById('testimonials-carousel');
+    const progressFill = document.getElementById('testi-progress-fill');
+    if(!track || !dotsContainer) return;
+
+    // Render cards
+    track.innerHTML = TESTIMONIALS.map((t, idx) => `
+      <article class="testi-card" role="group" aria-roledescription="slide" aria-label="Testimonio ${idx + 1} de ${TESTIMONIALS.length}">
+        <div>
+          <div class="testi-top">
+            <div class="testi-stars" aria-label="5 de 5 estrellas">
+              <svg class="ico"><use href="#i-star"/></svg>
+              <svg class="ico"><use href="#i-star"/></svg>
+              <svg class="ico"><use href="#i-star"/></svg>
+              <svg class="ico"><use href="#i-star"/></svg>
+              <svg class="ico"><use href="#i-star"/></svg>
+            </div>
+            <span class="testi-tag">${t.tag}</span>
+          </div>
+          <p class="testi-quote">“${t.quote}”</p>
+        </div>
+        <div class="testi-author">
+          <div class="testi-avatar" aria-hidden="true">${t.initials}</div>
+          <div class="testi-info">
+            <h4 class="testi-name">${t.name}</h4>
+            <span class="testi-role">${t.role}</span>
+            <span class="testi-mat"><svg class="ico" style="width:10px;height:10px;"><use href="#i-gem"/></svg> ${t.project}</span>
+          </div>
+        </div>
+      </article>
+    `).join('');
+
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+    let progressInterval = null;
+    let isPaused = false;
+    const AUTOPLAY_DURATION = 5000;
+    const PROGRESS_STEP = 50;
+    let elapsed = 0;
+
+    function getVisibleCount(){
+      const w = window.innerWidth;
+      if(w >= 1100) return 3;
+      if(w >= 680) return 2;
+      return 1;
+    }
+
+    function getMaxIndex(){
+      const visible = getVisibleCount();
+      return Math.max(0, TESTIMONIALS.length - visible);
+    }
+
+    function renderDots(){
+      const maxIdx = getMaxIndex();
+      dotsContainer.innerHTML = '';
+      for(let i = 0; i <= maxIdx; i++){
+        const btn = document.createElement('button');
+        btn.className = `testi-dot ${i === currentIndex ? 'is-active' : ''}`;
+        btn.setAttribute('aria-label', `Ir a diapositiva ${i + 1}`);
+        btn.addEventListener('click', () => {
+          goToSlide(i);
+          resetAutoPlay();
+        });
+        dotsContainer.appendChild(btn);
+      }
+    }
+
+    function updateTrackPosition(){
+      const card = track.querySelector('.testi-card');
+      if(!card) return;
+      const cardWidth = card.offsetWidth;
+      const gap = parseFloat(window.getComputedStyle(track).gap) || 20;
+      const offset = currentIndex * (cardWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+
+      // Update dots
+      const dots = dotsContainer.querySelectorAll('.testi-dot');
+      dots.forEach((d, idx) => {
+        d.classList.toggle('is-active', idx === currentIndex);
+      });
+    }
+
+    function goToSlide(index){
+      const maxIdx = getMaxIndex();
+      if(index > maxIdx) {
+        currentIndex = 0;
+      } else if(index < 0) {
+        currentIndex = maxIdx;
+      } else {
+        currentIndex = index;
+      }
+      updateTrackPosition();
+      elapsed = 0;
+    }
+
+    function nextSlide(){
+      const maxIdx = getMaxIndex();
+      if(currentIndex >= maxIdx){
+        goToSlide(0);
+      } else {
+        goToSlide(currentIndex + 1);
+      }
+    }
+
+    function prevSlide(){
+      const maxIdx = getMaxIndex();
+      if(currentIndex <= 0){
+        goToSlide(maxIdx);
+      } else {
+        goToSlide(currentIndex - 1);
+      }
+    }
+
+    if(prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
+    if(nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
+
+    // Progress and Autoplay
+    function startAutoPlay(){
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      clearInterval(progressInterval);
+      elapsed = 0;
+      progressInterval = setInterval(() => {
+        if(!isPaused){
+          elapsed += PROGRESS_STEP;
+          const pct = Math.min(100, (elapsed / AUTOPLAY_DURATION) * 100);
+          if(progressFill) progressFill.style.width = `${pct}%`;
+          if(elapsed >= AUTOPLAY_DURATION){
+            elapsed = 0;
+            nextSlide();
+          }
+        }
+      }, PROGRESS_STEP);
+    }
+
+    function resetAutoPlay(){
+      elapsed = 0;
+      if(progressFill) progressFill.style.width = '0%';
+      startAutoPlay();
+    }
+
+    if(sectionEl){
+      sectionEl.addEventListener('mouseenter', () => { isPaused = true; });
+      sectionEl.addEventListener('mouseleave', () => { isPaused = false; });
+      sectionEl.addEventListener('focusin', () => { isPaused = true; });
+      sectionEl.addEventListener('focusout', () => { isPaused = false; });
+    }
+
+    // Touch Swipe
+    let touchStartX = 0;
+    let touchEndX = 0;
+    if(carousel){
+      carousel.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+        isPaused = true;
+      }, { passive: true });
+      carousel.addEventListener('touchend', e => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if(Math.abs(diff) > 45){
+          if(diff > 0) nextSlide();
+          else prevSlide();
+          resetAutoPlay();
+        }
+        isPaused = false;
+      }, { passive: true });
+    }
+
+    // Keyboard navigation
+    if(carousel){
+      carousel.setAttribute('tabindex', '0');
+      carousel.addEventListener('keydown', e => {
+        if(e.key === 'ArrowLeft'){ prevSlide(); resetAutoPlay(); }
+        if(e.key === 'ArrowRight'){ nextSlide(); resetAutoPlay(); }
+      });
+    }
+
+    window.addEventListener('resize', () => {
+      renderDots();
+      if(currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+      updateTrackPosition();
+    });
+
+    renderDots();
+    updateTrackPosition();
+    startAutoPlay();
   })();
 
   /* ═══ 05 · MODAL DE PRODUCTO ════════════════════════════════ */
