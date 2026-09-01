@@ -66,7 +66,8 @@ Se puede visitar de Lunes a Viernes de 09:00 a 17:00 hs para ver y elegir las pl
 ### Contacto y Presupuestos
 📲 WhatsApp directo para presupuestos y consultas: https://wa.me/5491144926814
 📧 Email: info@marmoleriabenjamin.com
-📸 Instagram: @marmoleriabenjamin`;
+📸 Instagram: https://www.instagram.com/marmoleriabenjamin/
+📘 Facebook: https://www.facebook.com/marmolesbenjamin/?locale=es_LA`;
 
 /* ═══ HANDLER PRINCIPAL ════════════════════════════════════════ */
 export default {

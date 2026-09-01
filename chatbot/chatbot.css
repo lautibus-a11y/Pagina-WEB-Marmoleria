@@ -256,29 +256,29 @@
   .chatbot-panel {
     bottom: clamp(1.2rem, 3vw, 2.2rem);
     right: clamp(1.2rem, 3vw, 2.2rem);
-    width: 400px;
+    width: 420px;
     max-width: calc(100vw - 2rem);
-    height: 560px;
-    max-height: calc(100vh - 6rem);
-    border-radius: 0;
+    height: 600px;
+    max-height: calc(100vh - 5rem);
+    border-radius: 10px;
   }
 }
 
-/* Mobile: Ventana modal compacta flotante (Mobile-First UX/UI) */
+/* Mobile: Ventana modal más amplia, cómoda de leer y pegada a la derecha */
 @media (max-width: 640px) {
   .chatbot-panel {
     top: auto;
     bottom: 0.85rem;
-    left: 0.75rem;
     right: 0.75rem;
-    width: auto;
-    max-width: 390px;
-    margin: 0 auto;
-    height: min(72vh, 490px);
-    max-height: 76vh;
+    left: auto;
+    margin: 0;
+    width: calc(100vw - 1.5rem);
+    max-width: 410px;
+    height: min(78vh, 570px);
+    max-height: 82vh;
     border: 1px solid rgba(200,164,93,.65);
     border-radius: 14px;
-    box-shadow: 0 16px 48px rgba(0,0,0,.5);
+    box-shadow: 0 20px 50px rgba(0,0,0,.5);
     font-size: 15px;
   }
 }
@@ -376,6 +376,7 @@
 
 /* ─── Área de mensajes ─── */
 .chatbot-messages {
+  position: relative;
   flex: 1;
   overflow-y: auto;
   padding: 1.2rem 1rem;
@@ -399,10 +400,10 @@
 
 /* ─── Burbuja de mensaje ─── */
 .chatbot-msg {
-  max-width: 88%;
-  padding: .85rem 1rem;
+  max-width: 90%;
+  padding: .85rem 1.05rem;
   font-family: var(--sans);
-  font-size: .88rem;
+  font-size: .94rem;
   line-height: 1.6;
   animation: chatMsgIn .4s var(--ease) both;
   word-break: break-word;
@@ -617,10 +618,10 @@
     gap: .65rem;
   }
   .chatbot-msg {
-    max-width: 92%;
-    padding: .65rem .85rem;
-    font-size: .84rem;
-    line-height: 1.48;
+    max-width: 93%;
+    padding: .75rem .95rem;
+    font-size: .91rem;
+    line-height: 1.55;
   }
   .chatbot-quick-actions {
     padding: 0 .75rem;

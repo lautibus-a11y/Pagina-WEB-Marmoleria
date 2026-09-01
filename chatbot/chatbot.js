@@ -77,10 +77,14 @@
     messagesEl.appendChild(div);
 
     if (type === 'bot' || type === 'error') {
-      // Scrollear al inicio del nuevo mensaje del bot para que el usuario no tenga que subir
-      setTimeout(() => {
-        div.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 40);
+      // Posicionar el scroll exactamente en el inicio del mensaje del bot
+      requestAnimationFrame(() => {
+        const topOffset = div.offsetTop;
+        messagesEl.scrollTo({
+          top: Math.max(0, topOffset - 12),
+          behavior: 'smooth'
+        });
+      });
     } else {
       scrollToBottom();
     }
