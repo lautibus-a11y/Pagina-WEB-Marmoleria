@@ -86,24 +86,34 @@
   }
 
   function formatBotMessage(text) {
-    // Convertir links de WhatsApp a enlaces clickeables
+    if (!text) return '';
+
     let html = escapeHTML(text);
 
-    // Detectar URLs de wa.me y convertirlas
-    html = html.replace(
-      /https:\/\/wa\.me\/\S+/g,
-      match => `<a href="${match}" target="_blank" rel="noopener noreferrer">contactanos por WhatsApp</a>`
-    );
+    // 1. Manejar markdown links existentes tipo [Texto](url)
+    html = html.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, (match, linkText, url) => {
+      const cleanUrl = url.replace(/^[<"']|[>"']$/g, '');
+      return `<a href="${cleanUrl}" target="_blank" rel="noopener noreferrer">${linkText}</a>`;
+    });
 
-    // Si el texto menciona WhatsApp sin link, agregar uno
-    if (/whatsapp/i.test(text) && !html.includes('<a ')) {
-      html = html.replace(
-        /(WhatsApp)/gi,
-        `<a href="${WA_LINK}" target="_blank" rel="noopener noreferrer">$1</a>`
-      );
+    // 2. Convertir negritas markdown **texto** a <strong>texto</strong>
+    html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    // Limpiar asteriscos sueltos que hayan quedado
+    html = html.replace(/\*\*/g, '');
+
+    // 3. Detectar URLs de wa.me sueltas (que no estén dentro de un href ya)
+    html = html.replace(/(^|[^"'>])(https:\/\/wa\.me\/[0-9]+(?:\?[^\s<"']*)?)/g, (match, prefix, url) => {
+      return `${prefix}<a href="${url}" target="_blank" rel="noopener noreferrer" style="font-weight:600;">📲 Contactar por WhatsApp</a>`;
+    });
+
+    // 4. Si el texto menciona WhatsApp pero no tiene ningún enlace, enlazar la palabra
+    if (!html.includes('<a ') && /whatsapp/i.test(html)) {
+      html = html.replace(/(WhatsApp)/gi, `<a href="${WA_LINK}" target="_blank" rel="noopener noreferrer">$1</a>`);
     }
 
-    // Convertir saltos de línea
+    // 5. Convertir saltos de línea ordenados
+    html = html.replace(/\n\s*\n/g, '<br><br>');
     html = html.replace(/\n/g, '<br>');
 
     return html;
