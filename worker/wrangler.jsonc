@@ -1,0 +1,23 @@
+/**
+ * Cloudflare Worker — Chatbot IA Marmolería Benjamín
+ *
+ * Configuración:
+ *   1. Agregar el secret OPENROUTER_API_KEY con: npx wrangler secret put OPENROUTER_API_KEY
+ */
+{
+  "name": "marmoleria-chatbot",
+  "main": "src/index.js",
+  "compatibility_date": "2024-12-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  // Variables de entorno no secretas
+  "vars": {
+    "AI_MODEL": "qwen/qwen3-30b-a3b-instruct-2507",
+    "ALLOWED_ORIGIN": "https://marmoleria-benjamin.com"
+  }
+
+  // NOTA: La variable OPENROUTER_API_KEY debe configurarse como secret:
+  //   npx wrangler secret put OPENROUTER_API_KEY
+  // Nunca incluir API Keys en este archivo.
+}
+

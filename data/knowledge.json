@@ -1,0 +1,230 @@
+{
+  "empresa": {
+    "nombre": "Marmolería Benjamín",
+    "descripcion": "Taller de marmolería especializado en mármol, granito, cuarzo y superficies sinterizadas de ingeniería. Catálogo propio, corte a medida e instalación en Buenos Aires.",
+    "historia": "Somos una marmolería familiar con una historia que atraviesa generaciones. Nuestro oficio comenzó con nuestro abuelo, continuó de la mano de nuestro padre y hoy somos nosotros quienes seguimos manteniendo viva esa tradición. Hace 9 años iniciamos nuestro propio camino, combinando todo el conocimiento y la experiencia heredados con una mirada actual, cuidando cada detalle y manteniendo siempre el compromiso con la calidad. Para nosotros, trabajar el mármol no es solo un oficio: es un legado familiar que continúa creciendo generación tras generación.",
+    "estadisticas": {
+      "anios_experiencia": 15,
+      "proyectos_realizados": 129,
+      "tipos_de_materiales": 30,
+      "generaciones": 3
+    }
+  },
+  "servicios": [
+    "Diseño y asesoramiento personalizado de superficies de piedra",
+    "Medición en obra",
+    "Corte a medida con maquinaria de precisión",
+    "Fabricación de mesadas de cocina, islas, alzadas y desayunadores",
+    "Fabricación de mesadas de baño, vanitories y bachas integradas",
+    "Bachas conformadas (integradas en el mismo material)",
+    "Ingletes a 45° y frentes en cascada",
+    "Revestimientos de paredes, pisos y fachadas",
+    "Escaleras en piedra natural y sinterizada",
+    "Tapas de mesas a medida",
+    "Instalación y montaje certificado en obra",
+    "Visitas al taller para selección de materiales en persona"
+  ],
+  "materiales": {
+    "categorias": [
+      {
+        "nombre": "Purastone Prima",
+        "tipo": "Piedra sinterizada",
+        "descripcion": "Piedra sinterizada, más fuerte, totalmente natural y 100% reciclable. Se puede aplicar tanto en interiores como en exteriores: revestimientos, pisos, mesadas y fachadas ventiladas, siendo ideal para construcciones más eficientes y sustentables.",
+        "cantidad_modelos": 37,
+        "ejemplos": ["Ember", "Dalmata", "Desert", "Alpinus White", "Blanco Jade", "Breccia Imperiale", "Ceppo di Gre", "Ora Gold", "Marquina", "Calacatta Viola", "Travertino Navona", "Blanco Zen", "Absolute Black", "Verde Selva"]
+      },
+      {
+        "nombre": "Purastone",
+        "tipo": "Superficie de cuarzo",
+        "descripcion": "Superficies de cuarzo natural de máxima pureza y resistencia. Compuestas por más del 90% de cuarzo natural y resinas de última generación. Diseñadas para mesadas de cocina, vanitories e islas de uso intensivo con acabado inalterable y fácil mantenimiento.",
+        "cantidad_modelos": 15,
+        "ejemplos": ["Basaltina", "Estatuario Venato", "Calacatta Vagli", "Blanco Paloma", "Calacatta Antico", "Bianco Silver", "Calacatta Borghini", "Statuarietto", "Venatino", "Negro Glitter", "Concrete Dark"]
+      },
+      {
+        "nombre": "Neolith",
+        "tipo": "Superficie sinterizada",
+        "descripcion": "Neolith es una superficie sinterizada elaborada con materiales 100% naturales, resistente y versátil. Ideal para interiores y exteriores: mesadas, pisos, revestimientos, fachadas y muebles. Resistente al fuego directo, rayaduras extremas, manchas de todo tipo y rayos UV.",
+        "cantidad_modelos": 34,
+        "ejemplos": ["Calacatta", "Calacatta Luxe", "Estatuario", "Mont Blanc", "Abu Dhabi White", "Nero Marquina", "Iron Grey", "Iron Corten", "Basalt Black", "Beton", "Zaha Stone", "Pietra di Osso", "Rapolano", "White Sands"]
+      },
+      {
+        "nombre": "Cuarcitas",
+        "tipo": "Piedra natural",
+        "descripcion": "Roca metamórfica natural de extrema nobleza. Dureza 7 en la escala de Mohs, superior al granito y al acero de los cuchillos. Bajísima porosidad natural, excelente resistencia al choque térmico y total inmunidad ante ácidos culinarios como limón o vinagre.",
+        "cantidad_modelos": 19,
+        "ejemplos": ["Azul Bahía", "Taj Mahal Leather", "Blue Roma", "Amazonita", "Lucent", "Matarazzo", "Rosso Luana", "Black Panther", "Silver White", "Avocatus"]
+      },
+      {
+        "nombre": "Mármoles",
+        "tipo": "Piedra natural",
+        "descripcion": "Piedra caliza metamórfica reconocida por sus elegantes vetas y su acabado pulido de alto brillo. Material clásico por excelencia para mesadas, vanitories, revestimientos y pisos que buscan una estética atemporal.",
+        "ejemplos": ["Tundra Grey", "Calacatta", "Carrara"]
+      },
+      {
+        "nombre": "Granitos",
+        "tipo": "Piedra natural",
+        "descripcion": "Roca ígnea plutónica de tenacidad indiscutible. Tolerancia superior al uso diario intensivo, impactos mecánicos, rayaduras y abrasión. Tolera el calor directo de ollas, es 100% resistente a los rayos UV y a las inclemencias climáticas exteriores. Ideal para mesadas de cocina, quinchos, parrillas al aire libre, pisos de alto tránsito y escaleras.",
+        "ejemplos": ["Negro Brasil", "Gris Mara", "Alpinus"]
+      }
+    ]
+  },
+  "trabajos_realizados": {
+    "total": 28,
+    "categorias": ["Cocinas", "Baños", "Revestimientos", "Varios"],
+    "proyectos_destacados": [
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Isla, mesada y alzada en Purastone Prima Travertino Navona de 12 mm, con isla de patas laterales en forma de cascada y frentines ingletados de 7 cm."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Isla, mesada y alzada realizadas en Neolith Mont Blanc de 12 mm."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Mesadas, alzadas e isla realizadas en Cuarcita Taj Mahal Leather de 20 mm."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Isla y mesada realizadas en Granito Negro Brasil."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Mesada, alzada e isla con patas laterales en forma de cascada realizadas en Purastone Prima Blanco Zen Pulido."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Mesadas, alzada e isla realizadas en Neolith Calacatta."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Mesada de cocina con bacha conformada realizada en Neolith Pietra di Osso."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Mesada e isla realizadas en Purastone Statuarietto."
+      },
+      {
+        "categoria": "Cocinas",
+        "descripcion": "Isla realizada en Silestone Miami White."
+      },
+      {
+        "categoria": "Baños",
+        "descripcion": "Mesada con bacha integrada realizada en Cuarcita Rosso Luana de 20 mm."
+      },
+      {
+        "categoria": "Baños",
+        "descripcion": "Vanitory con bacha integrada realizado en Mármol Tundra Grey."
+      },
+      {
+        "categoria": "Baños",
+        "descripcion": "Bacha integrada con desagüe oculto realizada en Mármol Tundra Grey."
+      },
+      {
+        "categoria": "Baños",
+        "descripcion": "Vanitory con bacha conformada realizado en Purastone Venatino."
+      },
+      {
+        "categoria": "Baños",
+        "descripcion": "Vanitory con doble bacha conformada realizado en Neolith Rapolano."
+      },
+      {
+        "categoria": "Revestimientos",
+        "descripcion": "Revestimiento retroiluminado realizado en Cuarcita Lucent de 20 mm."
+      },
+      {
+        "categoria": "Revestimientos",
+        "descripcion": "Revestimiento realizado en Purastone Negro Glitter."
+      }
+    ]
+  },
+  "ubicacion": {
+    "direccion": "Saraza 4297, B1761FFM Pontevedra, Provincia de Buenos Aires, Argentina",
+    "localidad": "Pontevedra",
+    "provincia": "Provincia de Buenos Aires",
+    "pais": "Argentina",
+    "coordenadas": {
+      "latitud": "-34.7397",
+      "longitud": "-58.6833"
+    },
+    "google_maps": "https://www.google.com/maps/dir/?api=1&destination=Saraza+4297,+B1761FFM+Pontevedra,+Provincia+de+Buenos+Aires",
+    "tipo": "Taller & Showroom",
+    "nota": "Podés venir a conocer nuestras placas en persona, apreciar las vetas y texturas de cada piedra y coordinar tu proyecto directo en el taller."
+  },
+  "contacto": {
+    "whatsapp": {
+      "numero": "5491144926814",
+      "link": "https://wa.me/5491144926814",
+      "mensajes_predefinidos": {
+        "consulta_general": "Hola! Quisiera hacer una consulta sobre sus trabajos y materiales.",
+        "presupuesto": "Hola! Quisiera consultar y pedir presupuesto para un proyecto.",
+        "visita_taller": "Hola! Quisiera coordinar una visita al taller y conocer los materiales."
+      }
+    },
+    "email": "info@marmoleriabenjamin.com",
+    "instagram": "https://instagram.com/marmoleriabenjamin",
+    "horarios": "Lunes a Viernes de 09:00 a 17:00 hs"
+  },
+  "preguntas_frecuentes": [
+    {
+      "pregunta": "¿Qué materiales trabajan?",
+      "respuesta": "Trabajamos con piedras naturales (mármoles, granitos y cuarcitas) y superficies de ingeniería (Purastone, Purastone Prima, Neolith y Silestone). Tenemos más de 100 modelos disponibles en nuestro catálogo."
+    },
+    {
+      "pregunta": "¿Hacen mesadas a medida?",
+      "respuesta": "Sí, todas nuestras mesadas son fabricadas a medida. Realizamos la medición en obra, el corte con maquinaria de precisión y la instalación final."
+    },
+    {
+      "pregunta": "¿Hacen islas de cocina?",
+      "respuesta": "Sí, fabricamos islas de cocina en todos nuestros materiales. Realizamos frentes ingletados a 45°, patas laterales en cascada y desayunadores integrados."
+    },
+    {
+      "pregunta": "¿Qué es Purastone Prima?",
+      "respuesta": "Purastone Prima es piedra sinterizada, totalmente natural y 100% reciclable. Es más resistente que el cuarzo convencional y se puede usar en interiores y exteriores: mesadas, revestimientos, pisos y fachadas ventiladas."
+    },
+    {
+      "pregunta": "¿Qué es Neolith?",
+      "respuesta": "Neolith es una superficie sinterizada elaborada con materiales 100% naturales. Es resistente al fuego directo, rayaduras extremas, manchas y rayos UV. Ideal para interiores y exteriores."
+    },
+    {
+      "pregunta": "¿Hacen bachas integradas?",
+      "respuesta": "Sí, realizamos bachas conformadas (integradas en el mismo material de la mesada) tanto para cocinas como para baños, incluyendo desagüe oculto."
+    },
+    {
+      "pregunta": "¿Trabajan con cuarcitas?",
+      "respuesta": "Sí, tenemos una amplia variedad de cuarcitas naturales incluyendo Azul Bahía, Taj Mahal, Blue Roma, Amazonita, Lucent y muchas más. Las cuarcitas son piedras de dureza excepcional, superiores al granito."
+    },
+    {
+      "pregunta": "¿Hacen trabajos de revestimiento?",
+      "respuesta": "Sí, realizamos revestimientos de paredes, pisos y fachadas en piedra natural y superficies sinterizadas, incluyendo revestimientos retroiluminados."
+    },
+    {
+      "pregunta": "¿Hacen escaleras?",
+      "respuesta": "Sí, fabricamos escaleras en piedra natural y superficies sinterizadas. Hemos realizado trabajos como escaleras retroiluminadas en Neolith Iron Grey."
+    },
+    {
+      "pregunta": "¿Puedo visitar el taller?",
+      "respuesta": "Sí, podés venir a conocer nuestras placas en persona, apreciar las vetas y texturas de cada piedra y coordinar tu proyecto directo en el taller. Estamos en Saraza 4297, Pontevedra, Buenos Aires. Lunes a Viernes de 9 a 17 hs."
+    },
+    {
+      "pregunta": "¿Cómo solicito un presupuesto?",
+      "respuesta": "Podés contactarnos por WhatsApp contándonos qué necesitás y te asesoramos. Respondemos el mismo día."
+    },
+    {
+      "pregunta": "¿Dónde están ubicados?",
+      "respuesta": "Nuestro taller y showroom está en Saraza 4297, Pontevedra, Provincia de Buenos Aires, Argentina. Atendemos de Lunes a Viernes de 09:00 a 17:00 hs."
+    },
+    {
+      "pregunta": "¿Qué diferencia hay entre mármol, granito y cuarzo?",
+      "respuesta": "El mármol es una piedra caliza metamórfica elegante con vetas clásicas. El granito es una roca ígnea de máxima resistencia, ideal para uso intensivo y exteriores. El cuarzo de ingeniería (como Purastone) combina cuarzo natural con resinas para lograr nula porosidad y fácil mantenimiento."
+    },
+    {
+      "pregunta": "¿Los materiales resisten el calor?",
+      "respuesta": "Sí, especialmente las piedras sinterizadas (Purastone Prima y Neolith) y los granitos resisten el calor directo de ollas y sartenes. Las cuarcitas también tienen excelente resistencia térmica."
+    },
+    {
+      "pregunta": "¿Los materiales se manchan?",
+      "respuesta": "Las superficies sinterizadas como Purastone Prima y Neolith tienen nula porosidad y no absorben manchas de ningún tipo. Los granitos y cuarcitas también son muy resistentes a manchas. Los mármoles requieren algo más de cuidado ya que pueden ser sensibles a ácidos."
+    }
+  ]
+}
