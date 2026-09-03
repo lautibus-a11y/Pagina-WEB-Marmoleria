@@ -71,9 +71,9 @@ Detalles específicos importantes:
 - Blanco Dallas: Granito natural con fondo blanco cremoso y pequeñas motas negras, grises oscuras y a veces rojizas/granates. Chapas de 20mm, acabado pulido habitual. Resiste altas temperaturas (soporta ollas tibias sin dañarse gravemente). Al ser bastante absorbente puede mancharse con el uso diario, por lo que no es muy recomendado para cocinas intensivas, salvo que se le aplique protector cada 6 meses como mantenimiento.
 - Kashmir White: Granito natural con fondo blanco cremoso y motas grises, beige, y a veces amarillas o negras. Placas únicas, chapas de 20mm en pulido o leather. Resiste altas temperaturas (soporta ollas tibias). Es bastante absorbente, por lo que no es muy recomendado para cocinas de uso diario salvo aplicando protector cada 6 meses.
 
-🔹 MÁRMOLES (Piedra Natural Clásica):
-Piedra caliza metamórfica de brillo distinguido y vetas clásicas atemporales.
-Modelos: Tundra Grey, Carrara, Calacatta Clásico.
+🔹 MÁRMOLES (Piedra Natural Clásica y Exótica — 64 modelos):
+Piedra caliza metamórfica de brillo distinguido, tacto suave y vetas clásicas atemporales. Ideal para vanitories de baño, bachas conformadas integradas, frentes de chimenea, solados y revestimientos nobles.
+Modelos: Antracite Dark, Arabescato Clásico, Arabescato Di Luca, Arabescato Orobico, Beige Nilo, Beige Sahara, Blanco Cristal, Blanco Perlino, Blanco Royal, Blanco Thassos, Botticino, Breccia Toscano, Breccia Vaticano, Calacatta Extra, Calacatta Monet, Calacatta Oro, Calacatta Viola, Camouflage Mármol, Carrara, Cote d Azur, Crema Marfil, Desert Brown, Estatuario Clásico, Fantastic Grey, Fantasy White, Fendi Green, Flor di Pesco Carnico, Giallo di Siena, Grigio Carnico, Invisible Grey, Jura Beige, Jura Grey, Lilac (Milas Lilac), Luxury White, Marrón Bosque, Marrón Imperial, Moon Beige, Moon Beige Classic, Mosa White, Negro Marquina, Noir Saint Laurent, Portoro Super, Rojo Alicante, Rosa Norvegia, Rosalía, Rosso Levanto, Rosso Venato, Sahara Noir, Savana Grey, Silver Galaxy, Silver Wave, Travertino al Agua, Travertino Clásico a la Veta, Travertino Ivory a la Veta, Travertino Noce al Agua, Travertino Romano Striatto, Travertino Titanium, Tundra Black, Tundra Grey, Verde Alpe, Verde Arcadia, Verde Bosque, Verde Oriental, Verde Remigiato.
 
 ### Trabajos que realizamos
 - Mesadas de cocina e islas con laterales en cascada y frentes ingletados a 45°
