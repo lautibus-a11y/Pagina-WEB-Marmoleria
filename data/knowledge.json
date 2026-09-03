@@ -59,7 +59,11 @@
         "tipo": "Piedra natural",
         "descripcion": "Roca ígnea plutónica de tenacidad indiscutible. Tolerancia superior al uso diario intensivo, impactos mecánicos, rayaduras y abrasión. Tolera el calor directo de ollas, es 100% resistente a los rayos UV y a las inclemencias climáticas exteriores. Ideal para mesadas de cocina, quinchos, parrillas al aire libre, pisos de alto tránsito y escaleras.",
         "cantidad_modelos": 22,
-        "modelos": ["Alpinus", "Amadeus", "Be Black", "Black Cosmic Leather", "Blanco Dallas", "Blanco Fortaleza", "Blanco Orión", "Branco Ceará", "Brown Antique", "Coffee Brown", "Cygnus", "Delicatus", "Ebony Cristal", "Gris Mara", "Gris Perla", "Kashmir White", "Matrix", "Negro Boreal", "Negro Brasil", "Negro Brasil Leather", "Negro Semi Absoluto", "Volga Blue"]
+        "modelos": ["Alpinus", "Amadeus", "Be Black", "Black Cosmic Leather", "Blanco Dallas", "Blanco Fortaleza", "Blanco Orión", "Branco Ceará", "Brown Antique", "Coffee Brown", "Cygnus", "Delicatus", "Ebony Cristal", "Gris Mara", "Gris Perla", "Kashmir White", "Matrix", "Negro Boreal", "Negro Brasil", "Negro Brasil Leather", "Negro Semi Absoluto", "Volga Blue"],
+        "detalles_especificos": {
+          "Blanco Dallas": "Granito natural con fondo blanco cremoso y pequeñas motas negras, grises oscuras y en ocasiones rojizas/granates. Chapas de 20mm en acabado pulido. Resiste altas temperaturas (soporta ollas tibias). Es bastante absorbente, puede mancharse con el uso diario, por lo que no es muy recomendado para cocinas salvo aplicando protector cada 6 meses.",
+          "Kashmir White": "Granito natural con fondo blanco cremoso y motas grises, beige, y en ocasiones amarillas o negras. Placas únicas, chapas de 20mm en pulido o leather. Resiste altas temperaturas (soporta ollas tibias). Es bastante absorbente, por lo que no es muy recomendado para cocinas de uso diario salvo aplicando protector cada 6 meses."
+        }
       },
       {
         "nombre": "Mármoles",

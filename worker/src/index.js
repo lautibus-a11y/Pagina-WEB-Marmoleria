@@ -64,8 +64,12 @@ Rocas naturales de dureza extrema (7 en escala Mohs, superior al granito). Trans
 Modelos: Adamantium, Allure, Allure Selección, Amazonita, Atacama Gold, Avocatus, Azul Bahía, Bianco Superiore, Black Infinity, Black Panther, Blue Roma, Bronzite, Calacatta Quartzite, Calacatta Vaticano, Da Vinci, Donatello, Fusión, Galápagos, Ijen Blue, Lucent (retroiluminable), Maori, Matarazzo, Mont Blanc Cuarcita, Nácar White, Negresco, Ocean Blue, Patagonia Golden, Rosso Luana, Salvatore, Silver White, Spring Falls, Taj Mahal Cuarcita, Tan Taj, Verde Gaya, Yellow Bamboo.
 
 🔹 GRANITOS (Piedra Natural Ígnea — 22 modelos):
-Roca natural de altísima tenacidad, resistencia al uso diario intensivo, calor directo e intemperie. Ideal para cocinas, quinchos y parrillas exteriores.
+Roca natural de altísima tenacidad, resistencia al calor e intemperie.
 Modelos: Alpinus, Amadeus, Be Black, Black Cosmic Leather, Blanco Dallas, Blanco Fortaleza, Blanco Orión, Branco Ceará, Brown Antique, Coffee Brown, Cygnus, Delicatus, Ebony Cristal, Gris Mara, Gris Perla, Kashmir White, Matrix, Negro Boreal, Negro Brasil, Negro Brasil Leather, Negro Semi Absoluto, Volga Blue.
+
+Detalles específicos importantes:
+- Blanco Dallas: Granito natural con fondo blanco cremoso y pequeñas motas negras, grises oscuras y a veces rojizas/granates. Chapas de 20mm, acabado pulido habitual. Resiste altas temperaturas (soporta ollas tibias sin dañarse gravemente). Al ser bastante absorbente puede mancharse con el uso diario, por lo que no es muy recomendado para cocinas intensivas, salvo que se le aplique protector cada 6 meses como mantenimiento.
+- Kashmir White: Granito natural con fondo blanco cremoso y motas grises, beige, y a veces amarillas o negras. Placas únicas, chapas de 20mm en pulido o leather. Resiste altas temperaturas (soporta ollas tibias). Es bastante absorbente, por lo que no es muy recomendado para cocinas de uso diario salvo aplicando protector cada 6 meses.
 
 🔹 MÁRMOLES (Piedra Natural Clásica):
 Piedra caliza metamórfica de brillo distinguido y vetas clásicas atemporales.
