@@ -49,22 +49,27 @@ const SYSTEM_PROMPT = `Sos el asesor comercial virtual de Marmolería Benjamín,
 
 🔹 PURASTONE PRIMA (Piedra Sinterizada Ultracompacta — 39 modelos):
 Piedra sinterizada 100% natural y reciclable. Máxima resistencia a altas temperaturas, manchas, rayaduras y rayos UV. Apta para interiores y exteriores.
+Formatos y espesores: Placas de 3.20 × 1.60 m en 12 mm de espesor.
 Modelos: Absolute Black, Alpinus White, Arabescato Wow, Aria, Aurora, Bianco Lasa, Blanco Jade, Blanco Zen, Breccia Imperiale (P24), Bronce Armani, Calacatta Viola, Camouflage, Ceppo di Gre, Coralina, Dalmata, Dazzle, Desert, Ember, Fiordibosco, Gris Manhattan, Ivory Desert, Lava Black, Limestone, Lumiere, Macchia Vecchia, Marquina, Metro Cream, Onyx Black, Onyx White, Ora Gold, Patagonia Gold, Summer Calm, Taj Mahal, Titanium Black, Toscanavena, Travertino Navona, Tundra Dark, Vena Oro, Verde Selva.
 
 🔹 PURASTONE (Superficie de Cuarzo de Alta Pureza — 34 modelos):
 Compuesta por más del 90% de cuarzo natural y resinas de última generación. Nula porosidad, máxima higiene y fácil limpieza. Ideal para mesadas de cocina y baños interiores.
+Formatos y espesores: Placas de 3.20 × 1.60 m y 3.00 × 1.40 m en 20 mm de espesor.
 Modelos: Basaltina, Bianco Luxe, Bianco Silver, Blanco Cana, Blanco Glitter, Blanco Icon, Blanco Nube, Blanco Paloma, Calacatta Antico, Calacatta Borghini, Calacatta Dore, Calacatta Gold, Calacatta Vagli, Calacatta Versalles, Cemento, Concrete, Concrete Dark, Concrete Sand, Crema Pisa, Estatuario Venato, Greyge, Gris Fosil, Gris Topo, Gris Zen, Negro Betun, Negro Glitter, Nero Marquina, Noir, Porfido Gris, Statuarietto, Statuario, Taj, Terrazo White, Venatino.
 
 🔹 NEOLITH (Superficie Sinterizada de Ingeniería — 34 modelos):
 Superficie sinterizada ultracompacta elaborada con minerales naturales. Inmune al calor directo de ollas, fuego, rayaduras extremas, manchas ácidas y rayos UV.
+Formatos y espesores: Placas de 3.20 × 1.60 m en 12 mm de espesor y placas de 3.20 × 1.50 m en 6 mm de espesor.
 Modelos: Abu Dhabi White, Amazonico, Arctic-White-01, Basalt Black, Beton, Beton PC4BETK061 PR, Calacatta, Calacatta Luxe, Calatorao, Cement, Ceppo di Gres, Estatuario, Himalaya Cristal, Iron Copper, Iron Corten, Iron Grey, Krater, Layla, Mamba, Mont Blanc, Nero, Nero Marquina, Nero Zimbabwe, New York, Perla, Phedra, Pierre Bleue, Pietra di Luna, Pietra di Osso, Pietra di Piombo, Rapolano, Retrostone, Strata Argentum, Zaha Stone.
 
 🔹 CUARCITAS (Piedra Natural Metamórfica — 34 modelos):
 Rocas naturales de dureza extrema (7 en escala Mohs, superior al granito). Translúcidas, resistentes a ácidos culinarios y con vetas geológicas únicas e irrepetibles.
+Formatos y espesores: Disponible en diferentes medidas según stock y en 20 mm de espesor.
 Modelos: Adamantium, Allure, Allure Selección, Amazonita, Atacama Gold, Avocatus, Azul Bahía, Bianco Superiore, Black Infinity, Black Panther, Blue Roma, Bronzite, Calacatta Quartzite, Calacatta Vaticano, Da Vinci, Donatello, Fusión, Galápagos, Ijen Blue, Lucent (retroiluminable), Maori, Matarazzo, Mont Blanc Cuarcita, Nácar White, Negresco, Ocean Blue, Patagonia Golden, Rosso Luana, Salvatore, Silver White, Spring Falls, Taj Mahal Cuarcita, Tan Taj, Verde Gaya, Yellow Bamboo.
 
 🔹 GRANITOS (Piedra Natural Ígnea — 22 modelos):
 Roca natural de altísima tenacidad, resistencia al calor e intemperie.
+Formatos y espesores: Disponible en diferentes medidas según stock y en 20 mm de espesor.
 Modelos: Alpinus, Amadeus, Be Black, Black Cosmic Leather, Blanco Dallas, Blanco Fortaleza, Blanco Orión, Branco Ceará, Brown Antique, Coffee Brown, Cygnus, Delicatus, Ebony Cristal, Gris Mara, Gris Perla, Kashmir White, Matrix, Negro Boreal, Negro Brasil, Negro Brasil Leather, Negro Semi Absoluto, Volga Blue.
 
 Detalles específicos importantes:
@@ -73,6 +78,7 @@ Detalles específicos importantes:
 
 🔹 MÁRMOLES (Piedra Natural Clásica y Exótica — 64 modelos):
 Roca caliza metamórfica natural de brillo noble, tacto sedoso y vetas artísticas irrepetibles.
+Formatos y espesores: Disponible en diferentes medidas según stock y en 20 mm de espesor.
 Propiedades y cuidados: Dureza 3-4 Mohs. Al ser una piedra caliza natural con cierta porosidad, es sensible a ácidos (limón, vinagre, vino, tomate). Requiere sellador periódico.
 Aplicaciones ideales: Vanitories de baño, bachas conformadas integradas en el mismo material, revestimientos de pared, frentes de chimenea, solados interiores, escaleras y tapas de mesas decorativas.
 Para mesadas de cocina: Asesorar con honestidad que el mármol natural requiere cuidados minuciosos ante manchas y ácidos. Si el cliente busca la estética de vetas de mármol para una cocina de uso intensivo, sugerir también las alternativas ultrarresistentes en Purastone Prima (sinterizado), Neolith o Cuarcitas naturales (Taj Mahal, Calacatta Quartzite).
@@ -150,7 +156,7 @@ export default {
       if (!body.message || typeof body.message !== 'string') {
         return corsResponse(
           JSON.stringify({ error: 'Mensaje requerido' }),
-          400, allowedOrigin
+          400, corsOrigin
         );
       }
 
@@ -158,7 +164,7 @@ export default {
       if (userMessage.length === 0) {
         return corsResponse(
           JSON.stringify({ error: 'Mensaje vacío' }),
-          400, allowedOrigin
+          400, corsOrigin
         );
       }
 
@@ -192,7 +198,7 @@ export default {
         console.error('OPENROUTER_API_KEY no configurada');
         return corsResponse(
           JSON.stringify({ error: 'Servicio no disponible' }),
-          503, allowedOrigin
+          503, corsOrigin
         );
       }
 
@@ -227,7 +233,7 @@ export default {
         console.error(`OpenRouter error: ${aiResponse.status}`);
         return corsResponse(
           JSON.stringify({ error: statusText }),
-          502, allowedOrigin
+          502, corsOrigin
         );
       }
 
@@ -238,27 +244,27 @@ export default {
         console.error('Respuesta inválida de OpenRouter:', JSON.stringify(aiData).slice(0, 200));
         return corsResponse(
           JSON.stringify({ error: 'Respuesta inválida del servicio' }),
-          502, allowedOrigin
+          502, corsOrigin
         );
       }
 
       // Devolver respuesta limpia
       return corsResponse(
         JSON.stringify({ reply: reply.trim() }),
-        200, allowedOrigin
+        200, corsOrigin
       );
 
     } catch (err) {
       if (err.name === 'AbortError') {
         return corsResponse(
           JSON.stringify({ error: 'Tiempo de espera agotado' }),
-          504, allowedOrigin
+          504, corsOrigin
         );
       }
       console.error('Worker error:', err.message);
       return corsResponse(
         JSON.stringify({ error: 'Error interno del servicio' }),
-        500, allowedOrigin
+        500, corsOrigin
       );
     }
   }

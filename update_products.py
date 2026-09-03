@@ -1,8 +1,12 @@
 import re
 import os
 
-folder = "/Users/lauti/Documents/GitHub/Pagina-WEB-Marmoleria/assets/images/catalogo/neolitih"
-files = [f for f in os.listdir(folder) if f.endswith(".webp")]
+base_dir = os.path.dirname(os.path.abspath(__file__))
+folder = os.path.join(base_dir, "assets/images/catalogo/neolitih")
+if os.path.exists(folder):
+    files = [f for f in os.listdir(folder) if f.endswith(".webp")]
+else:
+    files = []
 
 entries = []
 for f in sorted(files):
@@ -13,7 +17,7 @@ for f in sorted(files):
 
 entries_str = "\n".join(entries)
 
-html_path = "/Users/lauti/Documents/GitHub/Pagina-WEB-Marmoleria/index.html"
+html_path = os.path.join(base_dir, "index.html")
 with open(html_path, "r", encoding="utf-8") as file:
     content = file.read()
 

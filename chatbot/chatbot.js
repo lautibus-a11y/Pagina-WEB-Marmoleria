@@ -279,12 +279,12 @@
 
   function getErrorMessage(err) {
     if (err.name === 'AbortError') {
-      return `La consulta tardó demasiado. Podés intentar de nuevo o contactarnos directamente por <a href="${WA_LINK}" target="_blank" rel="noopener noreferrer">WhatsApp</a>.`;
+      return `La consulta tardó demasiado. Podés intentar de nuevo o contactarnos directamente por [WhatsApp](${WA_LINK}).`;
     }
     if (!navigator.onLine) {
       return 'Parece que hay un problema de conexión. Verificá tu internet e intentá de nuevo.';
     }
-    return `No pude procesar tu consulta en este momento. Podés contactarnos directamente por <a href="${WA_LINK}" target="_blank" rel="noopener noreferrer">WhatsApp</a>.`;
+    return `No pude procesar tu consulta en este momento. Podés contactarnos directamente por [WhatsApp](${WA_LINK}).`;
   }
 
   /* ═══ INPUT Y CONTROLES ══════════════════════════════════════ */

@@ -30,6 +30,7 @@
         "nombre": "Purastone Prima",
         "tipo": "Piedra sinterizada ultracompacta",
         "descripcion": "Piedra sinterizada, más fuerte, totalmente natural y 100% reciclable. Se puede aplicar tanto en interiores como en exteriores: revestimientos, pisos, mesadas y fachadas ventiladas, siendo ideal para construcciones más eficientes y sustentables.",
+        "formatos_y_espesores": "Placas de 3.20 × 1.60 m en 12 mm de espesor.",
         "cantidad_modelos": 39,
         "modelos": ["Absolute Black", "Alpinus White", "Arabescato Wow", "Aria", "Aurora", "Bianco Lasa", "Blanco Jade", "Blanco Zen", "Breccia Imperiale (P24)", "Bronce Armani", "Calacatta Viola", "Camouflage", "Ceppo di Gre", "Coralina", "Dalmata", "Dazzle", "Desert", "Ember", "Fiordibosco", "Gris Manhattan", "Ivory Desert", "Lava Black", "Limestone", "Lumiere", "Macchia Vecchia", "Marquina", "Metro Cream", "Onyx Black", "Onyx White", "Ora Gold", "Patagonia Gold", "Summer Calm", "Taj Mahal", "Titanium Black", "Toscanavena", "Travertino Navona", "Tundra Dark", "Vena Oro", "Verde Selva"]
       },
@@ -37,6 +38,7 @@
         "nombre": "Purastone",
         "tipo": "Superficie de cuarzo",
         "descripcion": "Superficies de cuarzo natural de máxima pureza y resistencia. Compuestas por más del 90% de cuarzo natural y resinas de última generación. Diseñadas para mesadas de cocina, vanitories e islas de uso intensivo con acabado inalterable y fácil mantenimiento.",
+        "formatos_y_espesores": "Placas de 3.20 × 1.60 m y 3.00 × 1.40 m en 20 mm de espesor.",
         "cantidad_modelos": 34,
         "modelos": ["Basaltina", "Bianco Luxe", "Bianco Silver", "Blanco Cana", "Blanco Glitter", "Blanco Icon", "Blanco Nube", "Blanco Paloma", "Calacatta Antico", "Calacatta Borghini", "Calacatta Dore", "Calacatta Gold", "Calacatta Vagli", "Calacatta Versalles", "Cemento", "Concrete", "Concrete Dark", "Concrete Sand", "Crema Pisa", "Estatuario Venato", "Greyge", "Gris Fosil", "Gris Topo", "Gris Zen", "Negro Betun", "Negro Glitter", "Nero Marquina", "Noir", "Porfido Gris", "Statuarietto", "Statuario", "Taj", "Terrazo White", "Venatino"]
       },
@@ -44,6 +46,7 @@
         "nombre": "Neolith",
         "tipo": "Superficie sinterizada",
         "descripcion": "Neolith es una superficie sinterizada elaborada con materiales 100% naturales, resistente y versátil. Ideal para interiores y exteriores: mesadas, pisos, revestimientos, fachadas y muebles. Resistente al fuego directo, rayaduras extremas, manchas de todo tipo y rayos UV.",
+        "formatos_y_espesores": "Placas de 3.20 × 1.60 m en 12 mm de espesor y placas de 3.20 × 1.50 m en 6 mm de espesor.",
         "cantidad_modelos": 34,
         "modelos": ["Abu Dhabi White", "Amazonico", "Arctic-White-01", "Basalt Black", "Beton", "Beton PC4BETK061 PR", "Calacatta", "Calacatta Luxe", "Calatorao", "Cement", "Ceppo di Gres", "Estatuario", "Himalaya Cristal", "Iron Copper", "Iron Corten", "Iron Grey", "Krater", "Layla", "Mamba", "Mont Blanc", "Nero", "Nero Marquina", "Nero Zimbabwe", "New York", "Perla", "Phedra", "Pierre Bleue", "Pietra di Luna", "Pietra di Osso", "Pietra di Piombo", "Rapolano", "Retrostone", "Strata Argentum", "Zaha Stone"]
       },
@@ -51,6 +54,7 @@
         "nombre": "Cuarcitas",
         "tipo": "Piedra natural",
         "descripcion": "Roca metamórfica natural de extrema nobleza. Dureza 7 en la escala de Mohs, superior al granito y al acero de los cuchillos. Bajísima porosidad natural, excelente resistencia al choque térmico y total inmunidad ante ácidos culinarios como limón o vinagre.",
+        "formatos_y_espesores": "Disponible en diferentes medidas según stock y en 20 mm de espesor.",
         "cantidad_modelos": 34,
         "modelos": ["Adamantium", "Allure", "Allure Selección", "Amazonita", "Atacama Gold", "Avocatus", "Azul Bahía", "Bianco Superiore", "Black Infinity", "Black Panther", "Blue Roma", "Bronzite", "Calacatta Quartzite", "Calacatta Vaticano", "Da Vinci", "Donatello", "Fusión", "Galápagos", "Ijen Blue", "Lucent", "Maori", "Matarazzo", "Mont Blanc Cuarcita", "Nácar White", "Negresco", "Ocean Blue", "Patagonia Golden", "Rosso Luana", "Salvatore", "Silver White", "Spring Falls", "Taj Mahal Cuarcita", "Tan Taj", "Verde Gaya", "Yellow Bamboo"]
       },
@@ -58,6 +62,7 @@
         "nombre": "Granitos",
         "tipo": "Piedra natural",
         "descripcion": "Roca ígnea plutónica de tenacidad indiscutible. Tolerancia superior al uso diario intensivo, impactos mecánicos, rayaduras y abrasión. Tolera el calor directo de ollas, es 100% resistente a los rayos UV y a las inclemencias climáticas exteriores. Ideal para mesadas de cocina, quinchos, parrillas al aire libre, pisos de alto tránsito y escaleras.",
+        "formatos_y_espesores": "Disponible en diferentes medidas según stock y en 20 mm de espesor.",
         "cantidad_modelos": 22,
         "modelos": ["Alpinus", "Amadeus", "Be Black", "Black Cosmic Leather", "Blanco Dallas", "Blanco Fortaleza", "Blanco Orión", "Branco Ceará", "Brown Antique", "Coffee Brown", "Cygnus", "Delicatus", "Ebony Cristal", "Gris Mara", "Gris Perla", "Kashmir White", "Matrix", "Negro Boreal", "Negro Brasil", "Negro Brasil Leather", "Negro Semi Absoluto", "Volga Blue"],
         "detalles_especificos": {
@@ -69,6 +74,7 @@
         "nombre": "Mármoles",
         "tipo": "Piedra natural clásica y exótica",
         "descripcion": "Piedra caliza metamórfica reconocida por sus elegantes vetas y su acabado pulido de alto brillo. Material clásico por excelencia para vanitories, bachas conformadas integradas, revestimientos, frentes de chimenea, solados y tapas de mesas.",
+        "formatos_y_espesores": "Disponible en diferentes medidas según stock y en 20 mm de espesor.",
         "cantidad_modelos": 64,
         "cuidados_y_caracteristicas": "Dureza 3-4 Mohs. Sensible al ataque de sustancias ácidas (limón, vinagre, vino). Requiere sellador periódico. Para mesadas de cocina de uso intensivo se recomienda asesorar con cuidado o considerar alternativas ultrarresistentes como Purastone Prima o Neolith con diseño de vetas.",
         "modelos": ["Antracite Dark", "Arabescato Clásico", "Arabescato Di Luca", "Arabescato Orobico", "Beige Nilo", "Beige Sahara", "Blanco Cristal", "Blanco Perlino", "Blanco Royal", "Blanco Thassos", "Botticino", "Breccia Toscano", "Breccia Vaticano", "Calacatta Extra", "Calacatta Monet", "Calacatta Oro", "Calacatta Viola", "Camouflage Mármol", "Carrara", "Cote d Azur", "Crema Marfil", "Desert Brown", "Estatuario Clásico", "Fantastic Grey", "Fantasy White", "Fendi Green", "Flor di Pesco Carnico", "Giallo di Siena", "Grigio Carnico", "Invisible Grey", "Jura Beige", "Jura Grey", "Lilac (Milas Lilac)", "Luxury White", "Marrón Bosque", "Marrón Imperial", "Moon Beige", "Moon Beige Classic", "Mosa White", "Negro Marquina", "Noir Saint Laurent", "Portoro Super", "Rojo Alicante", "Rosa Norvegia", "Rosalía", "Rosso Levanto", "Rosso Venato", "Sahara Noir", "Savana Grey", "Silver Galaxy", "Silver Wave", "Travertino al Agua", "Travertino Clásico a la Veta", "Travertino Ivory a la Veta", "Travertino Noce al Agua", "Travertino Romano Striatto", "Travertino Titanium", "Tundra Black", "Tundra Grey", "Verde Alpe", "Verde Arcadia", "Verde Bosque", "Verde Oriental", "Verde Remigiato"]
